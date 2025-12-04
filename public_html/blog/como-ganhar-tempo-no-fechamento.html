@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#667eea">
+
+  <title>Como ganhar tempo no fechamento sem surtar na última semana do mês | Blog Fluxoteca</title>
+  <meta name="description" content="Um roteiro enxuto para tirar o fechamento do modo apaga-incêndio e distribuir o trabalho ao longo do mês, usando o que você já tem no ERP e na equipe.">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXY7XHLX32"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-FXY7XHLX32');
+  </script>
+
+  <!-- PWA Meta Tags (mesmo padrão do blog) -->
+  <link rel="manifest" href="#" id="manifestPlaceholder">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Fluxoteca">
+
+  <!-- CSS base do blog + estilo dos artigos -->
+  <link rel="stylesheet" href="/blog/assets/css/blog-base.css">
+  <link rel="stylesheet" href="/blog/assets/css/blog-article.css">
+
+  <!-- View Transitions -->
+  <style>@view-transition { navigation: auto; }</style>
+</head>
+
+<body>
+
+  <!-- Links de pular para conteúdo -->
+  <div class="skip-links">
+    <a href="#main-content" class="skip-link">Ir para conteúdo principal</a>
+  </div>
+
+  <!-- Botão mobile para abrir sidebar -->
+  <button class="mobile-sidebar-toggle" id="mobileSidebarToggle" aria-label="Abrir navegação lateral">
+    ☰
+  </button>
+  <div class="mobile-sidebar-overlay" id="mobileSidebarOverlay"></div>
+
+  <!-- Sidebar Navigation (mesma do blog) -->
+  <aside class="sidebar" id="sidebar" role="navigation" aria-label="Navegação principal">
+
+    <!-- Logo -->
+    <button class="sidebar-logo" onclick="window.location.href='https://fluxoteca.com.br/'" aria-label="Ir para página inicial da Fluxoteca">
+      <svg class="sidebar-logo-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="sidebarLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#4facfe;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <circle cx="40" cy="40" r="26" fill="rgba(255,255,255,0.14)" />
+        <circle cx="40" cy="40" r="16" fill="url(#sidebarLogoGradient)" />
+        <circle cx="40" cy="40" r="9" fill="#ffffff" />
+        <circle cx="40" cy="40" r="5" fill="url(#sidebarLogoGradient)" />
+      </svg>
+    </button>
+
+    <nav class="sidebar-nav">
+
+      <!-- Início -->
+      <button type="button" class="sidebar-item" data-page="inicio" aria-label="Ir para a página inicial" onclick="window.location.href='https://fluxoteca.com.br/'">
+        <svg viewBox="0 0 24 24">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
+        </svg>
+        <span class="sidebar-item-text">Início</span>
+      </button>
+
+      <!-- Ferramentas / Biblioteca -->
+      <button type="button" class="sidebar-item" aria-label="Explorar ferramentas na Biblioteca" onclick="window.location.href='https://fluxoteca.com.br/biblioteca/'">
+        <svg viewBox="0 0 24 24">
+          <rect x="3" y="3" width="7" height="7" />
+          <rect x="14" y="3" width="7" height="7" />
+          <rect x="14" y="14" width="7" height="7" />
+          <rect x="3" y="14" width="7" height="7" />
+        </svg>
+        <span class="sidebar-item-text">Ferramentas</span>
+      </button>
+
+      <!-- Gratuitas -->
+      <button type="button" class="sidebar-item" aria-label="Abrir biblioteca gratuita" onclick="window.location.href='https://fluxoteca.com.br/biblioteca/#gratuitas'">
+        <svg viewBox="0 0 24 24">
+          <polyline points="20 12 20 22 4 22 4 12" />
+          <rect x="2" y="7" width="20" height="5" />
+          <line x1="12" y1="22" x2="12" y2="7" />
+          <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z" />
+          <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" />
+        </svg>
+        <span class="sidebar-item-text">Gratuitas</span>
+        <span class="sidebar-badge free">Free</span>
+      </button>
+
+      <!-- Prompts PME -->
+      <button type="button" class="sidebar-item" aria-label="Abrir o Painel de Prompts PME" onclick="window.location.href='https://fluxoteca.com.br/prompts-pme/'">
+        <svg viewBox="0 0 24 24">
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+        </svg>
+        <span class="sidebar-item-text">Prompts PME</span>
+        <span class="sidebar-badge">Novo</span>
+      </button>
+
+      <!-- Blog (página atual) -->
+      <button type="button" class="sidebar-item" aria-label="Abrir o Blog da Fluxoteca" aria-current="page" onclick="window.location.href='https://fluxoteca.com.br/blog/'">
+        <svg viewBox="0 0 24 24">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+          <polyline points="14 2 14 8 20 8" />
+          <line x1="16" y1="13" x2="8" y2="13" />
+          <line x1="16" y1="17" x2="8" y2="17" />
+          <polyline points="10 9 9 9 8 9" />
+        </svg>
+        <span class="sidebar-item-text">Blog</span>
+      </button>
+
+      <!-- Sobre -->
+      <button type="button" class="sidebar-item" aria-label="Sobre a Fluxoteca" onclick="window.location.href='https://fluxoteca.com.br/#sobre'">
+        <svg viewBox="0 0 24 24">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+        <span class="sidebar-item-text">Sobre</span>
+      </button>
+
+      <!-- Suporte -->
+      <button type="button" class="sidebar-item" aria-label="Ajuda e contato" onclick="window.location.href='https://fluxoteca.com.br/suporte/'">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+          <line x1="12" y1="17" x2="12.01" y2="17" />
+        </svg>
+        <span class="sidebar-item-text">Suporte</span>
+      </button>
+
+    </nav>
+
+    <!-- Rodapé da sidebar -->
+    <div class="sidebar-footer">
+      <button type="button" class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+        <svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;">
+          <line x1="12" y1="19" x2="12" y2="5" />
+          <polyline points="5 12 12 5 19 12" />
+        </svg>
+      </button>
+
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+        <svg id="themeIcon" viewBox="0 0 24 24" style="width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;">
+          <circle cx="12" cy="12" r="5" />
+          <line x1="12" y1="1" x2="12" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="23" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+          <line x1="1" y1="12" x2="3" y2="12" />
+          <line x1="21" y1="12" x2="23" y2="12" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Conteúdo principal -->
+  <main id="main-content" tabindex="-1">
+
+    <!-- ARTIGO - COMO GANHAR TEMPO NO FECHAMENTO -->
+    <section class="article-wrapper" aria-labelledby="articleTitle">
+      <div class="container">
+
+        <!-- Voltar para o blog -->
+        <a href="/blog/" class="back-blog">
+          <span class="back-blog-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+          </span>
+          <span class="back-blog-label">Voltar para o Blog</span>
+        </a>
+
+        <!-- Conteúdo do artigo em card único -->
+        <div class="article-inner">
+          <article class="article-content" id="articleContent">
+
+            <header class="article-header">
+              <span class="badge badge-category">Fechamento &amp; Contabilidade</span>
+              <h1 id="articleTitle">
+                Como ganhar tempo no fechamento sem surtar na última semana do mês
+              </h1>
+              <p class="article-lead">
+                Se todo mês você sente que vive um “mini encerramento de ano” na última
+                semana, este texto é para você. A ideia aqui não é prometer mágica, e sim
+                mostrar como distribuir o peso do fechamento ao longo do mês, usando o que
+                você já tem hoje: ERP, equipe e alguns combinados simples.
+              </p>
+              <div class="article-meta">
+                <span>Leitura rápida · 6 minutos</span>
+                <span class="article-meta-separator">•</span>
+                <span>Para PMEs que vivem em modo apaga-incêndio no fechamento</span>
+              </div>
+            </header>
+
+            <!-- Bloco: Para quem é este artigo -->
+            <div class="article-block article-block--who">
+              <div class="article-block-header">
+                <span class="article-block-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="9" />
+                    <circle cx="12" cy="12" r="5" />
+                    <circle cx="12" cy="12" r="1.5" />
+                  </svg>
+                </span>
+                <div class="article-block-title">Para quem é este artigo?</div>
+              </div>
+              <p>
+                Para quem fecha balanço todo mês, mas sente que só “enxerga” o resultado
+                quando já não dá mais tempo de corrigir nada. E para quem é cobrado por
+                diretoria, contador externo ou auditor, sem ter clareza de onde o tempo
+                está sendo desperdiçado.
+              </p>
+            </div>
+
+            <h2>1. Por que o fechamento acumula na última semana?</h2>
+            <p>
+              Não é porque você é desorganizada(o) ou “lenta(o)”. O fechamento costuma
+              travar na última semana por alguns motivos bem concretos:
+            </p>
+            <ul>
+              <li>
+                <strong>Informações-chave chegam tarde</strong>:
+                notas fiscais, inventários, provisões, relatórios de faturamento.
+              </li>
+              <li>
+                <strong>Dependência de uma única pessoa</strong>:
+                “só o fulano sabe rodar esse relatório”, “só ciclano entende esse ajuste”.
+              </li>
+              <li>
+                <strong>Medo de registrar provisório</strong>:
+                tudo espera “o certo definitivo”, então nada anda.
+              </li>
+              <li>
+                <strong>Falta de combinado entre áreas</strong>:
+                compras, estoque, fiscal, financeiro e contabilidade não trabalham com o
+                mesmo calendário mental.
+              </li>
+            </ul>
+            <p>
+              Repare que nada disso é exatamente “técnico”. É fluxo, definição de dono e
+              momento de cada etapa. O ERP entra como ferramenta, não como vilão nem herói.
+            </p>
+
+            <h2>2. O que muda quando você pensa em fechamento contínuo</h2>
+            <p>
+              Em vez de enxergar o fechamento como um grande evento mensal, vamos olhar
+              para ele como uma sequência de pequenas rotinas semanais, que vão
+              deixando o mês “pré-fechado”.
+            </p>
+
+            <div class="article-block">
+              <div class="article-block-title">Ideia central</div>
+              <p>
+                Fechamento contínuo é quando você transforma parte do trabalho da última
+                semana em tarefas que acontecem nas semanas 1, 2 e 3, sem criar mais
+                burocracia. Você só antecipa o que já faz, em pedaços menores.
+              </p>
+            </div>
+
+            <p>Um jeito simples de visualizar é assim:</p>
+            <ul>
+              <li><strong>Semana 1</strong>: acertos de cadastros e integrações.</li>
+              <li><strong>Semana 2</strong>: conferências de movimento (entradas, saídas, faturamento).</li>
+              <li><strong>Semana 3</strong>: provisões e conciliações mais pesadas.</li>
+              <li><strong>Semana 4</strong>: ajustes finais e validação com diretoria.</li>
+            </ul>
+            <p>
+              O conteúdo específico de cada semana pode variar, mas a lógica é a mesma:
+              você não espera tudo empilhar para “virar noites” no final.
+            </p>
+
+            <h2>3. Roteiro prático em 4 semanas para PMEs</h2>
+            <p>
+              Aqui vai um roteiro realista, pensado para empresas que ainda não têm
+              equipe grande nem tempo sobrando.
+            </p>
+
+            <h3>Semana 1 · Arrumar a base</h3>
+            <ul>
+              <li>
+                Rodar um relatório rápido de <strong>cadastros críticos</strong>:
+                CFOP, CST, NCM, centro de custo, contas contábeis padrão.
+              </li>
+              <li>
+                Escolher 1 ou 2 cadastros para revisar profundamente naquele mês
+                (não precisa ser tudo de uma vez).
+              </li>
+              <li>
+                Validar com compras e estoque como estão alimentando dados importantes
+                (unidade, prazo, condição de pagamento, tipo de operação).
+              </li>
+            </ul>
+
+            <h3>Semana 2 · Cuidar dos movimentos vivos</h3>
+            <ul>
+              <li>
+                Conferir se as <strong>entradas e saídas</strong> estão integrando
+                corretamente entre estoque, fiscal e contabilidade.
+              </li>
+              <li>
+                Bater <strong>faturamento do ERP x relatórios externos</strong>
+                (sistema de vendas, gateway, marketplace).
+              </li>
+              <li>
+                Identificar operações que estão exigindo muito ajuste manual
+                e anotar exemplos para tratar depois com calma.
+              </li>
+            </ul>
+
+            <h3>Semana 3 · Provisões e conciliações</h3>
+            <ul>
+              <li>
+                Mapear quais provisões se repetem todo mês
+                (salários, impostos, aluguéis, comissões).
+              </li>
+              <li>
+                Deixar configurado o <strong>mínimo de automatização</strong>
+                possível no ERP ou em planilha padrão.
+              </li>
+              <li>
+                Avançar conciliações bancárias e de clientes/fornecedores
+                antes da última semana.
+              </li>
+            </ul>
+
+            <h3>Semana 4 · Fechamento mesmo</h3>
+            <ul>
+              <li>
+                Fechar o movimento do período, evitando lançamentos retroativos sem necessidade.
+              </li>
+              <li>
+                Ajustar o que ficou para trás com base nas listas das semanas anteriores.
+              </li>
+              <li>
+                Preparar um <strong>resumo executivo</strong> simples
+                para diretoria: 3 indicadores, 3 alertas, 3 próximos passos.
+              </li>
+            </ul>
+
+            <h2>4. Como trazer a equipe junto sem parecer “mais trabalho”</h2>
+            <p>
+              O maior risco aqui é o time ouvir “mais uma rotina” e travar. Então é
+              importante explicar o porquê, não só o que fazer.
+            </p>
+            <ul>
+              <li>
+                Conectar com a dor real:
+                menos hora extra, menos retrabalho, menos cobrança em cima da mesma pessoa.
+              </li>
+              <li>
+                Começar pequeno:
+                escolha um único foco por mês (exemplo: entradas de compras) em vez de
+                reinventar tudo.
+              </li>
+              <li>
+                Registrar em linguagem simples:
+                mini POPs com 5 passos e exemplos, não manuais gigantes que ninguém lê.
+              </li>
+            </ul>
+            <p>
+              Uma dica é usar um quadro visual (físico ou digital) com as quatro semanas
+              e marcar o que foi concluído. Visualmente o time entende que o fechamento
+              “anda” antes da última semana.
+            </p>
+
+            <h2>5. Exemplo de rotina semanal enxuta</h2>
+            <p>
+              Se você quiser testar em modo piloto, pode começar com algo assim:
+            </p>
+            <ul>
+              <li><strong>Segunda</strong>: revisar pendências da semana anterior.</li>
+              <li><strong>Quarta</strong>: conferir notas “sensíveis” (importações, substituição tributária, devoluções).</li>
+              <li><strong>Sexta</strong>: atualizar quadro de fechamento, registrar bloqueios por área (compras, estoque, fiscal, financeiro).</li>
+            </ul>
+            <p>
+              Já é o suficiente para você chegar na última semana com menos “surpresas”
+              e ganhar fôlego para análises mais qualificadas.
+            </p>
+
+            <!-- SEÇÃO 6 COM BLOCO PREMIUM -->
+            <div class="article-ia-highlight">
+              <div class="article-ia-chip">Ferramentas &amp; IA na prática</div>
+              <h2>6. Conectando isso com ferramentas e IA na PME</h2>
+              <p>
+                Se você quiser apoio extra para documentar essas rotinas e criar checklists
+                com IA, o <a href="/prompts-pme/">Painel de Prompts Inteligentes para PMEs</a>
+                pode te ajudar a transformar esses passos em roteiros prontos para o dia a dia.
+              </p>
+              <p>
+                E, conforme você for amadurecendo o fechamento contínuo, vale explorar a
+                <a href="/biblioteca/">Biblioteca da Fluxoteca</a> para testar outras
+                ferramentas que organizam dados e decisões sem complicar.
+              </p>
+            </div>
+
+            <!-- CTA final do artigo -->
+            <div class="article-cta">
+              <p>
+                Se este artigo fez sentido para sua rotina, talvez você também goste de ler:
+                <br>
+                <a href="/blog/quando-o-problema-nao-e-o-erp.html">
+                  Quando o problema não é o ERP: ruídos entre compras, estoque, fiscal e contabilidade
+                </a>
+              </p>
+              <div class="article-cta-links">
+                <a href="/blog/">Voltar para o Blog</a>
+                <a href="/biblioteca/">Explorar a Biblioteca</a>
+              </div>
+            </div>
+
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL igual à do blog -->
+    <section class="blog-cta-section">
+      <div class="container">
+        <div class="blog-cta-grid">
+          <div class="blog-cta-card">
+            <h3>Explorar a Biblioteca da Fluxoteca</h3>
+            <p>Se este artigo falou com a sua rotina, a Biblioteca reúne ferramentas e guias práticos para você transformar leitura em ação dentro da PME.</p>
+            <a href="https://fluxoteca.com.br/biblioteca/" class="btn btn-primary">
+              Abrir Biblioteca Completa
+            </a>
+          </div>
+          <div class="blog-cta-card">
+            <h3>Conhecer o Painel de Prompts PME</h3>
+            <p>Um painel organizado de prompts para usar IA em tarefas reais de finanças, operações e decisões do dia a dia, sem ficar perdida(o) no chat.</p>
+            <a href="https://fluxoteca.com.br/prompts-pme/" class="btn btn-secondary">
+              Ver painel de Prompts
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer-inner">
+          <span>@2025 Fluxoteca · Ferramentas inteligentes para PMEs.</span>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- JS específico dos artigos -->
+  <script src="assets/js/blog-article.js" defer></script>
+</body>
+</html>

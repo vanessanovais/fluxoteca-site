@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fluxoteca • Em breve</title>
+  <meta name="description" content="Fluxoteca em breve. Ecossistema de clareza para PMEs com ferramentas, jornadas e conteúdo prático." />
+  <link rel="canonical" href="https://fluxoteca.com.br" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0b1220" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="referrer" content="no-referrer-when-downgrade" />
+  <meta name="google-site-verification" content="4jnswUdWZLU-o817rV2gakLyGUmELHS2o-8t-kbYRPs" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Fluxoteca" />
+  <meta property="og:title" content="Fluxoteca • Em breve" />
+  <meta property="og:description" content="Ecossistema de clareza para PMEs com ferramentas, jornadas e conteúdo prático." />
+  <meta property="og:url" content="https://fluxoteca.com.br" />
+  <meta property="og:image" content="https://fluxoteca.com.br/og-fluxoteca.png" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fluxoteca • Em breve" />
+  <meta name="twitter:description" content="Ecossistema de clareza para PMEs com ferramentas, jornadas e conteúdo prático." />
+  <meta name="twitter:image" content="https://fluxoteca.com.br/og-fluxoteca.png" />
+
+  <!-- JSON-LD básico -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Fluxoteca",
+    "url":"https://fluxoteca.com.br"
+  }
+  </script>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXY7XHLX32"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-FXY7XHLX32');
+  </script>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      color: #fff;
+      background: url('imagem_site.svg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .overlay {
+      background: rgba(0,0,0,0.6);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 { font-size: clamp(36px,6vw,64px); margin-bottom: 1rem; line-height: 1.05; }
+    h2 { font-size: clamp(18px,2.2vw,24px); margin-bottom: 2rem; font-weight: normal; max-width: 920px; color: #e1e7f7; }
+    nav { margin-top: 1.5rem; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    nav a {
+      background: rgba(255,255,255,0.95);
+      color: #000;
+      padding: 0.8rem 1.6rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: filter .2s ease;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    nav a:hover { filter: brightness(0.94); }
+    footer {
+      background: rgba(0,0,0,0.7);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #d0d7ec;
+    }
+    :focus-visible { outline: 2px solid #7bd88f; outline-offset: 2px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Em breve: Biblioteca Fluxoteca</h1>
+    <h2>Um ecossistema para transformar processos confusos em fluxos que funcionam de verdade.</h2>
+<h2><strong>Ferramentas interativas, jornadas práticas e conteúdo que vira decisão confiável.</strong></h2>
+    <nav aria-label="Atalhos">
+      <a id="link-site" href="https://www.vanessanovais.com.br" title="Visitar site pessoal Vanessa Novais" rel="noopener">Site pessoal</a>
+      <a id="cta-zap" href="#" data-w1="55" data-w2="47" data-w3="99987" data-w4="6341" rel="nofollow noopener">Contato</a>
+    </nav>
+  </div>
+
+  <footer>
+    © <span id="y"></span> Fluxoteca. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    // Ano automático
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // WhatsApp camuflado: monta o número só no clique
+    const zap = document.getElementById('cta-zap');
+    zap?.addEventListener('click', function(e){
+      e.preventDefault();
+      const p = ['+', this.dataset.w1, this.dataset.w2, this.dataset.w3, this.dataset.w4].join('');
+      const numero = p.replace(/\D/g,''); // 5547999876341
+      const msg = encodeURIComponent('Oi Vanessa, vim do site da Fluxoteca.');
+      // GA4 evento de clique no contato
+      gtag('event', 'click_contact', {
+        event_category: 'engagement',
+        event_label: 'whatsapp',
+        value: 1,
+        method: 'wa_me'
+      });
+      location.href = 'https://wa.me/' + numero + '?text=' + msg;
+    });
+
+    // GA4 evento de clique no site pessoal
+    const site = document.getElementById('link-site');
+    site?.addEventListener('click', function(){
+      gtag('event', 'click_site_pessoal', {
+        event_category: 'engagement',
+        event_label: this.href,
+        value: 1
+      });
+    });
+  </script>
+</body>
+</html>

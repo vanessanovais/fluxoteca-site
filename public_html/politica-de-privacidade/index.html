@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Política de Privacidade | Fluxoteca</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Política de Privacidade da Fluxoteca. Entenda como seus dados são coletados, utilizados e protegidos nos sites, conteúdos e produtos digitais.">
+  <link rel="canonical" href="https://fluxoteca.com.br/politica-de-privacidade/">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph básico -->
+  <meta property="og:title" content="Política de Privacidade | Fluxoteca">
+  <meta property="og:description" content="Saiba como a Fluxoteca cuida dos seus dados nos sites, conteúdos e produtos digitais.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fluxoteca.com.br/politica-de-privacidade/">
+
+<style>
+  /* ===== VARIÁVEIS BÁSICAS (ALINHADAS À PÁGINA PRINCIPAL) ===== */
+  :root {
+    --bg-primary: #fafafa;
+    --bg-secondary: #ffffff;
+
+    --text-primary: #0a0a0a;
+    --text-secondary: #525252;
+    --text-muted: #737373;
+
+    --accent-secondary: #6366f1; /* roxinho Fluxoteca */
+    --border-color: #e5e5e5;
+
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  [data-theme="dark"] {
+    /* Se o script de tema estiver ativo, mantém tudo legível.
+       Mesmo no dark, o card continua claro. */
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #ffffff;
+
+    --text-primary: #0a0a0a;
+    --text-secondary: #4b5563;
+    --text-muted: #6b7280;
+
+    --border-color: #e5e5e5;
+  }
+
+  /* ===== RESET BÁSICO ===== */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+
+    /* se essa página estiver dentro do layout principal
+       o padding-left garante espaço para a sidebar */
+    padding-left: 104px;
+  }
+
+  /* ===== LAYOUT DA PÁGINA LEGAL ===== */
+  .page-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 80px 24px 96px;
+  }
+
+  .legal-shell {
+    position: relative;
+    background: #ffffff;                /* fundo branco do card */
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    box-shadow: var(--shadow-sm);
+    padding: 40px 40px 48px;
+  }
+
+  .legal-inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ===== CHAVE / ETIQUETA SUPERIOR ===== */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.25rem 0.8rem;
+    border-radius: 999px;
+    background: #eef2ff;
+    border: 1px solid #c7d2fe;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #4f46e5;
+    margin-bottom: 0.9rem;
+  }
+
+  .chip-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 999px;
+    background: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+  }
+
+  /* ===== TÍTULOS E TEXTOS ===== */
+  h1, h2, h3 {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    color: var(--text-primary);
+  }
+
+  h1 {
+    font-size: 2.3rem;
+    margin-bottom: 0.4rem;
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 60%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .page-subtitle {
+    font-size: 0.98rem;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    max-width: 40rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  h2 .section-badge {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #4f46e5;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid #c7d2fe;
+    background: #eef2ff;
+  }
+
+  h3 {
+    font-size: 1.02rem;
+    margin-top: 1.4rem;
+    margin-bottom: 0.35rem;
+  }
+
+  p, li {
+    font-size: 0.96rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+
+  p + p {
+    margin-top: 0.5rem;
+  }
+
+  ul {
+    padding-left: 1.1rem;
+    margin-bottom: 0.9rem;
+  }
+
+  li + li {
+    margin-top: 0.2rem;
+  }
+
+  /* ===== CAIXA DE RESUMO ===== */
+  .highlight-box {
+    border-radius: 16px;
+    border: 1px solid #d4d4ff;
+    padding: 0.95rem 1.2rem;
+    background: #f5f3ff; /* lilás bem claro */
+    margin: 1.4rem 0 1.8rem;
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+  }
+
+  /* ===== DIVISOR ===== */
+  .section-divider {
+    margin: 1.8rem 0 1.2rem;
+    height: 1px;
+    border: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(229, 231, 235, 0),
+      rgba(209, 213, 219, 1),
+      rgba(229, 231, 235, 0)
+    );
+  }
+
+  /* ===== LINKS ===== */
+  a {
+    color: var(--accent-secondary);
+    text-decoration: none;
+    position: relative;
+  }
+
+  a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 1px;
+    background: var(--accent-secondary);
+    transition: width 0.2s ease;
+  }
+
+  a:hover::after {
+    width: 100%;
+  }
+
+  /* ===== LISTA MENOR ===== */
+  .mini-list {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  /* ===== RODAPÉ LEGAL ===== */
+  .legal-meta {
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .legal-meta p + p {
+    margin-top: 0.25rem;
+  }
+
+  /* ===== RESPONSIVO ===== */
+  @media (max-width: 768px) {
+    body {
+      padding-left: 0; /* no mobile normalmente não tem sidebar fixa */
+    }
+
+    .page-wrapper {
+      padding: 64px 16px 80px;
+    }
+
+    .legal-shell {
+      padding: 28px 20px 32px;
+      border-radius: 20px;
+    }
+
+    h1 {
+      font-size: 1.9rem;
+    }
+
+    h2 {
+      font-size: 1.18rem;
+    }
+  }
+</style>
+
+</head>
+<body>
+  <main class="page-wrapper" aria-labelledby="page-title">
+    <section class="legal-shell">
+      <div class="legal-inner">
+        <span class="chip">
+          <span class="chip-dot"></span>
+          Política de Privacidade
+        </span>
+
+        <h1 id="page-title">Política de Privacidade da Fluxoteca</h1>
+        <p class="page-subtitle">
+          Nesta página você encontra, em linguagem direta, como a Fluxoteca trata os seus dados ao
+          acessar nossos sites, receber conteúdos, participar de jornadas ou adquirir produtos digitais
+          como o “Prompts Inteligentes para PMEs &mdash; Guia + Painel Interativo”.
+        </p>
+
+        <div class="highlight-box">
+          <strong>Resumo rápido:</strong> usamos dados apenas na medida necessária para entregar conteúdos,
+          produtos e comunicações relacionados à Fluxoteca, com foco em segurança, clareza e respeito à
+          sua privacidade, de acordo com a legislação brasileira, incluindo a Lei Geral de Proteção de
+          Dados (LGPD &mdash; Lei nº 13.709/2018).
+        </div>
+
+        <hr class="section-divider">
+
+        <h2><span class="section-badge">01</span> Quem somos e onde esta política se aplica</h2>
+        <p>
+          A <strong>Fluxoteca</strong> é um ecossistema digital criado por <strong>Vanessa Novais</strong>,
+          com foco em ferramentas, conteúdos e produtos voltados para donos, gestoras e profissionais de PMEs.
+        </p>
+        <p>Esta Política de Privacidade se aplica a:</p>
+        <ul>
+          <li>Sites e páginas sob o domínio <strong>fluxoteca.com.br</strong>;</li>
+          <li>Materiais gratuitos disponibilizados em formulários, jornadas e listas de e-mail;</li>
+          <li>Produtos digitais pagos, como o Guia e o Painel Interativo de Prompts para PMEs;</li>
+          <li>Comunicações enviadas por e-mail em nome da Fluxoteca.</li>
+        </ul>
+
+        <p>
+          Ao navegar pelos sites, preencher formulários, adquirir produtos ou acessar conteúdos
+          protegidos, você declara que leu e concorda com os termos desta Política.
+        </p>
+
+        <hr class="section-divider">
+
+        <h2><span class="section-badge">02</span> Quais dados coletamos e por quê</h2>
+        <p>Os dados que coletamos variam conforme a forma como você se relaciona com a Fluxoteca.</p>
+
+        <h3>2.1 Acesso seguro por token temporário</h3>
+        <p>
+          O acesso aos conteúdos premium da Fluxoteca, como o Guia e o Painel Interativo de Prompts, é protegido por um
+          <strong>token temporário de segurança</strong>. Esse token é gerado automaticamente quando você entra na área
+          de membros da plataforma de pagamento (por exemplo, Kiwify) e funciona como uma chave digital que libera o
+          acesso por um período limitado.
+        </p>
+
+        <ul>
+          <li><strong>Validade:</strong> o token expira após algumas horas e é renovado sempre que você faz login novamente;</li>
+          <li><strong>Finalidade:</strong> impedir compartilhamento indevido e proteger o acesso individual adquirido na compra;</li>
+          <li><strong>Vinculação técnica:</strong> o token pode registrar informações mínimas de identificação técnica, como IP e navegador,
+              exclusivamente para fins de segurança e controle de acesso;</li>
+          <li><strong>Revalidação:</strong> se o token expirar, basta acessar sua área de membros novamente para liberar um novo acesso;</li>
+          <li><strong>Proteção do conteúdo:</strong> tentativas de reutilizar ou distribuir links protegidos podem gerar bloqueio automático.</li>
+        </ul>
+
+        <p>
+          Esse sistema não coleta dados sensíveis, não faz rastreamento de comportamento e serve apenas para garantir que
+          cada cliente tenha acesso seguro e exclusivo ao conteúdo que adquiriu.
+        </p>
+
+        <h3>2.2 Dados fornecidos diretamente por você</h3>
+        <p>Quando você interage com a Fluxoteca, podemos pedir alguns dados, por exemplo:</p>
+        <ul>
+          <li><strong>Formulários de conteúdo gratuito:</strong> nome, e-mail, área de atuação, tamanho da empresa, principais desafios;</li>
+          <li><strong>Compra de produtos:</strong> dados necessários para processar o pagamento e liberar o acesso na área de membros, coletados principalmente pela plataforma de pagamento (como Kiwify);</li>
+          <li><strong>Contato direto:</strong> mensagens enviadas por e-mail ou formulário de contato, com o conteúdo que você escreve.</li>
+        </ul>
+        <p>Esses dados são utilizados para:</p>
+        <ul class="mini-list">
+          <li>entregar o conteúdo solicitado;</li>
+          <li>liberar e manter o acesso aos produtos adquiridos;</li>
+          <li>enviar comunicações sobre temas relacionados à Fluxoteca e aos produtos que você já demonstrou interesse.</li>
+        </ul>
+
+        <h3>2.3 Dados de navegação e uso do site</h3>
+        <p>Podemos coletar automaticamente alguns dados técnicos quando você visita nossos sites, por exemplo:</p>
+        <ul>
+          <li>informações de dispositivo, sistema operacional e navegador;</li>
+          <li>páginas acessadas, tempo de permanência e cliques em determinados elementos;</li>
+          <li>endereço IP de forma anonimizada ou pseudonimizada, quando aplicável.</li>
+        </ul>
+        <p>
+          Esses dados são usados de forma agregada para entender como o site está sendo utilizado,
+          melhorar a experiência de navegação e, quando configurado, alimentar métricas básicas de
+          ferramentas de análise (por exemplo, Google Analytics).
+        </p>
+
+        <hr class="section-divider">
+
+        <h2><span class="section-badge">03</span> Como usamos seus dados</h2>
+        <p>De forma geral, usamos seus dados para:</p>
+        <ul>
+          <li>entregar conteúdos gratuitos que você solicitou (materiais, newsletters, jornadas, etc.);</li>
+          <li>liberar, manter e conferir acesso a produtos pagos adquiridos;</li>
+          <li>enviar comunicações sobre atualizações, novos conteúdos, ferramentas e ofertas da Fluxoteca;</li>
+          <li>melhorar a navegação, usabilidade e relevância dos nossos materiais;</li>
+          <li>cumprir obrigações legais, fiscais e contratuais relacionadas às vendas realizadas.</li>
+        </ul>
+        <p>
+          Sempre que possível, trabalhamos com dados de maneira agregada ou pseudonimizada, evitando
+          identificar diretamente indivíduos quando isso não for necessário.
+        </p>
+
+        <hr class="section-divider">
+
+        <h2><span class="section-badge">04</span> Cookies e tecnologias semelhantes</h2>
+        <p>
+          Os sites da Fluxoteca podem utilizar <strong>cookies</strong> e tecnologias semelhantes para:
+        </p>
+        <ul>
+          <li>manter sessões ativas e lembrar preferências básicas de navegação;</li>
+          <li>medir acesso e desempenho de páginas;</li>
+          <li>registrar eventos relevantes para melhorar a experiência do usuário.</li>
+        </ul>
+        <p>
+          Você pode gerenciar cookies diretamente no seu navegador, bloqueando ou excluindo,
+          de acordo com as suas preferências. Ao desativar determinados cookies, algumas funções do site
+          podem ficar limitadas.
+        </p>
+
+        <hr class="section-divider">
+
+        <h2><span class="section-badge">05</span> Compartilhamento de dados com terceiros</h2>
+        <p>
+          A Fluxoteca não vende nem aluga seus dados pessoais. O eventual compartilhamento ocorre apenas
+          com parceiros essenciais para a operação dos serviços, por exemplo:
+        </p>
+        <ul>
+          <li><strong>Plataformas de pagamento e área de membros</strong> (como Kiwify), para processar compras e liberar acesso a produtos;</li>
+          <li><strong>Plataformas de e-mail</strong>, para envio de comunicações e entrega de conteúdos solicitados;</li>
+          <li><strong>Ferramentas de análise</strong>, para métricas de acesso e melhoria de performance do site.</li>
+        </ul>
+        <p>
+          Nesses casos, buscamos atuar com plataformas que também estejam alinhadas à LGPD e possuam
+          políticas próprias de privacidade, as quais você pode consultar diretamente em seus sites.
+        </p>
+
+        <hr class="section-divider">
+
+        <h2><span class="section-badge">06</span> Seus direitos como titular de dados</h2>
+        <p>
+          De acordo com a LGPD, você possui uma série de direitos em relação aos seus dados pessoais.
+          Entre eles:
+        </p>
+        <ul>
+          <li>confirmar se tratamos ou não dados pessoais seus;</li>
+          <li>acessar os dados que temos sobre você, quando existentes;</li>
+          <li>corrigir dados incompletos, inexatos ou desatualizados;</li>
+          <li>solicitar a exclusão de dados desnecessários, excessivos ou tratados em desconformidade;</li>
+          <li>solicitar a portabilidade de dados, quando aplicável;</li>
+          <li>revogar o consentimento para usos específicos, quando a base legal for o consentimento.</li>
+        </ul>
+        <p>
+          Para exercer qualquer um desses direitos, você pode entrar em contato pelo e-mail
+          <a href="mailto:contato@fluxoteca.com.br">contato@fluxoteca.com.br</a>. Vamos analisar cada
+          solicitação com cuidado e responder dentro de um prazo razoável, observando os limites legais
+          e técnicos.
+        </p>
+
+        <hr class="section-divider">
+
+        <h2><span class="section-badge">07</span> Segurança das informações</h2>
+        <p>
+          A Fluxoteca adota medidas técnicas e organizacionais para proteger seus dados contra acessos
+          não autorizados, uso indevido ou divulgação indevida. Entre essas medidas estão:
+        </p>
+        <ul>
+          <li>uso de senhas fortes e controles de acesso em áreas administrativas;</li>
+          <li>mecanismos de token temporário para proteção de conteúdos premium;</li>
+          <li>parceria com plataformas que utilizam conexões seguras (HTTPS) e práticas modernas de segurança.</li>
+        </ul>
+        <p>
+          Nenhum ambiente online é 100% imune a riscos, porém buscamos reduzir ao máximo a exposição e
+          atuar com transparência em eventual incidente relevante.
+        </p>
+
+        <hr class="section-divider">
+
+        <h2><span class="section-badge">08</span> Retenção e descarte de dados</h2>
+        <p>
+          Mantemos seus dados pelo tempo necessário para cumprir as finalidades descritas nesta Política,
+          incluindo:
+        </p>
+        <ul>
+          <li>tempo de relacionamento ativo (por exemplo, enquanto você acessa conteúdos ou produtos);</li>
+          <li>períodos exigidos por lei ou por obrigações fiscais e contábeis;</li>
+          <li>ou até que você solicite a exclusão, quando isso for possível legalmente.</li>
+        </ul>
+        <p>
+          Quando os dados não forem mais necessários e não houver base legal para mantê-los, eles serão
+          eliminados ou anonimizados.
+        </p>
+
+        <hr class="section-divider">
+
+        <h2><span class="section-badge">09</span> Ferramentas de IA e conteúdos gerados</h2>
+        <p>
+          Parte dos conteúdos da Fluxoteca, especialmente os relacionados a prompts e fluxos inteligentes,
+          foi desenhada para ser usada em conjunto com ferramentas de inteligência artificial de terceiros
+          (como ChatGPT, Gemini, Copilot e outras).
+        </p>
+        <ul>
+          <li>
+            cada ferramenta possui termos de uso e políticas próprias, que você deve conhecer e respeitar;
+          </li>
+          <li>
+            a Fluxoteca não controla o funcionamento dessas ferramentas nem as respostas geradas por elas;
+          </li>
+          <li>
+            é responsabilidade do usuário revisar, validar e adaptar os resultados antes de usar em documentos,
+            decisões, processos ou comunicações reais.
+          </li>
+        </ul>
+
+        <hr class="section-divider">
+
+        <h2><span class="section-badge">10</span> Atualizações desta Política</h2>
+        <p>
+          Esta Política de Privacidade pode ser atualizada periodicamente, seja para refletir mudanças nos
+          serviços da Fluxoteca, seja para se adequar a novas exigências legais ou melhorias de clareza.
+        </p>
+        <p>
+          Quando alterações relevantes forem realizadas, podemos comunicar por e-mail ou por avisos em nossas
+          páginas. A versão mais recente estará sempre disponível em
+          <strong>https://fluxoteca.com.br/politica-de-privacidade/</strong>.
+        </p>
+
+        <hr class="section-divider">
+
+        <h2><span class="section-badge">11</span> Como falar com a Fluxoteca sobre privacidade</h2>
+        <p>
+          Se você tiver dúvidas sobre esta Política, sobre o uso dos seus dados ou sobre alguma situação
+          específica, pode entrar em contato pelo canal oficial:
+        </p>
+        <ul>
+          <li>E-mail: <a href="mailto:contato@fluxoteca.com.br">contato@fluxoteca.com.br</a></li>
+        </ul>
+
+        <div class="legal-meta">
+          <p><strong>Controladora dos dados:</strong> Fluxoteca, representada por Vanessa Novais.</p>
+          <p>Última atualização: novembro de 2025.</p>
+          <p>
+            Esta Política tem caráter informativo geral e não substitui aconselhamento jurídico específico.
+            Em caso de dúvidas legais, consulte um profissional da área.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
