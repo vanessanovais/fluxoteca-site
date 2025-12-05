@@ -336,25 +336,24 @@ body {
    COMPONENTES DE NAVEGAÇÃO
    ============================================= */
 
-/* Header principal, igual ao Painel */
 /* Header */
-  header {
+header {
     position: sticky;
     top: 0;
     z-index: 50;
     padding: var(--spacing-lg);
-    background: var(--blur-xl);
+    background: rgba(10, 10, 15, 0.85);
     backdrop-filter: var(--blur-xl);
     border-bottom: 1px solid var(--border-subtle);
     transition: all var(--transition-normal);
-    will-change:transform;
-  }
+    will-change: transform;
+}
 
-  header.scrolled {
+header.scrolled {
     background: var(--bg-primary);
     box-shadow: var(--shadow-lg);
     border-bottom-color: var(--border-default);
-  }
+}
 
   .header-content {
     max-width: 1280px;
@@ -406,6 +405,20 @@ body {
     .hero-logo-container {
         margin-bottom: 30px;
     }
+}
+
+/* Empilha grades em telas menores */
+@media (max-width: 640px) {
+  .standard-grid-2,
+  .standard-grid-3,
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .standard-card,
+  .comparison-card {
+    padding: var(--spacing-lg);
+  }
 }
 
 @media (max-width: 480px) {
@@ -686,25 +699,6 @@ body {
 [data-theme="light"] .moon-icon {
     opacity: 0;
     transform: rotate(-180deg) scale(0.8);
-}
-
-@media (max-width: 480px) {
-    .quick-nav-toggle {
-        right: 12px;
-        width: 40px;
-        height: 40px;
-    }
-}
-
-/* Responsivo específico do SIDEBAR */
-@media (max-width: 480px) {
-    .sidebar-nav {
-        left: 12px;
-        bottom: 8%;
-        padding: 10px 6px;
-        transform: scale(0.85); 
-        transform-origin: center;
-    }
 }
 
 /* Some em telas muito pequenas */
@@ -1172,6 +1166,76 @@ details[open] .summary-icon {
     border-color: var(--border-accent);
 }
 
+/* ====== Toggle dos Prompts Bônus ====== */
+
+.standard-card.is-open .standard-example-content {
+  /* Quando estiver aberto, aparece normal */
+  display: block;
+}
+
+.standard-example-content[hidden] {
+  display: none;
+}
+
+.example-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+/* Botão de abrir/fechar prompt */
+.prompt-toggle-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  color: var(--text-soft);
+  transition: background var(--transition-fast), 
+              color var(--transition-fast), 
+              transform var(--transition-fast);
+}
+
+.prompt-toggle-btn:hover {
+  background: var(--surface-hover);
+  color: var(--text-primary);
+}
+
+.prompt-toggle-btn svg {
+  transition: transform var(--transition-fast);
+}
+
+/* Quando o card estiver aberto, gira o ícone */
+.standard-card.is-open .prompt-toggle-btn svg {
+  transform: rotate(180deg);
+}
+
+.prompt-preview {
+  padding: var(--spacing-md);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+
+/* quando abrir, você pode reforçar visualmente que há mais conteúdo */
+.standard-card.is-open .prompt-preview {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.prompt-full {
+  padding: var(--spacing-md);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  background: var(--surface);
+}
+
 /* =============================================
    COMPONENTES DE EXEMPLO
    ============================================= */
@@ -1291,7 +1355,7 @@ details[open] .summary-icon {
 .reading-progress-bar {
     width: 100%;
     height: 8px;
-    background: var(--surface-elevated);
+    background: var(--surface-hover);
     border-radius: 4px;
     overflow: hidden;
     margin-bottom: var(--spacing-sm);
@@ -1835,11 +1899,21 @@ details summary:focus-visible {
     }
     
     .quick-nav-toggle {
-        right: var(--spacing-sm);
-        width: 36px;
-        height: 36px;
+        right: 12px;
+        width: 40px;
+        height: 40px;
+	top: 22%;
+    }
+
+    .sidebar-nav {
+        left: 12px;
+        bottom: 8%;
+        padding: 10px 6px;
+        transform: scale(0.85); 
+        transform-origin: center;
     }
 }
+
 
 @media (max-width: 360px) {
     :root {
@@ -3530,610 +3604,833 @@ details summary:focus-visible {
   </div>
 </section>
 
-	<!-- Prompts Bônus -->
+<!-- Prompts Bônus -->
 <section class="section" id="bonus">
   <div class="container">
-    <h2 class="section-title">Prompts Bônus por Área de Negócio</h2>
+    <h2 class="section-title">Prompts Bônus Exclusivos</h2>
     <p class="section-subtitle">
-      Aqui você encontra versões completas de prompts estruturados, um para cada área. 
-      São exemplos reais com a mesma arquitetura do Painel, pensados para acelerar seu raciocínio, 
-      destravar ideias e deixar a tomada de decisão mais clara e rápida.
+      Estes prompts extras expandem o método para áreas que influenciam diretamente a rotina do dono da PME,
+      como tomada de decisão, foco, energia, criatividade e liderança humana.
+      São exemplos avançados que mostram como a IA pode organizar não só processos,
+      mas também o próprio raciocínio.
     </p>
     
     <div class="section-standard">
-      <!-- Gestão & Estratégia -->
+
+      <!-- ========================================================= -->
+      <!-- CARD 1 – Reset mental rápido -->
+      <!-- ========================================================= -->
       <div class="standard-card">
         <div class="standard-card-header">
           <div class="standard-badge primary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-            </svg>
-            Gestão & Estratégia
+            ⭐ Prompt Bônus
           </div>
         </div>
+
         <div class="card-content">
-          <h4 class="example-title">Análise SWOT aplicada aos próximos 12 meses</h4>
+          <h4 class="example-title">Reset mental rápido antes de uma decisão importante</h4>
+
           <div class="standard-example">
             <div class="example-header">
-              <button class="standard-copy-btn" onclick="copyPrompt(this)">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <button
+                class="prompt-toggle-btn"
+                type="button"
+                aria-expanded="false"
+                aria-controls="prompt-bonus-1"
+                onclick="togglePrompt(this)"
+                aria-label="Mostrar ou ocultar o texto completo deste prompt"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </button>
+
+              <button class="standard-copy-btn" type="button" onclick="copyPrompt(this)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2">
                   <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                   <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                 </svg>
-                Copiar Prompt
+                <span>Copiar Prompt</span>
               </button>
             </div>
-            <div class="standard-example-content prompt-text">
-              🧠 <strong>Atue como:</strong> Consultor(a) Estratégico(a) especializado(a) em PMEs brasileiras, com foco em execução prática.<br><br>
 
-              🎯 <strong>Contexto:</strong> Quero organizar uma visão estratégica clara da empresa para os próximos 12 meses. 
-              Preciso enxergar forças, fraquezas, oportunidades e ameaças de forma aplicada à realidade da PME, 
-              para transformar essa análise em um pequeno plano de ação com prioridades bem definidas.<br><br>
+            <div class="standard-example-content">
+              <p class="prompt-preview">
+                Mini-reset para organizar o pensamento quando surge uma decisão importante e a mente está com ruído.
+              </p>
 
-              📊 <strong>Considere as informações disponíveis:</strong><br>
-              1. Descrição do negócio, principais produtos/serviços e público-alvo atual.<br>
-              2. Principais canais de venda utilizados hoje (online, físico, representantes etc.).<br>
-              3. Diferenciais que os clientes costumam elogiar e reclamações mais frequentes.<br>
-              4. Principais mudanças recentes no mercado ou no comportamento dos clientes.<br>
-              5. Recursos internos relevantes (equipe-chave, processos, tecnologia, caixa disponível para investir).<br><br>
+              <div
+                id="prompt-bonus-1"
+                class="prompt-full prompt-text"
+                hidden
+              >
+                🧠 <strong>Atue como:</strong> Mentor(a) de tomada de decisão para empreendedores, especializado(a) em clareza emocional e raciocínio objetivo.<br><br>
 
-              ⚙️ <strong>Siga estas diretrizes:</strong><br>
-              • Objetivo principal: construir uma matriz SWOT aplicada aos próximos 12 meses e convertê-la em 3 a 5 decisões estratégicas prioritárias.<br>
-              • Focar em ações factíveis para uma PME, evitando projetos gigantescos ou dependentes de grandes investimentos.<br>
-              • Destacar claramente o que deve ser mantido, melhorado, criado e abandonado (enfoque prático, não acadêmico).<br>
-              • Usar linguagem simples, sem jargões de consultoria ou termos excessivamente técnicos.<br>
-              • Sempre que sugerir uma ação, indicar o impacto esperado (receita, margem, organização, relação com cliente etc.).<br><br>
+                🎯 <strong>Contexto:</strong> Estou diante de uma decisão importante e sinto ansiedade leve, ruído mental e dificuldade de enxergar as opções com lógica. Quero reorganizar o pensamento e chegar a uma decisão mais calma e estruturada.<br><br>
 
-              ❗ <strong>Quando faltarem dados:</strong><br>
-              Se faltar informação sobre concorrência, mercado ou perfil de cliente, peça primeiro 5 a 7 linhas descrevendo 
-              como o dono da empresa enxerga o negócio hoje (pontos fortes, fracos e principais dores). 
-              Em seguida, construa a SWOT inicial com base nisso e deixe claro quais pontos precisariam ser validados depois.<br><br>
+                📊 <strong>Considere:</strong><br>
+                1. Qual é a decisão e o prazo real.<br>
+                2. Sintomas emocionais ou físicos presentes.<br>
+                3. Alternativas que já considerei.<br>
+                4. Consequências de curto e longo prazo.<br>
+                5. Melhor e pior cenário que visualizei até agora.<br><br>
 
-              📝 <strong>Apresente o resultado assim:</strong><br>
-              1. Matriz SWOT em formato de tabela Markdown, com 3 a 5 itens em cada quadrante (Forças, Fraquezas, Oportunidades, Ameaças).<br>
-              2. Síntese em texto de até 12 linhas, destacando os conflitos principais (ex.: força interna X ameaça externa).<br>
-              3. Lista de 3 a 5 decisões estratégicas prioritárias para os próximos 12 meses, explicando:<br>
-              &nbsp;&nbsp;• o que fazer<br>
-              &nbsp;&nbsp;• por que isso é prioritário<br>
-              &nbsp;&nbsp;• qual impacto esperado<br>
-              4. Um pequeno quadro “Começar / Fortalecer / Ajustar / Parar” com exemplos concretos para a empresa.
+                ⚙️ <strong>Siga estas diretrizes:</strong><br>
+                • Comece com um diagnóstico em 5 linhas, traduzindo a situação em linguagem simples.<br>
+                • Analise a decisão em 3 lentes: racional, emocional e prática (logística/recursos).<br>
+                • Reduza tudo a 2 ou 3 caminhos possíveis, com impactos claros e honestos.<br>
+                • Use linguagem acolhedora, sem jargões psicológicos complicados.<br>
+                • Feche com uma recomendação objetiva e um micro ritual de 60 segundos para estabilizar foco.<br><br>
+
+                ❗ <strong>Quando faltarem dados:</strong><br>
+                Peça que eu descreva, em até 3 linhas cada: a decisão, como me sinto e o que temo que aconteça.<br><br>
+
+                📝 <strong>Apresente o resultado assim:</strong><br>
+                1. Mini diagnóstico em até 8 linhas.<br>
+                2. Análise em 3 lentes (racional, emocional, prática).<br>
+                3. Lista de 2 ou 3 caminhos possíveis com impactos.<br>
+                4. Recomendação final objetiva.<br>
+                5. Micro ritual rápido de 60 segundos para clarear a mente.
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Finanças -->
+
+      <!-- ========================================================= -->
+      <!-- CARD 2 – Redução da sobrecarga mental -->
+      <!-- ========================================================= -->
       <div class="standard-card">
         <div class="standard-card-header">
           <div class="standard-badge primary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="12" y1="1" x2="12" y2="23"></line>
-              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-            </svg>
-            Finanças
+            ⭐ Prompt Bônus
           </div>
         </div>
+
         <div class="card-content">
-          <h4 class="example-title">Raio-x de custos por área com plano de redução</h4>
+          <h4 class="example-title">Redução da sobrecarga mental em dias caóticos</h4>
+
           <div class="standard-example">
             <div class="example-header">
-              <button class="standard-copy-btn" onclick="copyPrompt(this)">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <button
+                class="prompt-toggle-btn"
+                type="button"
+                aria-expanded="false"
+                aria-controls="prompt-bonus-2"
+                onclick="togglePrompt(this)"
+                aria-label="Mostrar ou ocultar o texto completo deste prompt"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </button>
+
+              <button class="standard-copy-btn" type="button" onclick="copyPrompt(this)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2">
                   <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                   <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                 </svg>
-                Copiar Prompt
+                <span>Copiar Prompt</span>
               </button>
             </div>
-            <div class="standard-example-content prompt-text">
-              🧠 <strong>Atue como:</strong> Consultor(a) de Eficiência de Custos para PMEs, com foco em ganho de margem sem comprometer a operação.<br><br>
 
-              🎯 <strong>Contexto:</strong> A empresa está com margem apertada e precisa entender, de forma simples, 
-              quais áreas ou departamentos mais pesam no resultado e onde existem desperdícios claros. 
-              Quero um guia para enxergar rapidamente onde agir primeiro e como estruturar um plano de redução de custos responsável.<br><br>
+            <div class="standard-example-content">
+              <p class="prompt-preview">
+                Uma limpeza mental guiada para reorganizar prioridades quando tudo parece urgente ao mesmo tempo.
+              </p>
 
-              📊 <strong>Considere as informações disponíveis:</strong><br>
-              1. Despesas por departamento ou centro de custo nos últimos 6 a 12 meses (mesmo que em planilha simples).<br>
-              2. Receita total no mesmo período, para estimar peso percentual de cada área no faturamento.<br>
-              3. Gastos considerados “fixos” e “variáveis” em cada área (mesmo que de forma aproximada).<br>
-              4. Eventuais aumentos recentes de custo (aluguel, folha, insumos, frete etc.).<br>
-              5. Restrições explícitas de corte (ex.: não reduzir salário de time-chave, não mexer em benefícios essenciais).<br><br>
+              <div
+                id="prompt-bonus-2"
+                class="prompt-full prompt-text"
+                hidden
+              >
+                🧠 <strong>Atue como:</strong> Facilitador(a) de redução de sobrecarga mental para profissionais multitarefas.<br><br>
 
-              ⚙️ <strong>Siga estas diretrizes:</strong><br>
-              • Objetivo principal: identificar áreas com maior potencial de economia e propor ações de redução de custos em camadas (rápidas, de curto e médio prazo).<br>
-              • Não sugerir cortes que coloquem em risco qualidade, segurança, atendimento ao cliente ou conformidade legal.<br>
-              • Classificar as sugestões em baixa, média e alta complexidade de implementação.<br>
-              • Sempre que propuser um corte, indicar o possível efeito colateral e como mitigá-lo.<br>
-              • Priorizar ações com impacto em até 3 meses, que possam ser testadas sem grandes traumas na operação.<br><br>
+                🎯 <strong>Contexto:</strong> Estou em um dia cheio, com demandas simultâneas, interrupções e sensação de descontrole. Quero reduzir a carga mental e reorganizar o que realmente importa hoje.<br><br>
 
-              ❗ <strong>Quando faltarem dados:</strong><br>
-              Se a empresa não tiver despesas separadas por departamento, oriente primeiro como agrupar as despesas em poucas categorias 
-              (ex.: Comercial, Administrativo, Operação, Logística) e, com base nesse agrupamento, faça uma análise inicial. 
-              Deixe claro quais dados deveriam ser detalhados depois para aprimorar o plano.<br><br>
+                📊 <strong>Considere:</strong><br>
+                1. Quais tarefas estão me pressionando agora.<br>
+                2. O que depende de mim e o que depende de terceiros.<br>
+                3. Prazos reais versus prazos que eu interpretei como urgentes.<br>
+                4. Meu nível de energia atual (baixo, médio, alto).<br>
+                5. Impacto real se cada tarefa atrasar 1 ou 2 dias.<br><br>
 
-              📝 <strong>Apresente o resultado assim:</strong><br>
-              1. Tabela em Markdown com colunas: Área/Departamento, % do custo total estimado, Sinais de desperdício, Ações sugeridas.<br>
-              2. Resumo executivo destacando as 3 áreas com maior potencial de economia imediata.<br>
-              3. Lista de ações priorizadas por impacto x esforço (baixa, média, alta complexidade), indicando:<br>
-              &nbsp;&nbsp;• o que fazer<br>
-              &nbsp;&nbsp;• risco principal<br>
-              &nbsp;&nbsp;• como monitorar se o corte está prejudicando a operação.<br>
-              4. Sugestão de rotina mensal simples para revisar custos e ajustar o plano ao longo do tempo.
+                ⚙️ <strong>Siga estas diretrizes:</strong><br>
+                • Comece com uma “limpeza mental” em até 6 linhas, organizando o que está na minha cabeça.<br>
+                • Reorganize as demandas em quatro grupos: fazer hoje, delegar, reagendar, cancelar.<br>
+                • Mostre com clareza quais riscos são reais e quais são exageros da minha percepção.<br>
+                • Sugira 1 ação simples, de baixa energia, para aliviar a sensação de peso imediato.<br><br>
+
+                ❗ <strong>Quando faltarem dados:</strong><br>
+                Peça que eu liste, sem filtro, tudo o que “está na minha cabeça agora” em forma de bullets.<br><br>
+
+                📝 <strong>Apresente o resultado assim:</strong><br>
+                1. Limpeza mental organizada em tópicos.<br>
+                2. Quadro com as quatro categorias (fazer, delegar, reagendar, cancelar).<br>
+                3. Top 3 ações prioritárias para hoje.<br>
+                4. Uma ação rápida de alívio imediato (de 5 a 10 minutos).
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Tributário & Fiscal -->
+
+      <!-- ========================================================= -->
+      <!-- CARD 3 – Planejamento da semana -->
+      <!-- ========================================================= -->
       <div class="standard-card">
         <div class="standard-card-header">
           <div class="standard-badge primary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14,2 14,8 20,8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-            </svg>
-            Tributário & Fiscal
+            ⭐ Prompt Bônus
           </div>
         </div>
+
         <div class="card-content">
-          <h4 class="example-title">Raio-x fiscal para identificar riscos e oportunidades</h4>
+          <h4 class="example-title">Planejamento da semana em 10 minutos</h4>
+
           <div class="standard-example">
             <div class="example-header">
-              <button class="standard-copy-btn" onclick="copyPrompt(this)">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <button
+                class="prompt-toggle-btn"
+                type="button"
+                aria-expanded="false"
+                aria-controls="prompt-bonus-3"
+                onclick="togglePrompt(this)"
+                aria-label="Mostrar ou ocultar o texto completo deste prompt"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </button>
+
+              <button class="standard-copy-btn" type="button" onclick="copyPrompt(this)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2">
                   <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                   <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                 </svg>
-                Copiar Prompt
+                <span>Copiar Prompt</span>
               </button>
             </div>
-            <div class="standard-example-content prompt-text">
-              🧠 <strong>Atue como:</strong> Consultor(a) Tributário(a) especializado(a) em PMEs, com foco em conformidade e prevenção de riscos.<br><br>
 
-              🎯 <strong>Contexto:</strong> Quero fazer um “raio-x fiscal” da empresa para entender, em linguagem simples, 
-              onde podem existir riscos de autuação, inconsistências entre fiscal e contábil ou oportunidades legais de otimização. 
-              Não quero nada fora da lei, apenas uma visão organizada para conversar melhor com o contador.<br><br>
+            <div class="standard-example-content">
+              <p class="prompt-preview">
+                Um planejamento semanal mínimo, simples e realista, com foco nas três prioridades que realmente movem o ponteiro.
+              </p>
 
-              📊 <strong>Considere as informações disponíveis:</strong><br>
-              1. Regime tributário atual (Simples, Lucro Presumido, Lucro Real) e principais atividades cadastradas (CNAEs).<br>
-              2. Estados e municípios em que a empresa opera (emissão de notas, filiais, tomadores etc.).<br>
-              3. Se a empresa vende produtos, serviços ou ambos, e se há ST, diferencial de alíquota ou retenções recorrentes.<br>
-              4. Existência (ou não) de integração entre ERP/faturamento e contabilidade.<br>
-              5. Histórico recente de notificações, autuações, malhas fiscais ou divergências em obrigações acessórias.<br><br>
+              <div
+                id="prompt-bonus-3"
+                class="prompt-full prompt-text"
+                hidden
+              >
+                🧠 <strong>Atue como:</strong> Facilitador(a) de clareza pessoal especializado(a) em foco leve e produtivo.<br><br>
 
-              ⚙️ <strong>Siga estas diretrizes:</strong><br>
-              • Objetivo principal: organizar uma visão de riscos e pontos de atenção fiscais, além de indicar oportunidades legais de melhoria, sempre dentro da legislação vigente.<br>
-              • Não sugerir manobras agressivas, planejamento abusivo ou qualquer prática que possa ser entendida como sonegação.<br>
-              • Sempre reforçar que as recomendações devem ser validadas com o contador ou consultor tributário responsável.<br>
-              • Explicar os termos técnicos em linguagem acessível, conectando cada risco a possíveis consequências práticas (multas, autuações, retrabalho, travamento de certidões etc.).<br>
-              • Destacar também pontos positivos já existentes, para a empresa entender o que está funcionando bem.<br><br>
+                🎯 <strong>Contexto:</strong> Quero iniciar a semana entendendo o essencial, sem criar listas gigantes ou planos impossíveis de cumprir.<br><br>
 
-              ❗ <strong>Quando faltarem dados:</strong><br>
-              Se não houver clareza sobre notificações, integrações ou regime, mostre primeiro quais perguntas o empresário deve fazer ao contador 
-              (em tópicos objetivos) para conseguir as informações mínimas. 
-              Em seguida, trabalhe com cenários possíveis, deixando claro que são hipóteses a serem confirmadas.<br><br>
+                📊 <strong>Considere:</strong><br>
+                1. Projetos ativos que não posso abandonar.<br>
+                2. Obrigações fixas (reuniões, fechamentos, compromissos pessoais).<br>
+                3. Limite real de energia ao longo da semana.<br>
+                4. Prazos inegociáveis que já existem.<br>
+                5. Coisas que quero avançar “pouco a pouco” sem pressão.<br><br>
 
-              📝 <strong>Apresente o resultado assim:</strong><br>
-              1. Quadro em Markdown com três colunas: “Área”, “Possível risco ou oportunidade”, “Comentário em linguagem simples”.<br>
-              2. Lista de 3 a 7 pontos de atenção prioritários, explicando por que cada um merece cuidado.<br>
-              3. Lista de 3 a 5 possíveis oportunidades legais (melhor enquadramento de operações, revisão de rotinas, ajustes de cadastro etc.), sem entrar em manobras agressivas.<br>
-              4. Conjunto de perguntas objetivas que o empresário deve levar ao contador para validar os próximos passos.
+                ⚙️ <strong>Siga estas diretrizes:</strong><br>
+                • Traga no máximo 3 prioridades reais para a semana.<br>
+                • Use blocos de intenção (períodos focados) em vez de listas de 30 tarefas.<br>
+                • Considere um “plano B” caso um dia saia do controle.<br>
+                • Feche com um resumo simples que caiba em 8 linhas.<br><br>
+
+                ❗ <strong>Quando faltarem dados:</strong><br>
+                Peça que eu liste rapidamente compromissos fixos e projetos ativos desta semana.<br><br>
+
+                📝 <strong>Apresente o resultado assim:</strong><br>
+                1. Três prioridades da semana, com justificativa curta.<br>
+                2. Sugestão de blocos de tempo (manhã/tarde/noite) para cada prioridade.<br>
+                3. Mini plano de contingência (“se X travar, faço Y”).<br>
+                4. Resumo final em até 8 linhas.
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Operações & Estoque -->
+
+      <!-- ========================================================= -->
+      <!-- CARD 4 – Ajuste de vida -->
+      <!-- ========================================================= -->
       <div class="standard-card">
         <div class="standard-card-header">
           <div class="standard-badge primary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-              <polyline points="3.27,6.96 12,12.01 20.73,6.96"></polyline>
-              <line x1="12" y1="22.08" x2="12" y2="12"></line>
-            </svg>
-            Operações & Estoque
+            ⭐ Prompt Bônus
           </div>
         </div>
+
         <div class="card-content">
-          <h4 class="example-title">Otimização de gestão de estoque e redução de perdas</h4>
+          <h4 class="example-title">Ajuste de vida quando algo saiu do eixo</h4>
+
           <div class="standard-example">
             <div class="example-header">
-              <button class="standard-copy-btn" onclick="copyPrompt(this)">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <button
+                class="prompt-toggle-btn"
+                type="button"
+                aria-expanded="false"
+                aria-controls="prompt-bonus-4"
+                onclick="togglePrompt(this)"
+                aria-label="Mostrar ou ocultar o texto completo deste prompt"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </button>
+
+              <button class="standard-copy-btn" type="button" onclick="copyPrompt(this)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2">
                   <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                   <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                 </svg>
-                Copiar Prompt
+                <span>Copiar Prompt</span>
               </button>
             </div>
-            <div class="standard-example-content prompt-text">
-              🧠 <strong>Atue como:</strong> Especialista em Operações e Gestão de Estoque para PMEs brasileiras, com foco em integração entre estoque físico, financeiro e fiscal.<br><br>
 
-              🎯 <strong>Contexto:</strong> Tenho uma empresa que cresceu sem uma política clara de estoque. Tenho itens críticos que vivem em falta, outros parados ocupando espaço, diferenças frequentes entre estoque físico e sistema e pouco tempo de equipe para fazer grandes projetos. Quero um plano simples, em fases, para reduzir perdas e ganhar previsibilidade, sem reinventar todo o sistema de uma vez.<br><br>
+            <div class="standard-example-content">
+              <p class="prompt-preview">
+                Um diagnóstico rápido para entender o que saiu do eixo e quais pequenos ajustes trazem de volta uma sensação de controle.
+              </p>
 
-              📊 <strong>Considere as informações disponíveis:</strong><br>
-              1. Principais grupos de produtos (por exemplo, matéria-prima, produtos acabados, insumos de uso interno).<br>
-              2. Itens que mais geram problema hoje (ruptura, vencimento, perda, divergência entre físico e sistema).<br>
-              3. Como o estoque é controlado hoje (ERP, planilha, caderno, “na cabeça” etc.).<br>
-              4. Frequência e forma de contagem (inventário geral, contagem cíclica, só quando “sobra tempo” etc.).<br>
-              5. Limitações de espaço físico, acesso e condições de armazenagem.<br>
-              6. Quantidade de pessoas envolvidas na rotina de estoque e quanto tempo por semana podem dedicar a melhorias.<br><br>
+              <div
+                id="prompt-bonus-4"
+                class="prompt-full prompt-text"
+                hidden
+              >
+                🧠 <strong>Atue como:</strong> Mentor(a) de realinhamento pessoal para momentos de sobrecarga ou desorganização interna.<br><br>
 
-              ⚙️ <strong>Siga estas diretrizes:</strong><br>
-              • Objetivo principal: reduzir perdas e rupturas, aproximar o estoque físico do estoque em sistema e criar rotinas simples que caibam na operação atual.<br>
-              • Priorize soluções de baixo custo, que possam ser aplicadas com o sistema e a estrutura já existentes.<br>
-              • Sempre que sugerir algo, explique o impacto prático no caixa, no retrabalho e na confiabilidade dos dados.<br>
-              • Divida as recomendações em etapas (por exemplo: arrumação mínima, contagem cíclica, revisão de parâmetros).<br>
-              • Evite propostas que dependam de projetos longos, equipe dedicada ou trocas completas de sistema.<br><br>
+                🎯 <strong>Contexto:</strong> Sinto que saí do meu eixo nos últimos dias e quero entender o que mudou, o que estou carregando a mais e qual o próximo passo mais inteligente.<br><br>
 
-              ❗ <strong>Quando faltarem dados:</strong><br>
-              Peça primeiro um recorte pequeno e viável (por exemplo, os 20 itens mais importantes em valor ou giro) e sugira como montar um controle mínimo em planilha ou relatório simples para começar. Evite fazer perguntas demais de uma vez, agrupe em blocos de no máximo 5 perguntas.<br><br>
+                📊 <strong>Considere:</strong><br>
+                1. Mudanças recentes no humor, na rotina ou no sono.<br>
+                2. Aumento de carga emocional (preocupações, conflitos, culpas).<br>
+                3. Hábitos que eu fazia e deixei de fazer.<br>
+                4. Coisas que estou evitando encarar ou decidir.<br>
+                5. Sinais físicos ou mentais de exaustão.<br><br>
 
-              📝 <strong>Apresente o resultado assim:</strong><br>
-              1. Resumo dos principais riscos e desperdícios atuais, em linguagem simples.<br>
-              2. Classificação dos itens em grupos de atenção (por exemplo: “não pode faltar”, “ocupa muito espaço”, “vence rápido”).<br>
-              3. Proposta de rotina enxuta de contagem e conferência (exemplo de inventário cíclico aplicável à realidade da PME).<br>
-              4. Lista de 3 a 5 ações práticas para os próximos 90 dias, com indicação de impacto esperado e esforço aproximado.
+                ⚙️ <strong>Siga estas diretrizes:</strong><br>
+                • Comece com um diagnóstico curto que conecte fatos, emoções e contexto.<br>
+                • Aponte padrões e pontos cegos, sem julgamento moral.<br>
+                • Traga 1 ajuste imediato para hoje e 1 ajuste para as próximas 48 horas.<br>
+                • Evite planos grandiosos; foque em pequenos movimentos consistentes.<br><br>
+
+                ❗ <strong>Quando faltarem dados:</strong><br>
+                Peça que eu descreva: meu último “dia bom”, meu último “dia difícil” e o que mudou entre eles.<br><br>
+
+                📝 <strong>Apresente o resultado assim:</strong><br>
+                1. Diagnóstico em até 10 linhas.<br>
+                2. Padrões identificados (em bullets).<br>
+                3. Ajuste imediato para hoje.<br>
+                4. Ajustes para as próximas 48 horas.<br>
+                5. Sinal de progresso para eu observar em mim.
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Compras & Suprimentos -->
+
+      <!-- ========================================================= -->
+      <!-- CARD 5 – Brainstorm rápido -->
+      <!-- ========================================================= -->
       <div class="standard-card">
         <div class="standard-card-header">
           <div class="standard-badge primary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <path d="M16 10a4 4 0 0 1-8 0"></path>
-            </svg>
-            Compras & Suprimentos
+            ⭐ Prompt Bônus
           </div>
         </div>
+
         <div class="card-content">
-          <h4 class="example-title">Estratégia de negociação com fornecedores para redução de custos</h4>
+          <h4 class="example-title">Brainstorm rápido para destravar ideias</h4>
+
           <div class="standard-example">
             <div class="example-header">
-              <button class="standard-copy-btn" onclick="copyPrompt(this)">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <button
+                class="prompt-toggle-btn"
+                type="button"
+                aria-expanded="false"
+                aria-controls="prompt-bonus-5"
+                onclick="togglePrompt(this)"
+                aria-label="Mostrar ou ocultar o texto completo deste prompt"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </button>
+
+              <button class="standard-copy-btn" type="button" onclick="copyPrompt(this)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2">
                   <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                   <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                 </svg>
-                Copiar Prompt
+                <span>Copiar Prompt</span>
               </button>
             </div>
-            <div class="standard-example-content prompt-text">
-              🧠 <strong>Atue como:</strong> Especialista em Compras Estratégicas e Negociação com Fornecedores para PMEs, com visão integrada de custo, prazo e fluxo de caixa.<br><br>
 
-              🎯 <strong>Contexto:</strong> Minhas compras são feitas de forma muito reativa. Cada comprador negocia do seu jeito, não temos uma política clara e sinto que pago mais caro do que poderia em itens importantes. Quero organizar uma rodada de renegociação mais profissional, começando pelos fornecedores chave, sem quebrar relacionamento e sem criar promessas que a empresa não consegue cumprir.<br><br>
+            <div class="standard-example-content">
+              <p class="prompt-preview">
+                Um disparo criativo para gerar várias alternativas e depois refinar o que é viável de verdade.
+              </p>
 
-              📊 <strong>Considere as informações disponíveis:</strong><br>
-              1. Lista dos principais fornecedores, com o que cada um fornece e o peso aproximado no total de compras.<br>
-              2. Dados (mesmo que aproximados) de preço médio atual, prazo de pagamento e condições comerciais.<br>
-              3. Histórico de problemas recentes (atrasos, qualidade, falta de produto, erros de faturamento).<br>
-              4. Situação do fluxo de caixa da empresa e sensibilidade a prazos maiores ou menores.<br>
-              5. Existência (ou não) de alternativas de fornecimento para itens críticos.<br><br>
+              <div
+                id="prompt-bonus-5"
+                class="prompt-full prompt-text"
+                hidden
+              >
+                🧠 <strong>Atue como:</strong> Facilitador(a) criativo(a) para PMEs que precisam gerar alternativas práticas.<br><br>
 
-              ⚙️ <strong>Siga estas diretrizes:</strong><br>
-              • Objetivo principal: estruturar uma estratégia de negociação realista, priorizando fornecedores mais relevantes em valor e risco.<br>
-              • Traga sugestões de ganhos não só em preço, mas também em prazos, condições, logística e previsibilidade.<br>
-              • Evite recomendações que dependam de uma estrutura de compras grande ou sistemas complexos.<br>
-              • Considere a importância do relacionamento de longo prazo e proponha contrapartidas possíveis (previsão de compras, volume mínimo, organização de pedidos etc.).<br>
-              • Sempre conecte as sugestões ao impacto no fluxo de caixa e na margem da empresa.<br><br>
+                🎯 <strong>Contexto:</strong> Preciso de novas ideias para resolver um problema específico, mas estou travado(a) e repetindo sempre as mesmas soluções.<br><br>
 
-              ❗ <strong>Quando faltarem dados:</strong><br>
-              Oriente como montar uma fotografia mínima das compras (por exemplo, extrair 3 a 6 meses de notas ou lançamentos e agrupar por fornecedor) e sugira um modelo simples de planilha ou resumo para apoiar a negociação.<br><br>
+                📊 <strong>Considere:</strong><br>
+                1. O problema central que quero resolver.<br>
+                2. Soluções que já tentei e fracassaram.<br>
+                3. Restrições de orçamento, tempo e equipe.<br>
+                4. Impacto se nada mudar.<br>
+                5. Como seria uma solução ideal, sem limites, apenas como referência.<br><br>
 
-              📝 <strong>Apresente o resultado assim:</strong><br>
-              1. Mapa dos fornecedores classificados por criticidade e volume de compras.<br>
-              2. Prioridades de negociação (quem atacar primeiro, por quê e com qual objetivo).<br>
-              3. Sugestão de argumentos e possíveis trocas saudáveis para cada tipo de fornecedor (preço, prazo, lote mínimo, logística).<br>
-              4. Plano de ação em etapas, com um roteiro prático para conduzir as negociações nas próximas semanas.
+                ⚙️ <strong>Siga estas diretrizes:</strong><br>
+                • Traga primeiro 7 ideias rápidas, sem julgamento, em modo “chuva de ideias”.<br>
+                • Depois refine 3 ideias viáveis levando em conta os limites reais da PME.<br>
+                • Apresente 1 caminho mais seguro e 1 caminho mais ousado, e explique a diferença.<br><br>
+
+                ❗ <strong>Quando faltarem dados:</strong><br>
+                Peça que eu descreva o contexto em no máximo 5 linhas, com foco em “o que está pegando agora”.<br><br>
+
+                📝 <strong>Apresente o resultado assim:</strong><br>
+                1. Lista com 7 ideias soltas.<br>
+                2. Tabela com 3 ideias refinadas (vantagens, riscos, esforço).<br>
+                3. Um caminho seguro e um caminho ousado destacados.<br>
+                4. Primeiro passo imediato para começar a testar.
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Marketing & Vendas -->
+
+      <!-- ========================================================= -->
+      <!-- CARD 6 – Criar nomes -->
+      <!-- ========================================================= -->
       <div class="standard-card">
         <div class="standard-card-header">
           <div class="standard-badge primary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <path d="M16 10a4 4 0 0 1-8 0"></path>
-            </svg>
-            Marketing & Vendas
+            ⭐ Prompt Bônus
           </div>
         </div>
+
         <div class="card-content">
-          <h4 class="example-title">Funil de vendas otimizado para conversão digital</h4>
+          <h4 class="example-title">Criar nomes de projetos, ações ou produtos</h4>
+
           <div class="standard-example">
             <div class="example-header">
-              <button class="standard-copy-btn" onclick="copyPrompt(this)">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <button
+                class="prompt-toggle-btn"
+                type="button"
+                aria-expanded="false"
+                aria-controls="prompt-bonus-6"
+                onclick="togglePrompt(this)"
+                aria-label="Mostrar ou ocultar o texto completo deste prompt"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </button>
+
+              <button class="standard-copy-btn" type="button" onclick="copyPrompt(this)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2">
                   <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                   <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                 </svg>
-                Copiar Prompt
+                <span>Copiar Prompt</span>
               </button>
             </div>
-            <div class="standard-example-content prompt-text">
-              🧠 <strong>Atue como:</strong> Especialista em Marketing Local e Vendas para PMEs do setor alimentício, com foco em combinar presença digital e fluxo na loja física.<br><br>
-              
-              🎯 <strong>Contexto:</strong> Tenho uma padaria artesanal em um bairro residencial, com 15 anos de tradição. Quero atrair mais clientes de 25 a 45 anos, mantendo os clientes antigos, aumentar o fluxo na loja física e usar melhor os canais digitais sem transformar a rotina em um “trabalho extra impossível de manter”.<br><br>
-	      
-              📊 <strong>Considere as informações disponíveis:</strong><br>
-              1. Orçamento mensal disponível para marketing (por exemplo, R$ 800/mês ou outra faixa realista).<br>
-              2. Como a padaria se comunica hoje (boca a boca, redes sociais, promoções pontuais, parcerias com empresas locais etc.).<br>
-              3. Principais produtos e diferenciais (pães artesanais, doces caseiros, itens sazonais, café especial, ambiente etc.).<br>
-              4. Horários de maior e menor movimento e dias da semana mais fracos.<br>
-              5. Capacidade da equipe para tirar fotos, postar ou responder mensagens ao longo do dia.<br><br>
 
-              ⚙️ <strong>Siga estas diretrizes:</strong><br>
-              • Objetivo principal: desenhar um mini funil de vendas digital que traga gente para a loja física e fortaleça o vínculo com o bairro.<br>
-              • Priorize estratégias simples, reaproveitáveis e de baixo custo, evitando planos que dependam de grande equipe de marketing.<br>
-              • Traga sugestões de conteúdos possíveis com a rotina real da padaria (produção, bastidores, clientes, lançamentos).<br>
-              • Adapte a linguagem para algo próximo, acolhedor e humano, sem jargões de marketing.<br>
-              • Considere tanto ações orgânicas quanto, se fizer sentido, pequenos investimentos em mídia local bem direcionada.<br><br>
+            <div class="standard-example-content">
+              <p class="prompt-preview">
+                Um gerador estruturado com variações de nomes em estilos diferentes, já com indicação dos mais promissores.
+              </p>
 
-              ❗ <strong>Quando faltarem dados:</strong><br>
-              Peça primeiro um retrato simples da semana típica (dias fortes, fracos, horários de pico) e uma lista dos produtos “queridinhos” da clientela. A partir disso, ajuste o plano, em vez de exigir um grande estudo formal de público-alvo.<br><br>
+              <div
+                id="prompt-bonus-6"
+                class="prompt-full prompt-text"
+                hidden
+              >
+                🧠 <strong>Atue como:</strong> Especialista em criação de nomes marcantes e memoráveis para PMEs.<br><br>
 
-              📝 <strong>Apresente o resultado assim:</strong><br>
-              1. Resumo do posicionamento da padaria para o público de 25 a 45 anos, sem perder a essência tradicional.<br>
-              2. Desenho de um funil simples (atração → relacionamento → visita na loja → recompra) com exemplos práticos para cada etapa.<br>
-              3. Plano de 90 dias com ações semanais, incluindo exemplos de posts, ativações locais e oportunidades de parceria no bairro.<br>
-              4. Conjunto de métricas simples para acompanhar (fluxo na loja, tíquete médio, cupons ou códigos usados, engajamento básico nas redes).
+                🎯 <strong>Contexto:</strong> Preciso criar um nome forte, simples e fácil de lembrar para um projeto, ação interna ou produto, sem cair em clichês.<br><br>
+
+                📊 <strong>Considere:</strong><br>
+                1. Objetivo principal do projeto ou produto.<br>
+                2. Público que vai usar ou comprar.<br>
+                3. Tom desejado (leve, técnico, aspiracional, popular etc.).<br>
+                4. Benefício central que quero comunicar.<br>
+                5. Palavras proibidas ou cansadas do mercado.<br><br>
+
+                ⚙️ <strong>Siga estas diretrizes:</strong><br>
+                • Traga 12 opções de nomes divididas em 3 estilos (ex.: direto, criativo, conceitual).<br>
+                • Explique em 1 linha o raciocínio de cada estilo.<br>
+                • Aponte quais 3 nomes têm maior potencial de uso prático no contexto de PME.<br><br>
+
+                ❗ <strong>Quando faltarem dados:</strong><br>
+                Peça que eu informe 3 palavras que representam o projeto/produto e 3 concorrentes de referência.<br><br>
+
+                📝 <strong>Apresente o resultado assim:</strong><br>
+                1. Explicação rápida dos 3 estilos de nome.<br>
+                2. Lista de nomes por estilo, em bullet points.<br>
+                3. Destaque de 3 nomes recomendados, com justificativa curta de cada um.
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Comunicação & Cliente -->
+
+      <!-- ========================================================= -->
+      <!-- CARD 7 – Feedback difícil, porém humano -->
+      <!-- ========================================================= -->
       <div class="standard-card">
         <div class="standard-card-header">
           <div class="standard-badge primary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-            </svg>
-            Comunicação & Cliente
+            ⭐ Prompt Bônus
           </div>
         </div>
+
         <div class="card-content">
-          <h4 class="example-title">Estratégia de retenção e fidelização de clientes</h4>
+          <h4 class="example-title">Construir um feedback difícil, porém humano</h4>
+
           <div class="standard-example">
             <div class="example-header">
-              <button class="standard-copy-btn" onclick="copyPrompt(this)">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <button
+                class="prompt-toggle-btn"
+                type="button"
+                aria-expanded="false"
+                aria-controls="prompt-bonus-7"
+                onclick="togglePrompt(this)"
+                aria-label="Mostrar ou ocultar o texto completo deste prompt"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </button>
+
+              <button class="standard-copy-btn" type="button" onclick="copyPrompt(this)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2">
                   <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                   <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                 </svg>
-                Copiar Prompt
+                <span>Copiar Prompt</span>
               </button>
             </div>
-            <div class="standard-example-content prompt-text">
-              🧠 <strong>Atue como:</strong> Especialista em Relacionamento e Retenção de Clientes para PMEs, com foco em comunicação simples e consistente no dia a dia.<br><br>
 
-              🎯 <strong>Contexto:</strong> Minha empresa vende bem para novos clientes, mas muitos não retornam ou demoram muito para comprar de novo. Não temos uma régua de comunicação definida e cada cliente é atendido de um jeito. Quero criar uma rotina de relacionamento leve, que caiba na agenda da equipe e aumente a recompra sem depender de grandes ferramentas ou automações complexas.<br><br>
+            <div class="standard-example-content">
+              <p class="prompt-preview">
+                Um roteiro de conversa que fala o que precisa ser dito sem humilhar, sem rodeios e sem criar clima de guerra.
+              </p>
 
-              📊 <strong>Considere as informações disponíveis:</strong><br>
-              1. Principais tipos de clientes (por segmento, ticket médio ou tipo de serviço/produto).<br>
-              2. Com que frequência, em média, os clientes voltam a comprar hoje (quando essa informação existir).<br>
-              3. Canais pelos quais nos comunicamos mais (WhatsApp, e-mail, redes sociais, telefone etc.).<br>
-              4. Situações mais comuns de reclamação, cancelamento ou frustração do cliente.<br>
-              5. “Mimos”, diferenciais ou cuidados que a empresa já oferece, mesmo que de maneira informal.<br><br>
+              <div
+                id="prompt-bonus-7"
+                class="prompt-full prompt-text"
+                hidden
+              >
+                🧠 <strong>Atue como:</strong> Mentor(a) de liderança humana para pequenas equipes.<br><br>
 
-              ⚙️ <strong>Siga estas diretrizes:</strong><br>
-              • Objetivo principal: desenhar uma régua de relacionamento simples, com poucos passos, que aumente a sensação de cuidado e a probabilidade de recompra.<br>
-              • Priorize ações de baixo custo, focadas em atenção e consistência, não apenas em descontos e promoções agressivas.<br>
-              • Traga exemplos de mensagens e abordagens humanizadas, adaptáveis para diferentes canais.<br>
-              • Considere que a equipe tem tempo limitado e precisa de modelos prontos ou quase prontos de mensagens e rotinas.<br>
-              • Inclua formas simples de ouvir o cliente (feedback rápido, pesquisas curtas, pedidos de opinião) sem ser invasivo.<br><br>
+                🎯 <strong>Contexto:</strong> Preciso dar um feedback delicado para alguém da equipe sem causar defensividade ou desconforto desnecessário.<br><br>
 
-              ❗ <strong>Quando faltarem dados:</strong><br>
-              Oriente como montar um controle básico de clientes ativos, inativos e em risco (por exemplo, “não compra há mais de X dias”), mesmo que em planilha, e como registrar motivos principais de perda ou reclamação a partir de agora.<br><br>
+                📊 <strong>Considere:</strong><br>
+                1. O comportamento específico que preciso abordar.<br>
+                2. Consequências reais desse comportamento para o time, clientes ou resultados.<br>
+                3. Histórico da pessoa (recém-chegada, experiente, em desenvolvimento etc.).<br>
+                4. Tom ideal da conversa (mais direto, mais cuidadoso, mais pedagógico).<br>
+                5. Resultado que eu gostaria de ver depois da conversa.<br><br>
 
-              📝 <strong>Apresente o resultado assim:</strong><br>
-              1. Descrição do perfil de cliente com maior potencial de fidelização e principais riscos de perda.<br>
-              2. Jornada resumida do cliente, destacando momentos-chave para comunicação (boas-vindas, pós-venda imediato, acompanhamento, reativação).<br>
-              3. Modelo de régua de relacionamento com exemplos de mensagens para 3 a 5 pontos de contato principais.<br>
-              4. Sugestão de indicadores simples para acompanhar (recompra, reativação, respostas positivas, redução de reclamações).
+                ⚙️ <strong>Siga estas diretrizes:</strong><br>
+                • Construa um roteiro com início acolhedor, contexto, fato, impacto e acordo.<br>
+                • Traga exemplos de frases que evitam ataque pessoal e generalizações.<br>
+                • Inclua 2 ou 3 perguntas que ajudem a pessoa a refletir, não se defender.<br>
+                • Feche com um acordo claro, simples e verificável no dia a dia.<br><br>
+
+                ❗ <strong>Quando faltarem dados:</strong><br>
+                Peça que eu descreva em 3 frases o que aconteceu, qual impacto teve e por que isso me incomodou.<br><br>
+
+                📝 <strong>Apresente o resultado assim:</strong><br>
+                1. Mini diagnóstico da situação.<br>
+                2. Roteiro completo da conversa, em blocos.<br>
+                3. Sugestão de frases-chave que evitam ataque e sarcasmo.<br>
+                4. Proposta de acordo final e forma de acompanhar.
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Crédito & Fomento -->
+
+      <!-- ========================================================= -->
+      <!-- CARD 8 – Reforço positivo -->
+      <!-- ========================================================= -->
       <div class="standard-card">
         <div class="standard-card-header">
           <div class="standard-badge primary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
-              <line x1="1" y1="10" x2="23" y2="10"></line>
-            </svg>
-            Crédito & Fomento
+            ⭐ Prompt Bônus
           </div>
         </div>
+
         <div class="card-content">
-          <h4 class="example-title">Estratégia para obtenção de crédito e linhas de financiamento</h4>
+          <h4 class="example-title">Reforço positivo para desenvolver alguém da equipe</h4>
+
           <div class="standard-example">
             <div class="example-header">
-              <button class="standard-copy-btn" onclick="copyPrompt(this)">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <button
+                class="prompt-toggle-btn"
+                type="button"
+                aria-expanded="false"
+                aria-controls="prompt-bonus-8"
+                onclick="togglePrompt(this)"
+                aria-label="Mostrar ou ocultar o texto completo deste prompt"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </button>
+
+              <button class="standard-copy-btn" type="button" onclick="copyPrompt(this)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2">
                   <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                   <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                 </svg>
-                Copiar Prompt
+                <span>Copiar Prompt</span>
               </button>
             </div>
-            <div class="standard-example-content prompt-text">
-              🧠 <strong>Atue como:</strong> Consultor(a) Financeiro(a) especializado em Crédito Empresarial para PMEs, com foco em organizar a empresa para negociar melhor com bancos, fintechs e programas de fomento.<br><br>
 
-              🎯 <strong>Contexto:</strong> Minha empresa precisa de recursos para expansão, reforço de capital de giro ou reorganização de dívidas. Tenho pouco tempo para “correr atrás de banco” e quero entender quais tipos de crédito fazem mais sentido, como me preparar para pedir e quais riscos devo evitar para não sufocar o caixa no médio prazo.<br><br>
+            <div class="standard-example-content">
+              <p class="prompt-preview">
+                Um modelo de reconhecimento específico, com impacto e próximos passos, para fortalecer quem já está evoluindo.
+              </p>
 
-              📊 <strong>Considere as informações disponíveis:</strong><br>
-              1. Finalidade principal do crédito (capital de giro, investimento em máquinas, reforma, expansão, reorganização de dívidas etc.).<br>
-              2. Valor aproximado necessário e prazo em que a empresa idealmente gostaria de pagar.<br>
-              3. Situação atual resumida: faturamento médio mensal, margem aproximada, nível de endividamento e atrasos (se houver).<br>
-              4. Garantias possíveis (imóveis, veículos, recebíveis, maquinário, aval etc.).<br>
-              5. Relação atual com instituições financeiras (contas ativas, histórico de crédito, restrições em nome da empresa ou dos sócios).<br><br>
+              <div
+                id="prompt-bonus-8"
+                class="prompt-full prompt-text"
+                hidden
+              >
+                🧠 <strong>Atue como:</strong> Coach de desenvolvimento humano para PMEs.<br><br>
 
-              ⚙️ <strong>Siga estas diretrizes:</strong><br>
-              • Objetivo principal: organizar um mapa de opções de crédito/fomento e um plano de preparação, não indicar “a melhor opção mágica”.<br>
-              • Explique de forma simples os impactos de prazos, taxas e garantias, conectando sempre com o fluxo de caixa.<br>
-              • Inclua alternativas que não dependam apenas de bancos tradicionais, quando fizer sentido (cooperativas, fintechs, programas públicos, fomento regional etc.).<br>
-              • Evite recomendações que levem a um nível de parcela mensal claramente incompatível com a realidade da PME.<br>
-              • Traga sugestões de perguntas que a empresa deve fazer ao gerente ou correspondente bancário antes de fechar qualquer contrato.<br><br>
+                🎯 <strong>Contexto:</strong> Quero incentivar alguém que está evoluindo, reforçar o bom desempenho e definir próximos passos de crescimento sem parecer cobrança disfarçada.<br><br>
 
-              ❗ <strong>Quando faltarem dados:</strong><br>
-              Mostre como estimar uma parcela máxima saudável (por exemplo, usando uma porcentagem do fluxo de caixa livre) e indique quais informações mínimas devem ser levantadas com a contabilidade antes de avançar em qualquer negociação.<br><br>
+                📊 <strong>Considere:</strong><br>
+                1. Exemplos concretos de progresso que observei.<br>
+                2. Padrões positivos de comportamento ou postura.<br>
+                3. Impacto desse avanço na equipe, nos clientes ou nos resultados.<br>
+                4. Possíveis próximos passos de desenvolvimento.<br>
+                5. Estilo de comunicação da pessoa (mais direta, mais sensível, mais tímida etc.).<br><br>
 
-              📝 <strong>Apresente o resultado assim:</strong><br>
-              1. Resumo da situação financeira e da necessidade de crédito em linguagem clara, como se fosse um “pitch” para o banco.<br>
-              2. Lista de tipos de crédito e fomento que fazem mais sentido para o cenário descrito, com prós e contras de cada um.<br>
-              3. Checklist de documentação e organização interna necessária antes de pedir crédito (demonstrações, contratos, impostos, garantias).<br>
-              4. Recomendações de próximos passos para negociar, comparar propostas e evitar armadilhas comuns em contratos de financiamento.
+                ⚙️ <strong>Siga estas diretrizes:</strong><br>
+                • Evite elogios genéricos, como “você é ótimo”.<br>
+                • Conecte sempre comportamento → impacto → reconhecimento.<br>
+                • Sugira novos desafios ou responsabilidades como convite, não como obrigação.<br>
+                • Mantenha tom humano e realista, sem frases motivacionais vazias.<br><br>
+
+                ❗ <strong>Quando faltarem dados:</strong><br>
+                Peça que eu descreva um episódio concreto que mostra essa evolução da pessoa.<br><br>
+
+                📝 <strong>Apresente o resultado assim:</strong><br>
+                1. Reconhecimento claro e específico.<br>
+                2. Explicação do impacto positivo gerado.<br>
+                3. Sugestão de próximos passos de desenvolvimento.<br>
+                4. Mensagem final motivadora, porém pé no chão.
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- RH & Pessoas -->
+
+      <!-- ========================================================= -->
+      <!-- CARD 9 – Diagnóstico de gargalos -->
+      <!-- ========================================================= -->
       <div class="standard-card">
         <div class="standard-card-header">
           <div class="standard-badge primary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-              <circle cx="8.5" cy="7" r="4"></circle>
-              <path d="M20 8v6"></path>
-              <path d="M23 11h-6"></path>
-            </svg>
-            RH & Pessoas
+            ⭐ Prompt Bônus
           </div>
         </div>
+
         <div class="card-content">
-          <h4 class="example-title">Plano de desenvolvimento e retenção de talentos</h4>
+          <h4 class="example-title">Diagnóstico rápido de gargalos operacionais</h4>
+
           <div class="standard-example">
             <div class="example-header">
-              <button class="standard-copy-btn" onclick="copyPrompt(this)">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <button
+                class="prompt-toggle-btn"
+                type="button"
+                aria-expanded="false"
+                aria-controls="prompt-bonus-9"
+                onclick="togglePrompt(this)"
+                aria-label="Mostrar ou ocultar o texto completo deste prompt"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </button>
+
+              <button class="standard-copy-btn" type="button" onclick="copyPrompt(this)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2">
                   <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                   <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                 </svg>
-                Copiar Prompt
+                <span>Copiar Prompt</span>
               </button>
             </div>
-            <div class="standard-example-content prompt-text">
-              🧠 <strong>Atue como:</strong> Especialista em Recursos Humanos para PMEs brasileiras, com foco em desenvolvimento, clima e retenção de talentos em equipes enxutas.<br><br>
 
-              🎯 <strong>Contexto:</strong> A empresa cresceu sem ter um RH estruturado, a maior parte das decisões é tomada pelos donos e por líderes operacionais, e a sensação é de cansaço geral. Existem sinais de desmotivação, risco de perder pessoas-chave e dificuldade em oferecer caminhos claros de crescimento. Quero estruturar um plano simples de desenvolvimento e retenção, realista para uma PME, sem copiar práticas de grandes corporações.<br><br>
+            <div class="standard-example-content">
+              <p class="prompt-preview">
+                Um scanner simples para localizar pontos que geram fila, retrabalho, atraso e dependência excessiva de uma única pessoa.
+              </p>
 
-              📊 <strong>Considere as informações disponíveis:</strong><br>
-              1. Cargos e áreas considerados críticos para o negócio (onde uma saída gera maior impacto).<br>
-              2. Taxa de turnover dos últimos 12 meses, se existir, separada por área ou cargo.<br>
-              3. Principais motivos de saída já percebidos (mesmo que só por relatos informais).<br>
-              4. Faixa de remuneração e benefícios atuais em comparação com o mercado local, se houver referência.<br>
-              5. Práticas atuais de reconhecimento (elogios, bônus, flexibilidade, feedbacks, rituais de celebração).<br>
-              6. Existência ou não de trilhas de carreira, planos de treinamento ou avaliações de desempenho.<br>
-              7. Orçamento máximo disponível para treinamentos, benefícios e ações de clima nos próximos 12 meses.<br><br>
+              <div
+                id="prompt-bonus-9"
+                class="prompt-full prompt-text"
+                hidden
+              >
+                🧠 <strong>Atue como:</strong> Analista de melhoria contínua especializado(a) em identificar gargalos simples e de alto impacto.<br><br>
 
-              ⚙️ <strong>Siga estas diretrizes:</strong><br>
-              • Objetivo principal: criar um plano enxuto de desenvolvimento e retenção focado primeiro em cargos e pessoas-chave, com ações possíveis para uma PME.<br>
-              • Priorize ações de baixo custo ou sem custo financeiro, como feedback estruturado, reconhecimento público, flexibilidade de rotina e conversas de desenvolvimento 1 a 1.<br>
-              • Evite soluções genéricas copiadas de grandes empresas, adapte tudo para uma realidade de equipe pequena, com pouco tempo e orçamento limitado.<br>
-              • Inclua um recorte claro de quais cargos ou pessoas serão prioridade nos primeiros 3 a 6 meses.<br>
-              • Proponha um conjunto de ações em camadas (rápidas, de médio prazo e estruturantes), com foco em consistência, não em quantidade.<br>
-              • Inclua indicadores simples de acompanhamento (por exemplo: intenção de permanência, engajamento com conversas de desenvolvimento, redução de saídas inesperadas).<br><br>
+                🎯 <strong>Contexto:</strong> Quero identificar rapidamente onde estão os gargalos que mais geram retrabalho, atrasos ou perda de eficiência na operação.<br><br>
 
-              ❗ <strong>Quando faltarem dados:</strong><br>
-              Se a empresa não tiver registros formais de motivos de saída, clima ou desempenho, oriente primeiro um mini-diagnóstico enxuto, sugerindo:<br>
-              • um roteiro de entrevista de desligamento com até 6 perguntas diretas<br>
-              • uma pesquisa rápida de clima com escala simples (por exemplo, 0 a 10) e poucas perguntas<br>
-              • uma forma simples de registrar essas informações (planilha ou formulário) para uso futuro.<br>
-              Só depois disso avance para recomendações mais específicas de retenção e desenvolvimento.<br><br>
+                📊 <strong>Considere:</strong><br>
+                1. Pontos do fluxo onde há filas, esperas e acúmulo de tarefas.<br>
+                2. Atividades que não têm padrão definido e variam conforme a pessoa.<br>
+                3. Processos totalmente dependentes de uma única pessoa-chave.<br>
+                4. Erros repetitivos que geram retrabalho.<br>
+                5. Atrasos previsíveis que “sempre” acontecem nas mesmas etapas.<br><br>
 
-              📝 <strong>Apresente o resultado assim:</strong><br>
-              1. Um diagnóstico resumido dos principais riscos de perda de talentos e das forças atuais da empresa em relação a pessoas.<br>
-              2. Um mapa de cargos e pessoas-chave com recomendações específicas de cuidado e desenvolvimento para cada grupo.<br>
-              3. Um plano de ações em três frentes (clima & reconhecimento, desenvolvimento & treinamento, carreira & perspectivas) com exemplos práticos adequados à realidade da PME.<br>
-              4. Um cronograma de 90 dias com prioridades, responsáveis e indicadores simples para acompanhar se o plano está funcionando.<br>
-              5. Sugestões de como comunicar esse plano para a equipe de forma transparente, realista e motivadora, sem prometer o que não pode ser cumprido.
+                ⚙️ <strong>Siga estas diretrizes:</strong><br>
+                • Faça um diagnóstico inicial em até 10 linhas, destacando sintomas principais.<br>
+                • Aponte os 3 gargalos de maior impacto, explicando por que eles são críticos.<br>
+                • Sugira microcorreções que possam ser testadas em pouco tempo, com esforço baixo.<br>
+                • Evite propostas de redesenho total da empresa; foque em melhorias incrementais.<br><br>
+
+                ❗ <strong>Quando faltarem dados:</strong><br>
+                Peça que eu cite 3 pontos que “sempre dão problema” no dia a dia.<br><br>
+
+                📝 <strong>Apresente o resultado assim:</strong><br>
+                1. Diagnóstico geral em texto curto.<br>
+                2. Lista dos 3 principais gargalos, em ordem de prioridade.<br>
+                3. Sugestões de microcorreções para cada gargalo.<br>
+                4. Indicação de qual gargalo atacar primeiro e por quê.
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Produtividade & Tempo -->
+
+      <!-- ========================================================= -->
+      <!-- CARD 10 – Mini experimento 7 dias -->
+      <!-- ========================================================= -->
       <div class="standard-card">
         <div class="standard-card-header">
           <div class="standard-badge primary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M12 6v6l3 3"></path>
-            </svg>
-            Produtividade & Tempo
+            ⭐ Prompt Bônus
           </div>
         </div>
+
         <div class="card-content">
-          <h4 class="example-title">Rotina realista do dono(a) da PME em 7 dias</h4>
+          <h4 class="example-title">Criar um mini experimento de melhoria em 7 dias</h4>
+
           <div class="standard-example">
             <div class="example-header">
-              <button class="standard-copy-btn" onclick="copyPrompt(this)">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <button
+                class="prompt-toggle-btn"
+                type="button"
+                aria-expanded="false"
+                aria-controls="prompt-bonus-10"
+                onclick="togglePrompt(this)"
+                aria-label="Mostrar ou ocultar o texto completo deste prompt"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </button>
+
+              <button class="standard-copy-btn" type="button" onclick="copyPrompt(this)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2">
                   <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                   <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                 </svg>
-                Copiar Prompt
+                <span>Copiar Prompt</span>
               </button>
             </div>
-            <div class="standard-example-content prompt-text">
-              🧠 <strong>Atue como:</strong> Consultor(a) de organização de agenda para donos de pequenas empresas, com experiência em rotina real de PME e sobrecarga de funções.<br><br>
 
-              🎯 <strong>Contexto:</strong> Sou dono(a) de uma pequena empresa e faço de tudo um pouco: atendo clientes, resolvo problemas do dia a dia, cuido de financeiro, respondo mensagens e ainda tento pensar em estratégia. Minha agenda vive estourada, tudo é urgente e sinto que nunca tenho tempo para o que realmente faz o negócio crescer. Quero desenhar uma rotina realista de 7 dias, com blocos de tempo protegidos, que funcione mesmo em semanas cheias e com imprevistos.<br><br>
+            <div class="standard-example-content">
+              <p class="prompt-preview">
+                Um teste rápido, de baixo risco e com começo, meio e fim claros, para melhorar um processo real em apenas 7 dias.
+              </p>
 
-              📊 <strong>Considere as informações disponíveis:</strong><br>
-              1. Horário de funcionamento da empresa e períodos de maior movimento.<br>
-              2. Principais tipos de atividades que eu executo hoje (operacionais, estratégicas, administrativas, relacionamento, família, cuidado pessoal etc.).<br>
-              3. Compromissos fixos da semana (reuniões, atendimento a clientes, rotinas financeiras, horários com família).<br>
-              4. Momentos do dia em que tenho mais energia e foco, e momentos em que geralmente estou esgotado(a).<br>
-              5. Ferramentas que já uso para organizar tarefas (agenda digital, papel, aplicativo simples, planilha etc.).<br>
-              6. Atividades estratégicas importantes que estão sempre sendo empurradas (ex.: revisão de indicadores, planejamento, criação de produtos, processos).<br>
-              7. Nível de apoio da equipe (o que pode ser delegado hoje e o que ainda depende só de mim).<br><br>
+              <div
+                id="prompt-bonus-10"
+                class="prompt-full prompt-text"
+                hidden
+              >
+                🧠 <strong>Atue como:</strong> Estrategista de inovação leve para PMEs.<br><br>
 
-              ⚙️ <strong>Siga estas diretrizes:</strong><br>
-              • Objetivo principal: criar um rascunho de “semana-tipo” com blocos de tempo, que equilibre operação, estratégia e vida pessoal sem exigir uma disciplina irreal.<br>
-              • Considere que nem todos os dias serão perfeitos, então o plano precisa ter margem para imprevistos e deslocamentos.<br>
-              • Sugira blocos de tempo curtos e claros, principalmente para atividades que exigem foco.<br>
-              • Inclua rituais mínimos de planejamento semanal e diário, com duração de 15 a 30 minutos, no máximo.<br>
-              • Proponha regras simples de proteção de agenda (o que não pode ser marcado em certos horários, como cliente, reunião ou favor de última hora).<br>
-              • Adapte a linguagem e os exemplos para a realidade de uma PME brasileira, sem jargões corporativos ou idealizações impraticáveis.<br><br>
+                🎯 <strong>Contexto:</strong> Quero testar uma melhoria pequena, rápida e simples em um processo da empresa, sem grandes riscos ou investimentos, em um período de 7 dias.<br><br>
 
-              ❗ <strong>Quando faltarem dados:</strong><br>
-              Se eu não souber dizer exatamente quanto tempo gasto em cada atividade, peça que eu descreva um ou dois dias típicos da semana (do horário que acordo até dormir) e use isso como base para estimar blocos. Em vez de pedir tempo exato em horas, trabalhe com faixas aproximadas e exemplos concretos de situações que mais me roubam tempo e energia.<br><br>
+                📊 <strong>Considere:</strong><br>
+                1. O processo alvo que desejo melhorar.<br>
+                2. O sintoma principal que quero reduzir (atraso, erro, retrabalho, reclamação etc.).<br>
+                3. Resultado mínimo que eu consideraria um sucesso.<br>
+                4. Recursos disponíveis (pessoas, tempo, ferramentas).<br>
+                5. O que é possível medir em apenas 7 dias sem complicar demais.<br><br>
 
-              📝 <strong>Apresente o resultado assim:</strong><br>
-              1. Um resumo em até 8 linhas explicando como está minha rotina hoje e quais são os principais gargalos de tempo e energia.<br>
-              2. Um modelo de “semana-tipo” com blocos de manhã, tarde e noite, destacando:<br>
-              &nbsp;&nbsp;• blocos de operação<br>
-              &nbsp;&nbsp;• blocos estratégicos<br>
-              &nbsp;&nbsp;• blocos administrativos<br>
-              &nbsp;&nbsp;• blocos pessoais/descanso.<br>
-              3. Sugestões práticas de rituais diários e semanais (por exemplo: revisão rápida de prioridades, alinhamento com equipe, fechamento financeiro).<br>
-              4. Um conjunto de 5 a 7 “regras de proteção de agenda” para evitar que tudo vire urgente de última hora.<br>
-              5. Uma lista de primeiros passos para testar essa rotina por 7 dias, com orientações de como ajustar o modelo sem culpa, de forma iterativa.
+                ⚙️ <strong>Siga estas diretrizes:</strong><br>
+                • Simplifique ao máximo a ideia de experimento; nada de projeto gigante.<br>
+                • Estruture o experimento em 4 passos: hipótese, ação, medição, decisão.<br>
+                • Traga exemplos de indicadores simples (contar ocorrências, medir tempo, comparar antes/depois).<br>
+                • Evite qualquer solução que exija implantação longa ou grande investimento logo de início.<br><br>
+
+                ❗ <strong>Quando faltarem dados:</strong><br>
+                Peça que eu descreva o processo escolhido em até 5 linhas e diga o que mais me irrita nele.<br><br>
+
+                📝 <strong>Apresente o resultado assim:</strong><br>
+                1. Hipótese do experimento, em 2 ou 3 frases.<br>
+                2. Ação que será testada durante 7 dias, com passos claros.<br>
+                3. Métricas simples para comparar antes e depois.<br>
+                4. Critério de decisão (o que define se vale a pena manter ou ajustar).<br>
+                5. Próximo passo sugerido após o experimento.
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+
+    </div> <!-- /.section-standard -->
+  </div> <!-- /.container -->
 </section>
-     
+
 <!-- FAQ -->
 <section class="section" id="faq">
   <div class="container">
@@ -5029,6 +5326,31 @@ if (typeof window.FLUXOTECA_INITIALIZED === 'undefined') {
             showToast('Erro ao copiar o prompt', 'error');
         }
     }
+
+function togglePrompt(button) {
+  if (!button) return;
+
+  const card = button.closest('.standard-card');
+  if (!card) return;
+
+  const contentId = button.getAttribute('aria-controls');
+  const content = contentId 
+    ? document.getElementById(contentId) 
+    : card.querySelector('.standard-example-content');
+
+  if (!content) return;
+
+  const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+  button.setAttribute('aria-expanded', String(!isExpanded));
+  card.classList.toggle('is-open', !isExpanded);
+
+  if (isExpanded) {
+    content.setAttribute('hidden', 'hidden');
+  } else {
+    content.removeAttribute('hidden');
+  }
+}
 
     // =============================================
     // SISTEMA DE PERFORMANCE E RESPONSIVIDADE
