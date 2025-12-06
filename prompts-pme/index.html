@@ -1,1050 +1,857 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
-<head>
+<!doctype html>
+<html lang="pt-BR">
+ <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Google Analytics (GA4) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXY7XHLX32"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-FXY7XHLX32', {
-      page_path: window.location.pathname
-    });
-  </script>
-
-  <!-- SEO base -->
-<title>Prompts prontos de IA para PMEs | Guia + Painel Interativo</title>
-<meta name="description" content="Prompts prontos de IA (ChatGPT, Gemini, Copilot) para pequenas e médias empresas: painel interativo e guia inteligente para finanças, vendas, compras, operação, RH e gestão.">
-  <meta name="language" content="pt-BR">
-  <meta name="author" content="Vanessa Novais">
-  <meta name="theme-color" content="#0a0a0f">
-
-  <!-- Canonical & robots -->
-  <link rel="canonical" href="https://fluxoteca.com.br/prompts-pme/">
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-
-  <!-- Hreflang -->
-  <link rel="alternate" href="https://fluxoteca.com.br/prompts-pme/" hreflang="pt-BR">
-  <link rel="alternate" href="https://fluxoteca.com.br/prompts-pme/" hreflang="x-default">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="product">
-  <meta property="og:site_name" content="Fluxoteca">
-  <meta property="og:title" content="Prompts Inteligentes de IA para PMEs | Guia + Painel Interativo">
-  <meta property="og:description" content="Guia Inteligente + Painel Interativo com prompts estruturados de IA para finanças, vendas, compras, operação, RH e gestão em pequenas e médias empresas.">
-  <meta property="og:url" content="https://fluxoteca.com.br/prompts-pme/">
-  <meta property="og:image" content="https://fluxoteca.com.br/images/og-prompts.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:locale" content="pt_BR">
-
-  <!-- OG extra de produto (opcional, ajuda em algumas integrações) -->
-  <meta property="product:price:amount" content="97.00">
-  <meta property="product:price:currency" content="BRL">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Prompts Inteligentes de IA para PMEs | Guia + Painel Interativo">
-  <meta name="twitter:description" content="Aplique IA na sua PME com prompts prontos, guia passo a passo e painel interativo organizado por área.">
-  <meta name="twitter:image" content="https://fluxoteca.com.br/images/og-prompts.jpg">
-
-  <!-- Favicons -->
-  <link rel="icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
-
-  <!-- JSON-LD Product -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "@id": "https://fluxoteca.com.br/prompts-pme/#produto",
-    "name": "Prompts Inteligentes para PMEs — Guia + Painel Interativo",
-    "description": "Sistema de prompts estruturados e Guia Inteligente para aplicar IA em pequenas e médias empresas, com foco em processos, finanças, vendas, compras, operação, RH e gestão.",
-    "brand": {
-      "@type": "Brand",
-      "name": "Fluxoteca",
-      "url": "https://fluxoteca.com.br/"
-    },
-    "image": "https://fluxoteca.com.br/images/og-prompts.jpg",
-    "url": "https://fluxoteca.com.br/prompts-pme/",
-    "sku": "PROMPTS-PME-FLU",
-    "category": "BusinessApplication",
-    "offers": {
-      "@type": "Offer",
-      "@id": "https://fluxoteca.com.br/prompts-pme/#oferta",
-      "url": "https://pay.kiwify.com.br/DQLoGH1",
-      "priceCurrency": "BRL",
-      "price": "97.00",
-      "availability": "https://schema.org/InStock",
-      "itemCondition": "https://schema.org/NewCondition",
-      "seller": {
-        "@type": "Organization",
-        "name": "Fluxoteca",
-        "url": "https://fluxoteca.com.br/"
-      }
-    },
-    "audience": {
-      "@type": "BusinessAudience",
-      "name": "Pequenas e médias empresas (PMEs)"
-    }
-  }
-  </script>
-
-  <!-- JSON-LD WebPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://fluxoteca.com.br/prompts-pme/#webpage",
-    "name": "Prompts Inteligentes para PMEs — Guia + Painel Interativo",
-    "url": "https://fluxoteca.com.br/prompts-pme/",
-    "description": "Página oficial do produto Prompts Inteligentes para PMEs, com Guia e Painel Interativo para aplicar IA em pequenas e médias empresas.",
-    "inLanguage": "pt-BR",
-    "primaryImageOfPage": "https://fluxoteca.com.br/images/og-prompts.jpg",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "Fluxoteca",
-      "url": "https://fluxoteca.com.br"
-    },
-    "breadcrumb": {
-      "@id": "https://fluxoteca.com.br/prompts-pme/#breadcrumb"
-    }
-  }
-  </script>
-
-  <!-- JSON-LD BreadcrumbList -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "@id": "https://fluxoteca.com.br/prompts-pme/#breadcrumb",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Fluxoteca",
-        "item": "https://fluxoteca.com.br/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Prompts de IA para PMEs",
-        "item": "https://fluxoteca.com.br/prompts-pme/"
-      }
-    ]
-  }
-  </script>
-
-  <!-- Placeholder para FAQ dinâmico (preenchido via JS no final da página) -->
-  <script type="application/ld+json" id="faq-schema"></script>
-
-  <!-- Tailwind + Fonts + CSS -->
+  <title>Sistema de Prompts Inteligentes para PMEs | Fluxoteca</title>
+  <meta name="description" content="Transforme IA em processo real para sua PME. Sistema estruturado de prompts para finanças, vendas, operação e gestão.">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            fluxo: {
-              bg: "#0a0a0f",
-              text: "#0f172a",
-              blue: "#0ea5e9",
-              blueDark: "#0284c7",
-              purple: "#a855f7",
-              amber: "#f59e0b"
-            }
-          },
-          fontFamily: {
-            sans: ["Inter", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
-            playfair: ["Playfair Display", "serif"]
-          }
-        }
-      }
-    };
-  </script>
-
-  <!-- Preload Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    rel="preload"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
-    as="style"
-    onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet">
-  </noscript>
+  <link rel="preconnect" href="https://pay.kiwify.com.br">
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <script>
+    // Service Worker Registration for Offline Cache
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register(createServiceWorkerBlob())
+          .then(registration => {
+            console.log('   Service Worker registrado - Cache offline ativo');
+          })
+          .catch(error => {
+            console.log('ℹ️ Service Worker não disponível neste ambiente');
+          });
+      });
+    }
 
-    <style>
-:root {
-  --fluxo-blue: #0ea5e9;
-  --fluxo-purple: #a855f7;
-  --fluxo-amber: #f59e0b;
-  --fluxo-blue-dark: #0284c7;
-}
+    function createServiceWorkerBlob() {
+      const swCode = `
+        const CACHE_NAME = 'fluxoteca-v1';
+        const urlsToCache = [
+          '/',
+          'https://cdn.tailwindcss.com',
+          'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700;800&display=swap'
+        ];
 
-        *,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+        // Install - cache critical resources
+        self.addEventListener('install', event => {
+          event.waitUntil(
+            caches.open(CACHE_NAME)
+              .then(cache => cache.addAll(urlsToCache))
+              .then(() => self.skipWaiting())
+          );
+        });
 
-body {
-  margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  color: #0f172a; 
-  background-color: #f9fafb; 
-}
-        
-.font-inter { font-family: 'Inter', sans-serif; }
-.font-playfair { font-family: 'Playfair Display', serif; }
+        // Activate - clean old caches
+        self.addEventListener('activate', event => {
+          event.waitUntil(
+            caches.keys().then(cacheNames => {
+              return Promise.all(
+                cacheNames.map(cacheName => {
+                  if (cacheName !== CACHE_NAME) {
+                    return caches.delete(cacheName);
+                  }
+                })
+              );
+            }).then(() => self.clients.claim())
+          );
+        });
 
-/* Brilho leve no título do hero */
-.hero-title-glow {
-  text-shadow: 0 2px 10px rgba(15, 23, 42, 0.55);
-}
-        
-        .gradient-hero {
-            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 25%, #a855f7 75%, #f59e0b 100%);
-            position: relative;
-        }
-        
-.gradient-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
-    /* Fundo agora estático para reduzir ruído visual */
-    will-change: auto;
-    pointer-events: none; 
-}
+        // Fetch - Network First, fallback to Cache
+        self.addEventListener('fetch', event => {
+          // Skip non-GET requests
+          if (event.request.method !== 'GET') return;
+          
+          // Skip external payment links
+          if (event.request.url.includes('pay.kiwify.com.br')) return;
 
-.benefit-icon {
-    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-}
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        .gradient-dark {
-            background: linear-gradient(135deg, #0a0a0f 0%, #0f172a 50%, #0284c7 100%);
-        }
-        
-        .holographic-shadow {
-            box-shadow: 0 8px 32px rgba(14, 165, 233, 0.4), 0 4px 16px rgba(168, 85, 247, 0.3);
-        }
-        
-        .card-3d {
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.06);
-            transform: translateY(0);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .card-3d:hover {
-            transform: translateY(-12px) scale(1.02);
-            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.15), 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Mobile optimizations */
-        @media (max-width: 768px) {
-            .card-3d {
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(0, 0, 0, 0.04);
-            }
-            
-            .card-3d:hover {
-                transform: translateY(-6px) scale(1.01);
-                box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.08);
-            }
-            
-            .holographic-shadow {
-                box-shadow: 0 4px 16px rgba(14, 165, 233, 0.3), 0 2px 8px rgba(168, 85, 247, 0.2);
-            }
-            
-            .testimonial-card {
-                backdrop-filter: blur(5px);
-            }
-                                  
-            /* Densidade visual mobile */
-            .mobile-compact {
-                padding: 12px 16px !important;
-            }
-            
-            .mobile-text-sm {
-                font-size: 14px !important;
-                line-height: 1.4 !important;
-            }
-            
-            .mobile-spacing {
-                margin-bottom: 16px !important;
-            }
-            
-            .mobile-grid-1 {
-                grid-template-columns: 1fr !important;
-                gap: 16px !important;
-            }
-            
-            .mobile-icon-sm {
-                width: 48px !important;
-                height: 48px !important;
-            }
-            
-            .mobile-title-sm {
-                font-size: 18px !important;
-                margin-bottom: 8px !important;
-            }
-        }
-        
-.neon-border {
-    border: 3px solid transparent;
-    background: linear-gradient(white, white) padding-box,
-               linear-gradient(45deg, #0ea5e9, #f59e0b, #a855f7) border-box;
-    box-shadow: 0 0 18px rgba(14, 165, 233, 0.25);
-}
-        
-        @keyframes neon-pulse {
-            from { box-shadow: 0 0 20px rgba(14, 165, 233, 0.5); }
-            to { box-shadow: 0 0 40px rgba(168, 85, 247, 0.8), 0 0 60px rgba(245, 158, 11, 0.6); }
-        }
-        
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.8s ease forwards;
-        }
-        
-        .fade-in-delay-1 { animation-delay: 0.2s; }
-        .fade-in-delay-2 { animation-delay: 0.4s; }
-        .fade-in-delay-3 { animation-delay: 0.6s; }
-        .fade-in-delay-4 { animation-delay: 0.8s; }
-        
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
-        }
-        
-        .btn-primary:hover::before {
-            left: 100%;
-        }
-        
-        .btn-primary:hover {
-            background: linear-gradient(135deg, #0284c7, #0369a1);
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(14, 165, 233, 0.4);
-        }
-        
-        .btn-secondary {
-            background: linear-gradient(135deg, #f59e0b, #d97706);
-            transition: all 0.3s ease;
-        }
-        
-        .btn-secondary:hover {
-            background: linear-gradient(135deg, #d97706, #b45309);
-            transform: translateY(-2px);
-        }
-        
-        .faq-item {
-            transition: all 0.3s ease;
-            border: 1px solid transparent;
-        }
-        
-        .faq-item:hover {
-            border-color: #e5e7eb;
-            transform: translateY(-2px);
-        }
-        
-.urgency-bar {
-    opacity: 1;
-}
-
-@keyframes urgency-pulse {
-    0%, 100% { opacity: 0.8; }
-    50% { opacity: 1; }
-}
-        
-@keyframes price-glow {
-    0%, 100% { box-shadow: 0 0 16px rgba(245, 158, 11, 0.25); }
-    50%      { box-shadow: 0 0 28px rgba(245, 158, 11, 0.45); }
-}
-        
-.countdown-timer {
-    background: linear-gradient(120deg, #b91c1c, #f97316);
-    color: white;
-    font-weight: bold;
-}        
-        @keyframes icon-float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
-        }        
-   
-.progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 2px;
-    background: linear-gradient(90deg, #0ea5e9, #a855f7, #f59e0b);
-    z-index: 90;
-    transform-origin: left;
-    transform: scaleX(0);
-    transition: transform 0.12s ease;
-    will-change: transform;
-    opacity: 0; 
-}
-        
-@media (max-width: 640px) {
-  .progress-bar {
-    display: none;
-  }
-}
-
-@media (max-width:768px){.gradient-hero,.gradient-dark{background-attachment:scroll!important;}}
-
-/* FAQ panel animation */
-.faq-answer {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.3s ease;
-    will-change: max-height;
-}
-
-.faq-item.open .faq-answer {
-    /* max-height é definida via JS; esta classe é apenas o estado aberto */
-}
-
-/* Barra de rolagem mais discreta */
-.hidden {
-  display: none !important;
-}
-
-/* Bloqueio de rolagem quando um modal estiver aberto */
-.overflow-hidden {
-  overflow: hidden !important;
-}
-
-/* Botão flutuante */
- position: fixed;
-  left: 50%;
-  bottom: max(1.25rem, env(safe-area-inset-bottom, 1rem));
-  transform: translateX(-50%);
-  z-index: 50;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 0.9rem 1.4rem;
-  border-radius: 999px;
-
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);      /* Safari */
-
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
-
-  color: #111;
-  font-weight: 600;
-  font-size: 0.95rem;
-  cursor: pointer;
-
-  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
-}
-
-/* Texto com gradiente para o botão flutuante */
-.floating-cta-label {
-  display: inline-block;
-  font-weight: 700;
-
-  background: linear-gradient(135deg, var(--fluxo-blue), var(--fluxo-purple));
-  background-clip: text;
-  -webkit-background-clip: text;
-
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-
-  font-size: 1rem;
-}
-
-@media (min-width: 1024px) {
-  #floatingCta {
-    display: none;
-  }
-}
-
-/* Ícone */
-.floating-cta-label::before {
-  content: "⚡";
-  margin-right: 0.35rem;
-}
-
-/* Hover */
-.floating-cta-btn:hover {
-  transform: translateX(-50%) translateY(-3px);
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
-}
-
-/* Active */
-.floating-cta-btn:active {
-  transform: translateX(-50%) scale(0.97);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
-}
-
-/* Mobile menor */
-@media (max-width: 640px) {
-  .floating-cta-btn {
-    padding: 0.75rem 1.2rem;
-    bottom: 1rem;
-    font-size: 0.85rem;
-  }
-}
-
-.btn-primary:focus-visible,
-.btn-secondary:focus-visible,
-.floating-cta-btn:focus-visible {
-  outline: 3px solid #facc15;   /* amarelo suave */
-  outline-offset: 3px;
-}
-
-/* Animação leve nos bullets do hero */
-.hero-bullet {
-  transition: transform 0.25s ease, color 0.25s ease;
-}
-
-.hero-bullet-icon {
-  transition: transform 0.25s ease;
-}
-
-.hero-bullet:hover {
-  transform: translateY(-1px);
-}
-
-.hero-bullet:hover .hero-bullet-icon {
-  transform: scale(1.15);
-}
-
-    </style>
-</head>
-<body class="font-inter text-gray-900">
-    <!-- Progress Bar -->
-<div class="progress-bar" id="progressBar" aria-hidden="true"></div>
-    
-    <!-- Urgency Bar -->
-<div class="urgency-bar countdown-timer text-white text-center py-2 px-4">
-  <p class="text-sm font-semibold">
-    🔥 CONDIÇÃO ESPECIAL DE LANÇAMENTO: R$ 97 no lote atual.
-    <span class="ml-2" id="countdown-label">
-      Válido por tempo limitado
-    </span>
-    <span class="ml-1 hidden" id="countdown-time">
-      Termina em
-      <span id="hours">00</span>h
-      <span id="minutes">00</span>m
-      <span id="seconds">00</span>s
-    </span>
-  </p>
-</div>
-
-<main id="main-content" role="main" aria-label="Página Prompts Inteligentes para PMEs">
-
-<!-- Hero Section Reescrita -->
-<section id="hero" class="gradient-hero min-h-[75vh] flex items-center text-white relative overflow-hidden" aria-labelledby="hero-title">
-  <div class="absolute inset-0 bg-black/30"></div>
-
-  <div class="container mx-auto px-6 py-16 relative z-10">
-    <div class="max-w-3xl mx-auto text-center fade-in">
+          event.respondWith(
+            fetch(event.request)
+              .then(response => {
+                // Clone response to cache
+                if (response.status === 200) {
+                  const responseClone = response.clone();
+                  caches.open(CACHE_NAME).then(cache => {
+                    cache.put(event.request, responseClone);
+                  });
+                }
+                return response;
+              })
+              .catch(() => {
+                // Network failed, try cache
+                return caches.match(event.request);
+              })
+          );
+        });
+      `;
       
-      <!-- Tagline -->
-      <p class="text-xs tracking-[0.25em] uppercase mb-3 text-cyan-100/80">
-        Prompts prontos para Gestão de Negócios
-      </p>
-
-      <!-- Título -->
-      <h1 id="hero-title" class="font-playfair text-5xl md:text-6xl font-bold mb-4 hero-title-glow">
-        Transforme a IA em resultados reais<br>na sua pequena ou média empresa
-      </h1>
-      <p class="text-lg md:text-2xl mb-8 leading-relaxed fade-in fade-in-delay-1">
-        Um sistema pronto com <strong>Guia + Painel Interativo</strong> que organiza seus processos e usa a IA para gerar produtividade, clareza e decisões melhores no dia a dia.
-      </p>
-      <!-- Badge de preço -->
-      <div class="inline-block mb-6 px-4 py-2 bg-white/10 border border-white/20 rounded-full text-sm backdrop-blur-md fade-in fade-in-delay-1">
-        Acesso vitalício • Pagamento único • <strong>R$ 97</strong> no lote atual
-      </div>
-
-      <!-- CTAs -->
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6 fade-in fade-in-delay-2">
-        <a href="https://pay.kiwify.com.br/DQLoGH1?utm_source=landing&utm_medium=cta&utm_campaign=prompts-pme&utm_content=hero"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="btn-primary holographic-shadow inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full hover:scale-105 transition-all duration-300">
-          Acessar agora o sistema de IA para PMEs
-        </a>
-
-        <a href="#conteudo"
-           class="inline-flex items-center justify-center text-white border-2 border-white/80 px-6 py-3 rounded-full text-sm md:text-base hover:bg-white hover:text-gray-900 transition-all duration-300">
-          Ver conteúdo e exemplos
-        </a>
-      </div>
-
-      <!-- Microinformação de reforço -->
-      <p class="text-sm md:text-base text-cyan-50/80 mb-8">
-        Organize a aplicação da IA nas áreas críticas do seu negócio com um método claro e pronto para adaptar.
-      </p>
-
-      <!-- Bullets mais visuais e fluidos -->
-      <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm fade-in fade-in-delay-3">
-
-        <div class="flex items-center hero-bullet">
-          <svg class="w-5 h-5 text-green-400 mr-2 hero-bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-          Prompts prontos para finanças, vendas e gestão
-        </div>
-
-        <div class="flex items-center hero-bullet">
-          <svg class="w-5 h-5 text-green-400 mr-2 hero-bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-          Sem improviso: método testado com PMEs reais
-        </div>
-
-        <div class="flex items-center hero-bullet">
-          <svg class="w-5 h-5 text-green-400 mr-2 hero-bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-          Compatível com ChatGPT, Gemini, Copilot ou a IA de sua preferência
-        </div>
-
-      </div>
-    </div>
+      const blob = new Blob([swCode], { type: 'application/javascript' });
+      return URL.createObjectURL(blob);
+    }
+  </script>
+  <style>
+    body {
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .font-playfair {
+      font-family: 'Playfair Display', serif;
+      letter-spacing: -0.02em;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      box-shadow: 0 10px 40px -10px rgba(16, 185, 129, 0.6);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.6s;
+    }
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+      box-shadow: 0 20px 60px -10px rgba(16, 185, 129, 0.7);
+      transform: translateY(-3px);
+    }
+    .btn-primary:focus-visible {
+      outline: 3px solid #10b981;
+      outline-offset: 3px;
+    }
+    button:focus-visible, a:focus-visible {
+      outline: 3px solid #10b981;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+    /* Touch targets - mínimo 44x44px (WCAG) */
+    button, a, .faq-question, .card-hover {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    /* Prevent double-tap zoom on buttons */
+    button, a {
+      touch-action: manipulation;
+    }
+    /* Active states for mobile feedback */
+    button:active, a:active {
+      transform: scale(0.97);
+    }
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #10b981, #3b82f6, #8b5cf6);
+      transform-origin: left;
+      z-index: 9999;
+      transition: opacity 0.3s ease;
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0;
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    }
+    .faq-item.open .faq-answer {
+      opacity: 1;
+    }
+    .faq-icon {
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .faq-item {
+      transition: all 0.3s ease;
+    }
+    .faq-item:hover {
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      transform: translateY(-2px);
+    }
+    .floating-cta-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 1000;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      padding: 16px 28px;
+      border-radius: 9999px;
+      font-weight: 700;
+      font-size: 14px;
+      box-shadow: 0 12px 40px rgba(16, 185, 129, 0.6);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+    }
+    .floating-cta-btn:hover {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+      box-shadow: 0 16px 50px rgba(16, 185, 129, 0.7);
+      transform: translateY(-4px);
+    }
+    .floating-cta-btn:focus-visible {
+      outline: 3px solid #10b981;
+      outline-offset: 3px;
+    }
+    @media (max-width: 640px) {
+      .floating-cta-btn {
+        padding: 14px 24px;
+        font-size: 13px;
+      }
+      .floating-cta-label::before {
+        content: 'Acessar agora';
+      }
+    }
+    @media (min-width: 641px) {
+      .floating-cta-label::before {
+        content: 'Acessar sistema de prompts';
+      }
+    }
+    .gradient-border {
+      position: relative;
+      background: linear-gradient(white, white) padding-box,
+                  linear-gradient(135deg, #10b981, #3b82f6, #8b5cf6) border-box;
+      border: 2px solid transparent;
+    }
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .animate-fade-in {
+      animation: fadeIn 0.8s ease-out;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .card-hover {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      will-change: transform;
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+    }
+    .card-hover:active {
+      transform: translateY(-4px);
+      transition-duration: 0.1s;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .card-hover {
+        transition: none;
+      }
+      .card-hover:hover {
+        transform: none;
+      }
+    }
+    .text-gradient {
+      background: linear-gradient(135deg, #10b981, #3b82f6, #8b5cf6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    .lazy-load {
+      opacity: 0;
+      transition: opacity 0.3s ease-in;
+    }
+    .lazy-load.loaded {
+      opacity: 1;
+    }
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #10b981;
+      color: white;
+      padding: 8px 16px;
+      text-decoration: none;
+      font-weight: bold;
+      z-index: 10000;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+    .offline-indicator {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 8px 30px rgba(245, 158, 11, 0.4);
+      z-index: 1000;
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+    .offline-indicator.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="bg-white text-slate-900 antialiased"><a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+  <div id="progressBar" class="progress-bar" style="opacity: 0;" role="progressbar" aria-label="Progresso de leitura da página" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  <div id="offlineIndicator" class="offline-indicator" role="status" aria-live="polite">
+   <div class="flex items-center gap-2">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414" />
+    </svg><span>Modo offline ativo</span>
+   </div>
   </div>
-</section>
-
-<!-- Comparação direta: Só ChatGPT x Sistema de Prompts -->
-<section id="comparacao" class="py-14 bg-white">
-  <div class="container mx-auto px-6">
-    <div class="max-w-3xl mx-auto text-center">
-
-      <h2 class="font-playfair text-3xl font-bold leading-snug mb-4 
-                 bg-gradient-to-r from-fluxo-blue via-fluxo-purple to-fluxo-amber 
-                 bg-clip-text text-transparent">
-        ChatGPT entrega texto.<br>Um sistema de prompts entrega processo.
-      </h2>
-
-      <p class="text-base text-gray-600 mb-6">
-        A ferramenta você já tem. O que falta é um método que transforma as respostas em tarefas reais e replicáveis, com clareza, critério e foco na rotina.
-      </p>
-
-      <!-- Bullet visual de contraste -->
-      <div class="inline-block px-5 py-3 rounded-xl bg-gray-50 border border-gray-200 shadow-sm">
-        <p class="text-sm text-gray-800 font-medium">
-          💡 IA sem método = respostas soltas<br>
-          ✅ IA com método = resultado repetível
-        </p>
-      </div>
-
+  <header class="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-slate-200/50 shadow-sm" role="banner">
+   <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between" role="navigation" aria-label="Navegação principal">
+    <div class="flex items-center gap-3">
+     <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 via-sky-500 to-purple-600 flex items-center justify-center shadow-lg" aria-hidden="true">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+     </div><span class="font-bold text-lg text-slate-900 tracking-tight">Fluxoteca</span>
     </div>
-  </div>
-</section>
-
-<!-- A Dor (Problema) -->
-<section class="py-20 bg-white" id="problema" aria-labelledby="problema-title">
-  <div class="container mx-auto px-6">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 id="problema-title" class="font-playfair text-4xl md:text-5xl font-bold mb-10 text-gray-900 fade-in">
-        Por que a maioria das PMEs <span class="text-red-600">não consegue aplicar IA de verdade</span>?
-      </h2>
-
-      <div class="grid md:grid-cols-3 gap-8 mobile-grid-1 fade-in fade-in-delay-1">
-
-        <!-- Card 1 -->
-        <div class="text-center mobile-compact">
-          <div class="w-16 h-16 mx-auto mb-5 bg-red-500 rounded-2xl flex items-center justify-center shadow-lg">
-            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9H9m11 11v-5h-.581a8.003 8.003 0 01-15.357-2h3.5"/>
-            </svg>
+    <div class="flex items-center gap-3"><button type="button" onclick="scrollToBonus()" class="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold text-emerald-700 bg-emerald-50 border-2 border-emerald-200 hover:bg-emerald-100 hover:border-emerald-300 transition-all shadow-sm" aria-label="Ver prompts bônus gratuitos" data-tooltip="2 prompts completos liberados para você testar">
+      <svg class="w-4 h-4 sm:w-5 sm:h-5" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 12V22H4V12" stroke="url(#gift-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> <path d="M22 7H2V12H22V7Z" stroke="url(#gift-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> <path d="M12 22V7" stroke="url(#gift-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> <path d="M12 7H7.5C6.83696 7 6.20107 6.73661 5.73223 6.26777C5.26339 5.79893 5 5.16304 5 4.5C5 3.83696 5.26339 3.20107 5.73223 2.73223C6.20107 2.26339 6.83696 2 7.5 2C11 2 12 7 12 7Z" stroke="url(#gift-gradient2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> <path d="M12 7H16.5C17.163 7 17.7989 6.73661 18.2678 6.26777C18.7366 5.79893 19 5.16304 19 4.5C19 3.83696 18.7366 3.20107 18.2678 2.73223C17.7989 2.26339 17.163 2 16.5 2C13 2 12 7 12 7Z" stroke="url(#gift-gradient2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> <defs>
+        <lineargradient id="gift-gradient" x1="2" y1="7" x2="22" y2="22" gradientunits="userSpaceOnUse">
+         <stop stop-color="#10b981" />
+         <stop offset="1" stop-color="#059669" />
+        </lineargradient>
+        <lineargradient id="gift-gradient2" x1="5" y1="2" x2="19" y2="7" gradientunits="userSpaceOnUse">
+         <stop stop-color="#ec4899" />
+         <stop offset="1" stop-color="#8b5cf6" />
+        </lineargradient>
+       </defs>
+      </svg> Prompts Bônus </button> <a href="https://pay.kiwify.com.br/DQLoGH1?utm_source=landing&amp;utm_medium=cta&amp;utm_campaign=prompts-pme&amp;utm_content=header" target="_blank" rel="noopener noreferrer" class="btn-primary inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold text-white tracking-wide" aria-label="Acessar agora o sistema de prompts (abre em nova aba)"> Acessar agora </a>
+    </div>
+   </nav>
+  </header>
+  <main class="pt-16" id="main-content">
+   <section class="relative py-20 sm:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900" aria-labelledby="hero-heading">
+    <div class="absolute inset-0 opacity-10" aria-hidden="true">
+     <div class="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full blur-3xl animate-pulse"></div>
+     <div class="absolute bottom-20 right-10 w-[500px] h-[500px] bg-gradient-to-br from-purple-400 to-pink-500 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+    </div>
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 text-center animate-fade-in">
+     <p class="inline-block px-5 py-2 rounded-full bg-emerald-500/20 text-emerald-300 text-xs sm:text-sm font-bold mb-6 border border-emerald-400/40 shadow-lg backdrop-blur-sm">Sistema de Prompts Inteligentes para PMEs</p>
+     <h1 id="hero-heading" class="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[1.1]">IA que <span class="bg-gradient-to-r from-emerald-300 via-cyan-300 to-purple-300 bg-clip-text text-transparent">realmente entra</span><br>
+      na rotina da sua Empresa</h1>
+     <p class="text-lg sm:text-xl md:text-2xl text-slate-200 max-w-4xl mx-auto mb-10 leading-relaxed font-medium">Mais de 90 prompts estruturados para transformar inteligência artificial em processo real: finanças, vendas, compras, operação, RH e gestão.</p>
+     <div class="flex flex-col items-center gap-4"><a href="https://pay.kiwify.com.br/DQLoGH1?utm_source=landing&amp;utm_medium=cta&amp;utm_campaign=prompts-pme&amp;utm_content=hero" target="_blank" rel="noopener noreferrer" class="btn-primary inline-flex items-center justify-center px-9 py-4 rounded-full text-base sm:text-lg font-bold text-white tracking-wide" aria-label="Quero acessar o sistema completo (abre em nova aba)"> Quero acessar o sistema completo </a>
+      <div class="flex flex-col items-center gap-3">
+       <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/10 border-2 border-emerald-400/50 backdrop-blur-sm shadow-xl">
+        <div class="flex flex-col items-center gap-1"><span class="text-xs sm:text-sm font-bold text-slate-400 line-through">De R$ 147</span>
+         <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-emerald-300" fill="none" stroke="currentColor" viewbox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+          </svg><span class="text-lg sm:text-xl font-black text-emerald-300">por R$ 97</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-emerald-500/20 border border-emerald-400/40 backdrop-blur-sm" data-tooltip="Teste sem riscos por 7 dias. Não gostou? Reembolso total.">
+        <svg class="w-5 h-5 text-purple-300" fill="none" stroke="currentColor" viewbox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+        </svg><span class="text-sm sm:text-base font-bold text-slate-200">Acesso vitalício</span>
+       <svg class="w-5 h-5 text-emerald-300" fill="none" stroke="currentColor" viewbox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+       </svg><span class="text-sm font-bold text-emerald-300">Garantia de 7 dias</span>
+      </div>
+     </div>
+     <p class="text-xs sm:text-sm text-slate-400 mt-6">Compatível com ChatGPT, Gemini, Copilot e outras IAs. Você escolhe a ferramenta, o sistema cuida do método.</p>
+    </div>
+   </section>
+   <section class="py-20 sm:py-24 bg-gradient-to-b from-white to-slate-50" aria-labelledby="problem-heading">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+     <div class="text-center mb-14 max-w-3xl mx-auto">
+      <h2 id="problem-heading" class="font-playfair text-3xl sm:text-4xl md:text-5xl font-black mb-5 text-slate-900 leading-tight">Você já tentou usar IA, mas não conseguiu encaixar no dia a dia</h2>
+      <p class="text-base sm:text-lg text-slate-600 leading-relaxed">A promessa da inteligência artificial é clara: mais produtividade, menos retrabalho, decisões mais rápidas. Mas quando você abre o ChatGPT, o que vem na cabe  a é: <em>"E agora? O que eu pergunto?"</em></p>
+     </div>
+     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
+      <article class="card-hover bg-white border-2 border-slate-100 rounded-3xl p-6 shadow-sm">
+       <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-rose-100 to-rose-200 flex items-center justify-center mb-4 shadow-sm" aria-hidden="true">
+        <svg class="w-7 h-7 text-rose-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-slate-900 mb-3 text-base">Pedidos genéricos, respostas vazias</h3>
+       <p class="text-slate-600 leading-relaxed">"ChatGPT, me ajuda a organizar o financeiro" devolve um texto bonito, mas que não vira processo.</p>
+      </article>
+      <article class="card-hover bg-white border-2 border-slate-100 rounded-3xl p-6 shadow-sm">
+       <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center mb-4 shadow-sm" aria-hidden="true">
+        <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-slate-900 mb-3 text-base">Perde tempo tentando, volta ao manual</h3>
+       <p class="text-slate-600 leading-relaxed">Você testa prompts diferentes, não chega em lugar nenhum, e acaba fazendo tudo do jeito antigo.</p>
+      </article>
+      <article class="card-hover bg-white border-2 border-slate-100 rounded-3xl p-6 shadow-sm">
+       <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center mb-4 shadow-sm" aria-hidden="true">
+        <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-slate-900 mb-3 text-base">Não sabe como transformar em rotina</h3>
+       <p class="text-slate-600 leading-relaxed">Mesmo quando a resposta é boa, você não consegue transformar aquilo em algo que a equipe siga.</p>
+      </article>
+      <article class="card-hover bg-white border-2 border-slate-100 rounded-3xl p-6 shadow-sm">
+       <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-sky-100 to-sky-200 flex items-center justify-center mb-4 shadow-sm" aria-hidden="true">
+        <svg class="w-7 h-7 text-sky-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-slate-900 mb-3 text-base">Falta contexto e estrutura</h3>
+       <p class="text-slate-600 leading-relaxed">Sem saber como estruturar o pedido com dados da sua empresa, a IA fica perdida.</p>
+      </article>
+      <article class="card-hover bg-white border-2 border-slate-100 rounded-3xl p-6 shadow-sm">
+       <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-100 to-emerald-200 flex items-center justify-center mb-4 shadow-sm" aria-hidden="true">
+        <svg class="w-7 h-7 text-emerald-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-slate-900 mb-3 text-base">Equipe não embarca junto</h3>
+       <p class="text-slate-600 leading-relaxed">Se nem você sabe como usar direito, fica impossível passar isso adiante para o time.</p>
+      </article>
+      <article class="card-hover bg-white border-2 border-slate-100 rounded-3xl p-6 shadow-sm">
+       <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-100 to-indigo-200 flex items-center justify-center mb-4 shadow-sm" aria-hidden="true">
+        <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-slate-900 mb-3 text-base">Cada demanda começa do zero</h3>
+       <p class="text-slate-600 leading-relaxed">Sem um padrão, você repete os mesmos erros e nunca evolui no uso da ferramenta.</p>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="py-20 sm:py-24 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 text-slate-50 relative overflow-hidden" aria-labelledby="solution-heading">
+    <div class="absolute inset-0 opacity-10" aria-hidden="true">
+     <div class="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full blur-3xl animate-pulse"></div>
+     <div class="absolute bottom-20 right-10 w-[500px] h-[500px] bg-gradient-to-br from-purple-400 to-pink-500 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+    </div>
+    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 text-center">
+     <h2 id="solution-heading" class="font-playfair text-3xl sm:text-4xl md:text-5xl font-black mb-6 leading-tight">Sistema de Prompts Inteligentes:<br>
+      da rotina para a IA, da IA de volta para a rotina</h2>
+     <p class="text-base sm:text-lg text-slate-200 max-w-3xl mx-auto mb-12 leading-relaxed">Em vez de começar pela ferramenta, você começa pelo processo. O sistema pega o que acontece no dia a dia da sua PME e transforma em prompts estruturados que geram respostas aplicáveis, não apenas bonitas.</p>
+     <div class="grid sm:grid-cols-3 gap-6 text-left text-sm">
+      <div class="glass-effect rounded-3xl p-6 border-2 border-emerald-500/30 shadow-2xl card-hover">
+       <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center mb-4 shadow-lg" aria-hidden="true">
+        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-slate-900 mb-3 text-base">Prompts já estruturados</h3>
+       <p class="text-slate-700 leading-relaxed">Mais de 90 prompts prontos, organizados por área da PME e tipo de tarefa. Você só adapta ao seu contexto.</p>
+      </div>
+      <div class="glass-effect rounded-3xl p-6 border-2 border-sky-500/30 shadow-2xl card-hover">
+       <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-sky-500 to-sky-600 flex items-center justify-center mb-4 shadow-lg" aria-hidden="true">
+        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-slate-900 mb-3 text-base">Pensado para processo</h3>
+       <p class="text-slate-700 leading-relaxed">Cada prompt considera contexto, objetivo, dados e formato de entrega. O resultado é algo que você coloca para rodar.</p>
+      </div>
+      <div class="glass-effect rounded-3xl p-6 border-2 border-purple-500/30 shadow-2xl card-hover">
+       <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center mb-4 shadow-lg" aria-hidden="true">
+        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+        </svg>
+       </div>
+       <h3 class="font-bold text-slate-900 mb-3 text-base">Aplicável no mundo real</h3>
+       <p class="text-slate-700 leading-relaxed">Construído com base em consultorias reais de PMEs brasileiras. Testado em rotinas apertadas e decis    es urgentes.</p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="py-20 sm:py-24 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 text-slate-50 relative overflow-hidden" aria-labelledby="comparison-heading">
+    <div class="absolute inset-0 opacity-10" aria-hidden="true">
+     <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full blur-3xl animate-pulse"></div>
+     <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-gradient-to-br from-purple-400 to-pink-500 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+    </div>
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+     <h2 id="comparison-heading" class="font-playfair text-3xl sm:text-4xl md:text-5xl font-black mb-5 text-center leading-tight">IA "na tentativa e erro" <span class="text-gradient">x</span> Sistema de Prompts</h2>
+     <p class="text-base sm:text-lg text-slate-200 text-center max-w-2xl mx-auto mb-12">Um exemplo real de como o mesmo problema é tratado de dois jeitos diferentes.</p>
+     <div class="relative max-w-5xl mx-auto">
+      <article class="relative mb-8 transform hover:-translate-y-2 transition-all duration-500">
+       <div class="absolute -inset-1 bg-gradient-to-r from-rose-500 to-red-600 rounded-3xl blur-lg opacity-30" aria-hidden="true"></div>
+       <div class="relative bg-gradient-to-br from-rose-50 to-red-50 rounded-3xl p-8 shadow-2xl border-2 border-rose-200">
+        <div class="flex items-start gap-4 mb-6">
+         <div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br from-rose-500 to-red-600 flex items-center justify-center shadow-lg transform -rotate-3" aria-hidden="true">
+          <svg class="w-9 h-9 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+         </div>
+         <div class="flex-1">
+          <h3 class="font-black text-2xl text-rose-900 mb-2">Sem sistema      pedido solto para a IA</h3>
+          <div class="inline-block px-4 py-2 rounded-full bg-rose-200/80 border border-rose-300">
+           <p class="text-sm font-bold text-rose-800 italic">"ChatGPT, monte um fluxo de cobrança para minha empresa."</p>
           </div>
-          <h3 class="font-bold text-gray-900 mb-2 text-lg">Retrabalho que nunca acaba</h3>
-          <p class="text-gray-600 text-sm">
-            Prompts genéricos, respostas bonitas, mas nada que vira rotina. IA sem método gera mais confusão que resultado.
-          </p>
+         </div>
         </div>
-
-        <!-- Card 2 -->
-        <div class="text-center mobile-compact">
-          <div class="w-16 h-16 mx-auto mb-5 bg-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
-            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
+        <div class="space-y-4 text-sm sm:text-base">
+         <div class="flex items-start gap-3 p-4 rounded-2xl bg-white/60 border border-rose-200/50"><span class="flex-shrink-0 w-6 h-6 rounded-full bg-rose-500 text-white flex items-center justify-center text-xs font-bold mt-0.5" aria-hidden="true">1</span>
+          <p class="text-slate-800 leading-relaxed">A IA devolve um <strong>texto genérico</strong> com passos teóricos que cabem em qualquer empresa.</p>
+         </div>
+         <div class="flex items-start gap-3 p-4 rounded-2xl bg-white/60 border border-rose-200/50"><span class="flex-shrink-0 w-6 h-6 rounded-full bg-rose-500 text-white flex items-center justify-center text-xs font-bold mt-0.5" aria-hidden="true">2</span>
+          <p class="text-slate-800 leading-relaxed">Nada considera <strong>como seu financeiro funciona hoje</strong>, seus prazos ou seu perfil de cliente.</p>
+         </div>
+         <div class="flex items-start gap-3 p-4 rounded-2xl bg-white/60 border border-rose-200/50"><span class="flex-shrink-0 w-6 h-6 rounded-full bg-rose-500 text-white flex items-center justify-center text-xs font-bold mt-0.5" aria-hidden="true">3</span>
+          <p class="text-slate-800 leading-relaxed">Fica <strong>difícil transformar</strong> aquilo em rotina de verdade que a equipe consiga seguir.</p>
+         </div>
+         <div class="flex items-start gap-3 p-4 rounded-2xl bg-white/60 border border-rose-200/50"><span class="flex-shrink-0 w-6 h-6 rounded-full bg-rose-500 text-white flex items-center justify-center text-xs font-bold mt-0.5" aria-hidden="true">4</span>
+          <p class="text-slate-800 leading-relaxed">A equipe não sabe o que fazer com aquele texto: <strong>vira PDF esquecido</strong>.</p>
+         </div>
+        </div>
+        <div class="mt-6 p-4 rounded-2xl bg-rose-100/80 border-2 border-rose-300">
+         <p class="text-sm font-bold text-rose-900 text-center">❌ Resultado: Você tentou usar IA, mas não conseguiu aplicar na prática</p>
+        </div>
+       </div>
+      </article>
+      <div class="flex items-center justify-center my-8" aria-hidden="true">
+       <div class="h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent flex-1"></div>
+       <div class="mx-6 w-14 h-14 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center shadow-xl transform rotate-12"><span class="font-black text-white text-xl">VS</span>
+       </div>
+       <div class="h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent flex-1"></div>
+      </div>
+      <article class="relative transform hover:-translate-y-2 transition-all duration-500">
+       <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-3xl blur-lg opacity-40" aria-hidden="true"></div>
+       <div class="relative bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-8 shadow-2xl border-2 border-emerald-300">
+        <div class="flex items-start gap-4 mb-6">
+         <div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center shadow-lg transform rotate-3" aria-hidden="true">
+          <svg class="w-9 h-9 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+          </svg>
+         </div>
+         <div class="flex-1">
+          <h3 class="font-black text-2xl text-emerald-900 mb-2">Com Sistema de Prompts Inteligentes</h3>
+          <div class="inline-block px-4 py-2 rounded-full bg-emerald-200/80 border border-emerald-400">
+           <p class="text-sm font-bold text-emerald-900">Você abre o Painel → Finanças &amp; Cobrança → "Organizar fluxo de cobrança do mês"</p>
           </div>
-          <h3 class="font-bold text-gray-900 mb-2 text-lg">Tempo desperdiçado</h3>
-          <p class="text-gray-600 text-sm">
-            Muitas horas testando IA sem conseguir aplicar nada em vendas, financeiro ou decisões do dia a dia.
-          </p>
+         </div>
         </div>
-
-        <!-- Card 3 -->
-        <div class="text-center mobile-compact">
-          <div class="w-16 h-16 mx-auto mb-5 bg-purple-500 rounded-2xl flex items-center justify-center shadow-lg">
-            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"/>
-            </svg>
-          </div>
-          <h3 class="font-bold text-gray-900 mb-2 text-lg">Soluções fora da realidade</h3>
-          <p class="text-gray-600 text-sm">
-            Muitas ferramentas parecem feitas para grandes empresas, e não para o dia a dia apertado de uma PME.
-          </p>
+        <div class="space-y-4 text-sm sm:text-base">
+         <div class="flex items-start gap-3 p-4 rounded-2xl bg-white/70 border border-emerald-300/50 shadow-sm"><span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold mt-0.5" aria-hidden="true">1</span>
+          <p class="text-slate-800 leading-relaxed">O prompt <strong>já vem estruturado</strong> com contexto, dados necessários e objetivo claro.</p>
+         </div>
+         <div class="flex items-start gap-3 p-4 rounded-2xl bg-white/70 border border-emerald-300/50 shadow-sm"><span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold mt-0.5" aria-hidden="true">2</span>
+          <p class="text-slate-800 leading-relaxed">Você só preenche <strong>como sua empresa cobra hoje</strong>, prazos, limites e perfil de clientes.</p>
+         </div>
+         <div class="flex items-start gap-3 p-4 rounded-2xl bg-white/70 border border-emerald-300/50 shadow-sm"><span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold mt-0.5" aria-hidden="true">3</span>
+          <p class="text-slate-800 leading-relaxed">A IA devolve um <strong>fluxo de cobrança</strong> com etapas claras, prazos e responsabilidades.</p>
+         </div>
+         <div class="flex items-start gap-3 p-4 rounded-2xl bg-white/70 border border-emerald-300/50 shadow-sm"><span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold mt-0.5" aria-hidden="true">4</span>
+          <p class="text-slate-800 leading-relaxed">Isso vira um <strong>mini procedimento</strong> que pode ser delegado, repetido e melhorado.</p>
+         </div>
         </div>
+        <div class="mt-6 p-4 rounded-2xl bg-emerald-200/80 border-2 border-emerald-400 shadow-sm">
+         <p class="text-sm font-bold text-emerald-900 text-center">✅ Resultado: Você transformou IA em processo real que entra na rotina da empresa</p>
+        </div>
+       </div>
+      </article>
+     </div>
+     <div class="mt-12 text-center max-w-3xl mx-auto">
+      <div class="inline-block px-6 py-4 rounded-2xl bg-gradient-to-r from-white/10 to-white/5 border border-white/20 backdrop-blur-sm shadow-xl">
+       <p class="text-base sm:text-lg text-slate-200 font-medium leading-relaxed">Você não está comprando "prompts bonitos".<br>
+         Está comprando um <span class="text-transparent bg-gradient-to-r from-emerald-300 via-cyan-300 to-teal-300 bg-clip-text font-black text-xl">sistema que transforma IA em processo e rotina</span>.</p>
       </div>
-
-      <!-- Conclusão resumida -->
-      <p class="text-gray-700 text-base mt-12 max-w-3xl mx-auto fade-in fade-in-delay-2">
-        O problema não está na IA. Está em tentar usá-la sem processo, sem contexto e sem critério. O resultado? Respostas bonitas, mas nenhuma rotina que funcione de verdade.
-      </p>
+     </div>
     </div>
-  </div>
-</section>
-
-<!-- A Solução -->
-<section class="gradient-dark py-20 text-white" id="como-funciona" aria-labelledby="como-funciona-title">
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-16">
-      <h2 id="como-funciona-title" class="font-playfair text-4xl md:text-5xl font-bold mb-6 fade-in">
-        IA não precisa ser difícil.<br><span class="text-fluxo-amber">Você só precisa de um método claro.</span>
-      </h2>
-      <p class="text-xl text-blue-100 max-w-3xl mx-auto fade-in fade-in-delay-1">
-        Com o Guia + Painel Interativo, você aplica IA onde sua empresa mais precisa, com prompts prontos, organizados e adaptáveis ao seu fluxo real.
-      </p>
+   </section>
+   <section id="para-quem" class="py-20 sm:py-24 bg-gradient-to-b from-white to-slate-50" aria-labelledby="audience-heading">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+     <h2 id="audience-heading" class="font-playfair text-3xl sm:text-4xl md:text-5xl font-black mb-5 text-slate-900 text-center leading-tight">Para quem este sistema foi pensado</h2>
+     <p class="text-base sm:text-lg text-slate-600 text-center max-w-2xl mx-auto mb-12 leading-relaxed">Nem toda solução de IA serve para todo mundo. Este sistema foi construído para uma realidade muito específica.</p>
+     <div class="grid md:grid-cols-2 gap-8 text-sm">
+      <div class="gradient-border rounded-3xl p-8 bg-gradient-to-br from-emerald-50 to-sky-50 shadow-lg card-hover">
+       <h3 class="font-bold text-emerald-800 mb-5 text-lg">✓ É para você se…</h3>
+       <ul class="space-y-3 text-emerald-900">
+        <li class="flex items-start gap-3"><span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-emerald-200 text-emerald-800 text-xs font-bold flex-shrink-0 mt-0.5" aria-hidden="true">✓</span> <span>Você é dono(a) ou gestor(a) de PME e vive apagando incêndios.</span></li>
+        <li class="flex items-start gap-3"><span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-emerald-200 text-emerald-800 text-xs font-bold flex-shrink-0 mt-0.5" aria-hidden="true">✓</span> <span>Já testou IA, mas sente que "não encaixa" no dia a dia da empresa.</span></li>
+        <li class="flex items-start gap-3"><span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-emerald-200 text-emerald-800 text-xs font-bold flex-shrink-0 mt-0.5" aria-hidden="true">✓</span> <span>Cansa de criar tudo do zero: relatórios, e-mails, fluxos, textos.</span></li>
+        <li class="flex items-start gap-3"><span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-emerald-200 text-emerald-800 text-xs font-bold flex-shrink-0 mt-0.5" aria-hidden="true">✓</span> <span>Quer reduzir retrabalho e ter processos mais claros para delegar.</span></li>
+        <li class="flex items-start gap-3"><span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-emerald-200 text-emerald-800 text-xs font-bold flex-shrink-0 mt-0.5" aria-hidden="true">✓</span> <span>Gosta de coisa prática, possível, aplicável no mundo real.</span></li>
+       </ul>
+      </div>
+      <div class="bg-gradient-to-br from-slate-50 to-slate-100 border-2 border-slate-200 rounded-3xl p-8 shadow-lg card-hover">
+       <h3 class="font-bold text-slate-900 mb-5 text-lg">✗ Não é para você se…</h3>
+       <ul class="space-y-3 text-slate-700">
+        <li class="flex items-start gap-3"><span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-200 text-slate-700 text-xs font-bold flex-shrink-0 mt-0.5" aria-hidden="true">✗</span> <span>Busca um curso longo e teórico de IA.</span></li>
+        <li class="flex items-start gap-3"><span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-200 text-slate-700 text-xs font-bold flex-shrink-0 mt-0.5" aria-hidden="true">✗</span> <span>Quer aprender programação ou construir modelo próprio.</span></li>
+        <li class="flex items-start gap-3"><span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-200 text-slate-700 text-xs font-bold flex-shrink-0 mt-0.5" aria-hidden="true">✗</span> <span>Não pretende usar IA no dia a dia da empresa.</span></li>
+        <li class="flex items-start gap-3"><span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-200 text-slate-700 text-xs font-bold flex-shrink-0 mt-0.5" aria-hidden="true">✗</span> <span>Prefere planilhas e processos totalmente manuais.</span></li>
+        <li class="flex items-start gap-3"><span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-200 text-slate-700 text-xs font-bold flex-shrink-0 mt-0.5" aria-hidden="true">✗</span> <span>Espera um "botão mágico" que resolve tudo sozinho.</span></li>
+       </ul>
+      </div>
+     </div>
     </div>
-
-    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
-
-      <!-- Passo 1 -->
-      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 card-3d fade-in">
-        <h3 class="text-xl font-bold mb-2">1. Encontre o gargalo</h3>
-        <p class="text-blue-100 text-sm">
-          Parta de um processo real da sua PME (ex: cobrança, atendimento, compras) e descubra onde a IA pode ajudar de verdade.
-        </p>
-      </div>
-
-      <!-- Passo 2 -->
-      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 card-3d fade-in fade-in-delay-1">
-        <h3 class="text-xl font-bold mb-2">2. Use o prompt certo</h3>
-        <p class="text-purple-100 text-sm">
-          Com base no cenário, selecione um prompt estruturado no Painel — com contexto, dados e objetivo. Resultado claro, sem tentativa e erro.
-        </p>
-      </div>
-
-      <!-- Passo 3 -->
-      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 card-3d fade-in fade-in-delay-2">
-        <h3 class="text-xl font-bold mb-2">3. Aplique na rotina</h3>
-        <p class="text-yellow-100 text-sm">
-          Os prompts viram ação: e-mail enviado, relatório montado, fluxo desenhado. Tudo pronto para delegar ou replicar.
-        </p>
-      </div>
-
-      <!-- Passo 4 -->
-      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 card-3d fade-in fade-in-delay-3">
-        <h3 class="text-xl font-bold mb-2">4. Melhore com uso</h3>
-        <p class="text-green-100 text-sm">
-          Cada vez que você aplica, melhora. Crie sua biblioteca própria de prompts e veja sua operação evoluir junto com sua inteligência.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Benefícios -->
-<section class="py-20 bg-gray-50" aria-labelledby="beneficios-title">
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-16">
-      <h2 id="beneficios-title" class="font-playfair text-4xl md:text-5xl font-bold mb-6 text-gray-900 fade-in">
-        O que muda quando você aplica IA com <span class="text-fluxo-blue">método</span>?
-      </h2>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in fade-in-delay-1">
-        Menos tentativa e erro, mais decisões claras, tempo economizado e processos prontos para delegar.
-      </p>
-    </div>
-
-    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 mobile-grid-1">
-
-      <!-- Benefício 1: Clareza -->
-      <div class="bg-white rounded-2xl p-8 card-3d fade-in mobile-compact">
-        <div class="w-16 h-16 mb-4 bg-blue-500 rounded-xl flex items-center justify-center shadow-lg">
-          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
+   <section id="conteudo" class="py-20 sm:py-24 bg-white" aria-labelledby="content-heading">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+     <div class="text-center max-w-3xl mx-auto mb-14">
+      <h2 id="content-heading" class="font-playfair text-3xl sm:text-4xl md:text-5xl font-black mb-5 text-slate-900 leading-tight">O que você recebe ao acessar o Sistema</h2>
+      <p class="text-base sm:text-lg text-slate-600 leading-relaxed">Não é um arquivo solto. É um sistema organizado para você aplicar IA de forma consistente nas áreas críticas da sua PME.</p>
+     </div>
+     <div class="grid md:grid-cols-3 gap-8 text-sm mb-12">
+      <article class="relative group">
+       <div class="absolute -inset-1 bg-gradient-to-br from-sky-400 via-blue-500 to-cyan-600 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500" aria-hidden="true"></div>
+       <div class="relative bg-white rounded-3xl p-8 shadow-2xl card-hover border-2 border-sky-100 flex flex-col gap-5 h-full">
+        <div class="flex items-start justify-between gap-3">
+         <div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center shadow-xl transform -rotate-3 group-hover:rotate-0 transition-transform duration-500" aria-hidden="true">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
           </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-2 text-gray-900">Clareza nos resultados</h3>
-        <p class="text-gray-600 text-sm">
-          Prompts estruturados geram respostas úteis, acionáveis e ligadas ao que sua PME realmente precisa resolver, sem achismos.
-        </p>
-      </div>
-
-      <!-- Benefício 2: Produtividade -->
-      <div class="bg-white rounded-2xl p-8 card-3d fade-in fade-in-delay-1 mobile-compact">
-        <div class="w-16 h-16 mb-4 bg-green-500 rounded-xl flex items-center justify-center shadow-lg">
-          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-2 text-gray-900">Produtividade real</h3>
-        <p class="text-gray-600 text-sm">
-          Menos retrabalho, mais tempo para decidir, liderar e acompanhar a equipe. IA vira extensão da sua operação, não mais uma distração.
-        </p>
-      </div>
-
-      <!-- Benefício 3: Padronização -->
-      <div class="bg-white rounded-2xl p-8 card-3d fade-in fade-in-delay-2 mobile-compact">
-        <div class="w-16 h-16 mb-4 bg-purple-500 rounded-xl flex items-center justify-center shadow-lg">
-          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3-12h.008v.008H15.75V6"/>
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-2 text-gray-900">Padronização inteligente</h3>
-        <p class="text-gray-600 text-sm">
-          Prompts replicáveis por toda a equipe, com linguagem, critérios e foco alinhados, mesmo quando muda a pessoa.
-        </p>
-      </div>
-
-      <!-- Benefício 4: ROI visível -->
-      <div class="bg-white rounded-2xl p-8 card-3d fade-in fade-in-delay-3 mobile-compact">
-        <div class="w-16 h-16 mb-4 bg-amber-500 rounded-xl flex items-center justify-center shadow-lg">
-          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.3 4.3a12 12 0 015.8-5.5l2.75-1.2"/>
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold mb-2 text-gray-900">Retorno que aparece</h3>
-        <p class="text-gray-600 text-sm">
-          Mais tempo livre, decisões melhores e processos confiáveis. Você sente o impacto já nas primeiras semanas de uso.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- O que você recebe -->
-<section class="py-20 bg-white" id="conteudo" aria-labelledby="conteudo-title">
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-16">
-      <h2 id="conteudo-title" class="font-playfair text-4xl md:text-5xl font-bold mb-6 text-gray-900 fade-in">
-        O que você recebe <span class="text-fluxo-purple">ao acessar hoje</span>
-      </h2>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in fade-in-delay-1">
-        Um sistema completo para aplicar IA com método, clareza e eficiência na sua pequena ou média empresa.
-      </p>
-    </div>
-
-    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 mobile-grid-1">
-
-      <!-- Card 1: Guia Inteligente -->
-      <div class="bg-white rounded-2xl p-8 card-3d fade-in border-2 border-fluxo-blue/20 mobile-compact">
-        <div class="w-16 h-16 mb-5 bg-fluxo-blue rounded-xl flex items-center justify-center">
-          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.25v13m0-13C10.8 5.5 9.2 5 7.5 5S4.2 5.5 3 6.25v13C4.2 18.5 5.8 18 7.5 18s3.3.5 4.5 1.25m0-13C13.2 5.5 14.8 5 16.5 5c1.7 0 3.3.5 4.5 1.25v13"/>
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-2">Guia Inteligente de Prompts</h3>
-        <p class="text-gray-600 text-sm">
-          Um passo a passo prático para transformar processos reais da sua PME em prompts eficientes. Inclui exemplos comentados, checklists e 14 prompts bônus exclusivos.
-        </p>
-      </div>
-
-      <!-- Card 2: Painel Interativo -->
-      <div class="bg-white rounded-2xl p-8 card-3d fade-in fade-in-delay-1 border-2 border-fluxo-purple/20 mobile-compact">
-        <div class="w-16 h-16 mb-5 bg-fluxo-purple rounded-xl flex items-center justify-center">
-          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-2">Painel Interativo de Prompts</h3>
-        <p class="text-gray-600 text-sm">
-          Ferramenta online com mais de 90 prompts prontos. Escolha a área (finanças, vendas, RH, etc.), selecione o cenário e adapte em minutos. Simples e direto.
-        </p>
-      </div>
-
-      <!-- Card 3: Acesso vitalício -->
-      <div class="bg-white rounded-2xl p-8 card-3d fade-in fade-in-delay-2 border-2 border-fluxo-amber/20 mobile-compact">
-        <div class="w-16 h-16 mb-5 bg-fluxo-amber rounded-xl flex items-center justify-center">
-          <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.76 2.924-1.76 3.35 0a1.72 1.72 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.72 1.72 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.72 1.72 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.72 1.72 0 00-2.572 1.065c-.426 1.76-2.924 1.76-3.35 0a1.72 1.72 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.72 1.72 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.72 1.72 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-          </svg>
-        </div>
-        <h3 class="text-xl font-bold text-gray-900 mb-2">Acesso vitalício + atualizações</h3>
-        <p class="text-gray-600 text-sm">
-          Você garante acesso completo para sempre, com atualizações contínuas baseadas em novos testes, consultorias e melhorias. Sem mensalidade, sem surpresas.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Exemplos de Prompts Bônus -->
-<section class="py-20 bg-gradient-to-r from-fluxo-blue/5 via-fluxo-purple/5 to-fluxo-amber/5" aria-labelledby="bonus-prompts-title">
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-14">
-      <h2 id="bonus-prompts-title" class="font-playfair text-4xl md:text-5xl font-bold text-gray-900 fade-in">
-        Exemplos de prompts bônus <span class="text-fluxo-purple">prontos para testar</span>
-      </h2>
-      <p class="text-lg text-gray-700 max-w-2xl mx-auto mt-4 fade-in fade-in-delay-1">
-        Estes prompts foram pensados para momentos críticos de decisão e organização. Você só preenche seu contexto e já vê resultado.
-      </p>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-
-      <!-- Prompt 1 -->
-      <div class="bg-white rounded-xl border border-fluxo-blue/30 p-6 flex gap-4 items-start fade-in fade-in-delay-2">
-        <div class="w-10 h-10 bg-fluxo-blue text-white font-bold rounded-full flex items-center justify-center">
-          1
+         </div>
         </div>
         <div>
-          <p class="text-xs font-semibold uppercase tracking-wide text-fluxo-blue mb-1">
-            Prompt bônus liberado
-          </p>
-          <h3 class="text-gray-800 text-base font-medium">
-            Tomada de decisão com mais clareza
-          </h3>
-          <p class="text-gray-600 text-sm mt-1">
-            Organize argumentos, riscos e cenários antes de decidir — com apoio estratégico da IA.
-          </p>
+         <h3 class="text-lg font-black text-slate-900 mb-2 bg-gradient-to-r from-sky-700 to-blue-700 bg-clip-text text-transparent">Guia Inteligente de Prompts</h3>
+         <div class="flex items-center gap-2 mb-3"><span class="inline-block px-3 py-1 rounded-full bg-sky-100 text-sky-700 text-xs font-bold">Digital</span> <span class="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold">+ 14 Bônus</span>
+         </div>
         </div>
-      </div>
-
-      <!-- Prompt 2 -->
-      <div class="bg-white rounded-xl border border-fluxo-purple/30 p-6 flex gap-4 items-start fade-in fade-in-delay-3">
-        <div class="w-10 h-10 bg-fluxo-purple text-white font-bold rounded-full flex items-center justify-center">
-          2
+        <p class="text-slate-700 leading-relaxed flex-grow">Um passo a passo prático para transformar processos reais da sua PME em prompts eficientes. Inclui exemplos comentados, checklists e <strong>14 prompts bônus</strong>.</p>
+        <div class="pt-4 border-t border-slate-100">
+         <p class="text-xs text-slate-600 italic flex items-start gap-2">
+          <svg class="w-4 h-4 text-sky-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg><span>Você aprende a pensar "processo + IA", não só "texto + IA".</span></p>
+        </div>
+       </div>
+      </article>
+      <article class="relative group">
+       <div class="absolute -inset-1 bg-gradient-to-br from-purple-400 via-pink-500 to-fuchsia-600 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500" aria-hidden="true"></div>
+       <div class="relative bg-white rounded-3xl p-8 shadow-2xl card-hover border-2 border-purple-100 flex flex-col gap-5 h-full">
+        <div class="flex items-start justify-between gap-3">
+         <div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center shadow-xl transform rotate-3 group-hover:rotate-0 transition-transform duration-500" aria-hidden="true">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+          </svg>
+         </div>
         </div>
         <div>
-          <p class="text-xs font-semibold uppercase tracking-wide text-fluxo-purple mb-1">
-            Prompt bônus liberado
-          </p>
-          <h3 class="text-gray-800 text-base font-medium">
-            Redesenho de rotina mais leve e produtiva
-          </h3>
-          <p class="text-gray-600 text-sm mt-1">
-            Use a IA para criar uma semana mais focada, com tempo e energia para o que importa.
-          </p>
+         <h3 class="text-lg font-black text-slate-900 mb-2 bg-gradient-to-r from-purple-700 to-pink-700 bg-clip-text text-transparent">Painel Interativo de Prompts</h3>
+         <div class="flex items-center gap-2 mb-3"><span class="inline-block px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-bold">Online</span> <span class="inline-block px-3 py-1 rounded-full bg-pink-100 text-pink-700 text-xs font-bold">90+ Prompts</span>
+         </div>
         </div>
+        <p class="text-slate-700 leading-relaxed flex-grow">Ferramenta online com mais de <strong>90 prompts estruturados</strong>, organizados por área e tipo de tarefa. Você escolhe o cenário e adapta em minutos.</p>
+        <div class="pt-4 border-t border-slate-100">
+         <p class="text-xs text-slate-600 italic flex items-start gap-2">
+          <svg class="w-4 h-4 text-purple-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg><span>Formato pensado para consulta rápida, sem enrolação.</span></p>
+        </div>
+       </div>
+      </article>
+      <article class="relative group">
+       <div class="absolute -inset-1 bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500" aria-hidden="true"></div>
+       <div class="relative bg-white rounded-3xl p-8 shadow-2xl card-hover border-2 border-amber-100 flex flex-col gap-5 h-full">
+        <div class="flex items-start justify-between gap-3">
+         <div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center shadow-xl transform -rotate-3 group-hover:rotate-0 transition-transform duration-500" aria-hidden="true">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+          </svg>
+         </div>
+        </div>
+        <div>
+         <h3 class="text-lg font-black text-slate-900 mb-2 bg-gradient-to-r from-amber-700 to-orange-700 bg-clip-text text-transparent">Acesso vitalício + atualizações</h3>
+         <div class="flex items-center gap-2 mb-3"><span class="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-700 text-xs font-bold">Sem mensalidade</span> <span class="inline-block px-3 py-1 rounded-full bg-orange-100 text-orange-700 text-xs font-bold">Para sempre</span>
+         </div>
+        </div>
+        <p class="text-slate-700 leading-relaxed flex-grow">Você garante acesso completo para sempre, com atualizações baseadas em novos testes, consultorias e melhorias. Sem mensalidade, sem renovação automática.</p>
+        <div class="pt-4 border-t border-slate-100">
+         <p class="text-xs text-slate-600 italic flex items-start gap-2">
+          <svg class="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg><span>O sistema evolui junto com o que funciona no campo de batalha das PMEs.</span></p>
+        </div>
+       </div>
+      </article>
+     </div>
+
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+     <div class="max-w-3xl text-center mx-auto mb-14">
+       <p class="text-base sm:text-lg text-slate-600 leading-relaxed">Em vez de começar pelo "que pedir para a IA", você começa pela rotina da empresa. O sistema faz a ponte entre o que acontece no dia a dia e o que a IA vai gerar.</p>
+     </div>
+     <ol class="grid md:grid-cols-4 gap-6 text-sm mb-12">
+      <li class="glass-effect rounded-3xl p-6 border-2 border-cyan-400/30 shadow-2xl card-hover">
+       <div class="flex items-center gap-3 mb-4"><span class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 text-white text-lg font-black shadow-lg" aria-hidden="true">1</span> <span class="font-bold text-slate-900 text-base">Você escolhe o processo</span>
+       </div><p class="text-slate-700 leading-relaxed">Cobrança, fechamento, compras, atendimento, comunicação com clientes, organização de rotina, etc.</p></li>
+      <li class="glass-effect rounded-3xl p-6 border-2 border-purple-400/30 shadow-2xl card-hover">
+       <div class="flex items-center gap-3 mb-4"><span class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-600 text-white text-lg font-black shadow-lg" aria-hidden="true">2</span> <span class="font-bold text-slate-900 text-base">Vai até o Painel</span>
+       </div><p class="text-slate-700 leading-relaxed">Escolhe a área (Finanças, Compras, Vendas, Operação, RH, Gestão) e o tipo de tarefa que quer organizar.</p></li>
+      <li class="glass-effect rounded-3xl p-6 border-2 border-amber-400/30 shadow-2xl card-hover">
+       <div class="flex items-center gap-3 mb-4"><span class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 text-white text-lg font-black shadow-lg" aria-hidden="true">3</span> <span class="font-bold text-slate-900 text-base">Preenche o contexto</span>
+       </div><p class="text-slate-700 leading-relaxed">Em linguagem simples, você responde ao que o prompt pede sobre sua empresa. Sem termos técnicos.</p></li>
+      <li class="glass-effect rounded-3xl p-6 border-2 border-emerald-400/30 shadow-2xl card-hover">
+       <div class="flex items-center gap-3 mb-4"><span class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white text-lg font-black shadow-lg" aria-hidden="true">4</span> <span class="font-bold text-slate-900 text-base">Cola na IA e aplica</span>
+       </div><p class="text-slate-700 leading-relaxed">O resultado já vem em formato de tarefa, check-list, fluxograma ou plano. Algo que você consegue colocar para rodar.</p></li>
+     </ol>
+
+     <aside id="bonus-section" class="gradient-border rounded-3xl p-8 sm:p-10 text-sm shadow-2xl bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 text-slate-50">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+       <div class="max-w-xl">
+        <p class="text-xs uppercase tracking-[0.2em] text-emerald-300 mb-3 font-bold">TESTE ANTES DE COMPRAR</p>
+        <h3 class="font-bold text-xl sm:text-2xl mb-2 font-playfair">2 prompts bônus liberados para você copiar e testar agora</h3>
+        <p class="text-slate-200 leading-relaxed">Um para <strong>tomada de decisão com clareza</strong> e outro para <strong>rotina de trabalho mais leve e produtiva</strong>. É o mesmo nível de profundidade do material completo.</p>
+       </div><button type="button" onclick="openBonusModal()" class="inline-flex items-center justify-center px-7 py-4 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-900 font-bold transition-all shadow-xl hover:shadow-2xl hover:scale-105 text-sm whitespace-nowrap" aria-label="Ver e copiar prompts bônus gratuitos"> Ver prompts bônus e copiar </button>
       </div>
-
+     </aside>
     </div>
-
-<!-- CTA Final com Botão para Modal -->
-<div class="text-center mt-12 fade-in fade-in-delay-4">
-
-  <p class="text-sm text-gray-700 mb-4">
-    Dentro do Painel e do Guia, você desbloqueia <strong>mais de 90 prompts inteligentes</strong> organizados por área e tipo de tarefa.
-  </p>
-
-  <!-- Botão abrir modal -->
-  <button
-    type="button"
-    onclick="openBonusModal()"
-    class="inline-flex items-center px-6 py-3 rounded-full text-sm font-semibold bg-gradient-to-r from-fluxo-blue to-fluxo-purple text-white shadow-lg hover:from-fluxo-blueDark hover:to-fluxo-amber transition-all duration-300 hover:scale-105"
-  >
-    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-    </svg>
-    Ver prompts bônus e copiar
-  </button>
-
-  <!-- Link alternativo para ver tudo -->
-  <div class="mt-6">
-    <a href="#conteudo" class="text-fluxo-purple text-sm font-medium underline hover:text-fluxo-amber transition-all">
-      Ver tudo o que está incluso →
-    </a>
   </div>
-</div>
-</section>
-
-    <!-- Modal: Exemplos de prompts bônus -->
-    <div
-      id="bonusModalBackdrop"
-      class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center px-4 hidden"
-      aria-hidden="true"
-    >
-      <div
-        id="bonusModal"
-        class="relative bg-white rounded-3xl shadow-2xl max-w-3xl w-full max-h-[90vh] flex flex-col overflow-hidden"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="bonusModalTitle"
-      >
-        <!-- Header -->
-        <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
-          <div>
-            <h3 id="bonusModalTitle" class="text-lg md:text-xl font-bold text-gray-900">
-              2 prompts bônus liberados para você testar agora
-            </h3>
-            <p class="text-xs md:text-sm text-gray-500">
-              Copie, cole na sua IA favorita e adapte ao seu contexto.
-            </p>
-          </div>
-          <button
-            type="button"
-            class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 text-xl"
-            onclick="closeBonusModal()"
-            aria-label="Fechar"
-          >
-            ×
-          </button>
-        </div>
-
-        <!-- Conteúdo scrollável -->
-        <div class="px-6 py-4 space-y-6 overflow-y-auto">
-          <!-- Prompt bônus 1 -->
-          <section class="border border-gray-100 rounded-2xl p-4 bg-gradient-to-br from-blue-50/60 to-purple-50/40">
-            <header class="mb-3">
-              <div class="flex items-center justify-between gap-2">
-                <div>
-                  <p class="text-xs font-semibold text-fluxo-blue tracking-wide">
-                    TOMADA DE DECISÃO ESTRATÉGICA
-                  </p>
-                  <h4 class="text-sm md:text-base font-bold text-gray-900">
-                    Decisões importantes com mais segurança
-                  </h4>
-                </div>
-                <span class="inline-flex items-center px-3 py-1 rounded-full text-[10px] font-semibold bg-blue-100 text-fluxo-blue border border-blue-200">
-                  Prompt bônus liberado
-                </span>
-              </div>
-              <p class="mt-1 text-xs md:text-sm text-gray-600">
-                Use para organizar cenário, riscos e alternativas antes de tomar uma decisão estratégica.
-              </p>
-            </header>
-
-            <pre
-              id="bonusPrompt1"
-              class="text-xs md:text-sm text-gray-800 whitespace-pre-wrap leading-relaxed bg-white/70 rounded-xl p-3 border border-gray-200 max-h-56 overflow-y-auto"
-            >🧠 Atue como:
+   </section>
+   <section id="preco" class="py-20 sm:py-24 bg-gradient-to-b from-slate-50 to-slate-100" aria-labelledby="pricing-heading">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+     <h2 id="pricing-heading" class="font-playfair text-3xl sm:text-4xl md:text-5xl font-black mb-5 text-slate-900 leading-tight">Menos que 1 hora de consultoria para um sistema que você usa todo mês</h2>
+     <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">R$ 97 dificilmente pagam 1 hora de consultoria especializada. Aqui, você leva um sistema inteiro de prompts estruturados que pode ser usado em dezenas de processos da sua PME.</p>
+     <div class="inline-flex flex-col items-center gap-4 gradient-border rounded-3xl px-12 py-10 shadow-2xl mb-8 bg-white">
+      <p class="text-xs uppercase tracking-[0.2em] text-slate-500 font-bold">OFERTA PROMOCIONAL</p>
+      <div class="flex flex-col items-center gap-2">
+       <p class="text-2xl font-bold text-slate-400 line-through">De R$ 147</p>
+       <p class="text-6xl font-black text-slate-900 font-playfair">por R$ 97</p>
+      </div>
+      <p class="text-sm text-slate-600 font-medium">Pagamento único • Acesso vitalício ao Sistema de Prompts + Guia + Painel</p>
+     </div>
+     <p class="text-sm sm:text-base text-slate-600 max-w-xl mx-auto mb-10 leading-relaxed">Se o sistema economizar 30 minutos da sua semana, ele já se pagou. Se te poupar uma decisão mal tomada, ele se paga muitas vezes.</p>
+     <div class="flex flex-col items-center gap-4"><a href="https://pay.kiwify.com.br/DQLoGH1?utm_source=landing&amp;utm_medium=cta&amp;utm_campaign=prompts-pme&amp;utm_content=preco" target="_blank" rel="noopener noreferrer" class="btn-primary inline-flex items-center justify-center px-9 py-4 rounded-full text-base sm:text-lg font-bold tracking-wide" aria-label="Quero acessar o sistema agora (abre em nova aba)"> Quero acessar o sistema agora </a>
+      <div class="flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-emerald-50 border-2 border-emerald-200 shadow-sm">
+       <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewbox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+       </svg><span class="text-sm font-bold text-emerald-800">Garantia de 7 dias · Reembolso sem burocracia</span>
+      </div>
+     </div>
+     <p class="text-xs text-slate-500 mt-4">Pagamento processado com segurança pela Kiwify. Acesso enviado automaticamente para o seu e-mail. Você baixa o app da Kiwify e está pronto para usar.</p>
+    </div>
+   </section>
+   <section class="py-20 sm:py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-50 relative overflow-hidden" aria-labelledby="author-heading">
+    <div class="absolute inset-0 opacity-5" aria-hidden="true">
+     <div class="absolute top-0 left-0 w-96 h-96 bg-amber-400 rounded-full blur-3xl"></div>
+     <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-400 rounded-full blur-3xl"></div>
+    </div>
+    <div class="relative max-w-5xl mx-auto px-4 sm:px-6">
+     <div class="grid md:grid-cols-[1.2fr,1fr] gap-12 items-center">
+      <div>
+       <p class="text-xs uppercase tracking-[0.2em] text-amber-300 mb-3 font-bold">QUEM CRIOU ESTE SISTEMA</p>
+       <h2 id="author-heading" class="font-playfair text-3xl sm:text-4xl md:text-5xl font-black mb-6 leading-tight">IA com pé no chão e respeito à rotina das PMEs</h2>
+       <p class="text-base sm:text-lg text-slate-200 mb-5 leading-relaxed">Eu sou <strong>Vanessa Novais</strong>, contadora, consultora de processos e fundadora da Fluxoteca. Há mais de 15 anos ajudo PMEs a organizar fechamento, finanças e operação, conectando compras, vendas, fiscal e contabilidade em sistemas como <strong>SAP</strong> e <strong>TOTVS</strong>.</p>
+       <p class="text-base sm:text-lg text-slate-200 mb-5 leading-relaxed">Depois de desenhar rotinas complexas em ERPs, levei o mesmo cuidado para a IA: criar prompts que respeitam o processo, os números e as pessoas que tocam o negócio todos os dias.</p>
+       <p class="text-base sm:text-lg text-slate-200 leading-relaxed">Este sistema não nasceu em laboratório. Nasceu no <strong>campo de batalha</strong>: consultorias reais, rotinas apertadas, decisões urgentes e negócios que não podem parar.</p>
+      </div>
+      <aside class="bg-white/95 rounded-3xl p-7 border-2 border-slate-200 text-sm shadow-2xl">
+       <h3 class="font-bold text-slate-900 mb-5 text-base">Alguns pontos que me guiaram ao criar o sistema</h3>
+       <ul class="space-y-3 text-slate-700">
+        <li class="flex items-start gap-3"><span class="text-amber-600 mt-1" aria-hidden="true">→</span> <span>IA precisa caber no mundo real, não só em apresentações bonitas.</span></li>
+        <li class="flex items-start gap-3"><span class="text-amber-600 mt-1" aria-hidden="true">→</span> <span>Donos e gestores de PMEs não precisam de mais complexidade, e sim de clareza.</span></li>
+        <li class="flex items-start gap-3"><span class="text-amber-600 mt-1" aria-hidden="true">→</span> <span>Prompts soltos não resolvem: é preciso pensar em fluxo e rotina.</span></li>
+        <li class="flex items-start gap-3"><span class="text-amber-600 mt-1" aria-hidden="true">→</span> <span>O melhor sistema é aquele que você realmente consegue usar toda semana.</span></li>
+       </ul>
+      </aside>
+     </div>
+    </div>
+   </section>
+   <section id="faq" class="py-20 sm:py-24 bg-gradient-to-br from-slate-50 via-white to-slate-50" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+     <div class="text-center mb-14">
+      <p class="text-xs uppercase tracking-[0.2em] text-emerald-600 font-bold mb-3">PERGUNTAS FREQUENTES</p>
+      <h2 id="faq-heading" class="font-playfair text-3xl sm:text-4xl md:text-5xl font-black mb-5 text-slate-900 leading-tight">Dúvidas de quem quer usar IA com responsabilidade</h2>
+      <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">Perguntas reais de donos e gestores de PMEs que estão cansados de promessas mágicas e querem algo possível, prático e aplicável.</p>
+     </div>
+     <div class="space-y-4">
+      <article class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"><button class="faq-question w-full px-5 sm:px-7 py-5 sm:py-6 flex items-center justify-between text-left gap-3 sm:gap-4" aria-expanded="false" aria-controls="faq1"> <span class="font-bold text-slate-900 text-sm sm:text-base leading-snug pr-2"> Preciso entender de IA, ChatGPT ou programação para usar o sistema? </span>
+        <svg class="faq-icon w-6 h-6 sm:w-6 sm:h-6 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6v12m-6-6h12" />
+        </svg></button>
+       <div id="faq1" class="faq-answer px-5 sm:px-7 pb-5 sm:pb-6" role="region" aria-hidden="true">
+        <p class="text-slate-700 leading-relaxed text-sm sm:text-base">Não. O sistema foi criado para quem conhece a própria empresa, não para quem conhece IA. Os prompts já vêm estruturados em linguagem simples, com espaço para você preencher o seu contexto. Se você sabe usar WhatsApp e e-mail, consegue usar o material sem dificuldade.</p>
+       </div>
+      </article>
+      <article class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"><button class="faq-question w-full px-6 sm:px-7 py-5 flex items-center justify-between text-left gap-4" aria-expanded="false" aria-controls="faq2"> <span class="font-bold text-slate-900 text-sm sm:text-base leading-snug"> Funciona para qualquer tipo de negócio ou é só para empresas específicas? </span>
+        <svg class="faq-icon w-5 h-5 sm:w-6 sm:h-6 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6v12m-6-6h12" />
+        </svg></button>
+       <div id="faq2" class="faq-answer px-6 sm:px-7 pb-5" role="region" aria-hidden="true">
+        <p class="text-slate-700 leading-relaxed text-sm sm:text-base">O foco é a realidade de pequenas e médias empresas brasileiras, independentemente do segmento. Os prompts foram pensados para áreas transversais: finanças, vendas, compras, operação, RH, gestão e relacionamento com clientes. Você adapta detalhes de acordo com o seu tipo de negócio.</p>
+       </div>
+      </article>
+      <article class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"><button class="faq-question w-full px-6 sm:px-7 py-5 flex items-center justify-between text-left gap-4" aria-expanded="false" aria-controls="faq3"> <span class="font-bold text-slate-900 text-sm sm:text-base leading-snug"> E se eu não tiver tempo para aprender mais uma coisa nova? </span>
+        <svg class="faq-icon w-5 h-5 sm:w-6 sm:h-6 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6v12m-6-6h12" />
+        </svg></button>
+       <div id="faq3" class="faq-answer px-6 sm:px-7 pb-5" role="region" aria-hidden="true">
+        <p class="text-slate-700 leading-relaxed text-sm sm:text-base">A ideia do sistema é justamente economizar tempo, não consumir. Você não precisa "estudar IA" para começar. Em poucos minutos, já consegue usar um prompt em uma demanda real, como um e-mail de cobrança, um plano de ação ou uma rotina de acompanhamento.</p>
+       </div>
+      </article>
+      <article class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"><button class="faq-question w-full px-6 sm:px-7 py-5 flex items-center justify-between text-left gap-4" aria-expanded="false" aria-controls="faq4"> <span class="font-bold text-slate-900 text-sm sm:text-base leading-snug"> Se a IA é gratuita, por que eu pagaria por um Sistema? </span>
+        <svg class="faq-icon w-5 h-5 sm:w-6 sm:h-6 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6v12m-6-6h12" />
+        </svg></button>
+       <div id="faq4" class="faq-answer px-6 sm:px-7 pb-5" role="region" aria-hidden="true">
+        <p class="text-slate-700 leading-relaxed text-sm sm:text-base">A IA é a ferramenta. O que você está adquirindo aqui é o método de aplicação. Em vez de perder tempo com tentativas soltas, você tem prompts organizados por área e objetivos, além de um guia que ensina a transformar respostas em processos práticos.</p>
+       </div>
+      </article>
+      <article class="faq-item bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"><button class="faq-question w-full px-6 sm:px-7 py-5 flex items-center justify-between text-left gap-4" aria-expanded="false" aria-controls="faq5"> <span class="font-bold text-slate-900 text-sm sm:text-base leading-snug"> E se eu comprar e achar que não é para mim? </span>
+        <svg class="faq-icon w-5 h-5 sm:w-6 sm:h-6 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6v12m-6-6h12" />
+        </svg></button>
+       <div id="faq5" class="faq-answer px-6 sm:px-7 pb-5" role="region" aria-hidden="true">
+        <p class="text-slate-700 leading-relaxed text-sm sm:text-base">Você tem 7 dias para testar com calma. Se não enxergar valor real para a sua rotina, é só enviar um e-mail pedindo o cancelamento e o reembolso integral será feito. Sem burocracia, sem letras miúdas.</p>
+       </div>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="py-20 sm:py-24 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 text-slate-50 relative overflow-hidden" aria-labelledby="final-cta-heading">
+    <div class="absolute inset-0 opacity-10" aria-hidden="true">
+     <div class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-gradient-to-br from-emerald-400 to-cyan-500 rounded-full blur-3xl animate-pulse"></div>
+     <div class="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-gradient-to-br from-purple-400 to-pink-500 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
+     <h2 id="final-cta-heading" class="font-playfair text-3xl sm:text-4xl md:text-5xl font-black mb-6 leading-tight">Pare de improvisar na IA. Comece a usar um sistema que funciona.</h2>
+     <p class="text-base sm:text-lg text-slate-200 max-w-2xl mx-auto mb-8 leading-relaxed">Você não precisa fazer uma revolução na empresa. Precisa de passos claros, possíveis e repetíveis. O Sistema de Prompts Inteligentes foi criado exatamente para isso.</p>
+     <div class="gradient-border rounded-3xl px-8 py-7 mb-10 text-sm max-w-2xl mx-auto shadow-2xl bg-white">
+      <div class="flex items-start gap-4 mb-3">
+       <div class="flex-shrink-0 w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center" aria-hidden="true">
+        <svg class="w-7 h-7 text-emerald-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+       </div>
+       <div>
+        <p class="font-bold mb-2 text-emerald-600 text-base">Garantia simples e direta de 7 dias</p>
+        <p class="text-slate-800 leading-relaxed">Se dentro de 7 dias você perceber que o sistema não faz diferença real na sua rotina, é só enviar um e-mail. Você recebe 100% do valor de volta, sem justificativa, sem formulário escondido e sem burocracia.</p>
+       </div>
+      </div>
+     </div>
+     <div class="flex flex-col items-center gap-4"><a href="https://pay.kiwify.com.br/DQLoGH1?utm_source=landing&amp;utm_medium=cta&amp;utm_campaign=prompts-pme&amp;utm_content=cta-final" target="_blank" rel="noopener noreferrer" class="btn-primary inline-flex items-center justify-center px-9 py-4 rounded-full text-base sm:text-lg font-bold tracking-wide" aria-label="Quero acessar o Sistema de Prompts Inteligentes"> Quero acessar o Sistema de Prompts Inteligentes </a>      
+     </div>
+     <p class="text-xs sm:text-sm text-slate-400 mt-6">Compatível com ChatGPT, Gemini, Copilot e outras IAs. Você escolhe a ferramenta, o sistema cuida do método.</p>
+    </div>
+   </section>
+  </main>
+  <footer class="bg-slate-950 text-slate-400 text-xs" role="contentinfo">
+   <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+    <p>© 2025 Fluxoteca | Sistema de Prompts Inteligentes para PMEs.</p>
+    <p>Desenvolvido por Vanessa Novais · <a href="https://fluxoteca.com.br/termos-de-uso" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-slate-200 transition-colors">Termos de uso</a></p>
+   </div>
+  </footer><button id="floatingCta" type="button" class="floating-cta-btn" onclick="window.open('https://pay.kiwify.com.br/DQLoGH1?utm_source=landing&amp;utm_medium=cta&amp;utm_campaign=prompts-pme&amp;utm_content=floating-cta','_blank','noopener,noreferrer')" aria-label="Acessar sistema de prompts para PMEs (abre em nova aba)" style="opacity: 0; pointer-events: none;"> <span class="floating-cta-label"></span> </button>
+  <div id="bonusModalBackdrop" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-md flex items-center sm:items-center items-end justify-center sm:px-4 hidden" aria-hidden="true">
+   <div id="bonusModal" class="relative bg-white rounded-t-3xl sm:rounded-3xl shadow-2xl max-w-3xl w-full max-h-[95vh] sm:max-h-[90vh] flex flex-col overflow-hidden text-xs sm:text-sm" role="dialog" aria-modal="true" aria-labelledby="bonusModalTitle">
+    <div class="flex items-center justify-between px-6 py-4 border-b border-slate-100 bg-gradient-to-r from-slate-50 to-slate-100 relative"><!-- Swipe indicator (mobile only) -->
+     <div class="absolute top-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-slate-300 rounded-full sm:hidden" aria-hidden="true"></div>
+     <div class="pt-2 sm:pt-0">
+      <h3 id="bonusModalTitle" class="text-base sm:text-lg md:text-xl font-black text-slate-900">2 prompts bônus liberados para você testar agora</h3>
+      <p class="text-xs sm:text-sm text-slate-500 mt-1">Copie, cole na sua IA favorita e adapte ao seu contexto.</p>
+     </div><button type="button" class="w-12 h-12 flex items-center justify-center rounded-full bg-slate-100 hover:bg-slate-200 active:bg-slate-300 text-slate-500 text-2xl transition-colors flex-shrink-0" onclick="closeBonusModal()" aria-label="Fechar modal"> × </button>
+    </div>
+    <div class="px-6 py-5 space-y-6 overflow-y-auto">
+     <section class="border-2 border-sky-200 rounded-3xl p-5 bg-gradient-to-br from-sky-50/80 to-blue-50/60 shadow-lg">
+      <header class="mb-3">
+       <p class="text-[10px] uppercase font-bold text-sky-700 tracking-wide mb-1">TOMADA DE DECISÃO ESTRATÉGICA</p>
+       <h4 class="text-sm sm:text-base font-black text-slate-900">Decisões importantes com mais segurança</h4>
+      </header>
+      <pre id="bonusPrompt1" class="whitespace-pre-wrap leading-relaxed bg-white/90 rounded-2xl p-4 border border-slate-200 max-h-64 overflow-y-auto text-[11px] sm:text-xs text-slate-800 shadow-inner">🧠 Atue como:
 Facilitador de Decisões Estratégicas para PMEs brasileiras, com foco em clareza de riscos, impacto no caixa e sustentabilidade no médio prazo.
 
 🎯 Contexto:
@@ -1072,50 +879,23 @@ Quero clareza, estrutura e segurança para decidir melhor, sem ignorar a realida
 ❗ Quando faltarem dados:
 Se eu não souber informar bem os fatores importantes ou as alternativas, proponha perguntas objetivas para completar o cenário.
 Monte um quadro inicial de hipóteses para Risco x Impacto x Irreversibilidade, deixando claro o que é hipótese e o que é dado real,
-e indique quais informações mínimas eu deveria buscar antes de bater o martelo.
+e indique quais informações m  nimas eu deveria buscar antes de bater o martelo.
 
 📝 Apresente o resultado assim:
 1. Resumo objetivo da decisão que preciso tomar.
 2. Quadro-resumo do cenário, separando fatos, suposições e medos.
 3. Tabela simples com as opções avaliadas usando o framework Risco x Impacto x Irreversibilidade.
 4. Recomendação da melhor opção com justificativa clara e pragmática.
-5. Lista de próximos passos em ordem lógica (o que fazer hoje, nas próximas semanas e o que monitorar).</pre>
-
-            <button
-              id="bonusPrompt1-btn"
-              type="button"
-              class="mt-3 inline-flex items-center px-4 py-2 rounded-full text-xs font-semibold bg-fluxo-blue text-white hover:bg-fluxo-blueDark transition-colors"
-              onclick="copyBonusPrompt('bonusPrompt1')"
-            >
-              Copiar prompt 1
-            </button>
-          </section>
-
-          <!-- Prompt bônus 2 -->
-          <section class="border border-gray-100 rounded-2xl p-4 bg-gradient-to-br from-green-50/60 to-purple-50/40">
-            <header class="mb-3">
-              <div class="flex items-center justify-between gap-2">
-                <div>
-                  <p class="text-xs font-semibold text-green-600 tracking-wide">
-                    GESTÃO DE TEMPO E PRODUTIVIDADE
-                  </p>
-                  <h4 class="text-sm md:text-base font-bold text-gray-900">
-                    Rotina de trabalho mais leve e eficiente
-                  </h4>
-                </div>
-                <span class="inline-flex items-center px-3 py-1 rounded-full text-[10px] font-semibold bg-purple-100 text-fluxo-purple border border-purple-200">
-                  Prompt bônus liberado
-                </span>
-              </div>
-              <p class="mt-1 text-xs md:text-sm text-gray-600">
-                Use para redesenhar sua semana com mais foco, energia e uso inteligente da IA nas tarefas.
-              </p>
-            </header>
-
-            <pre
-              id="bonusPrompt2"
-              class="text-xs md:text-sm text-gray-800 whitespace-pre-wrap leading-relaxed bg-white/70 rounded-xl p-3 border border-gray-200 max-h-56 overflow-y-auto"
-            >🧠 Atue como:
+5. Lista de próximos passos em ordem lógica (o que fazer hoje, nas próximas semanas e o que monitorar).</pre><button id="bonusPrompt1-btn" type="button" class="mt-3 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-xs sm:text-sm font-bold bg-gradient-to-r from-sky-500 to-blue-600 text-white hover:from-sky-400 hover:to-blue-500 active:from-sky-600 active:to-blue-700 transition-all shadow-lg hover:shadow-xl min-h-[48px]" onclick="copyBonusPrompt('bonusPrompt1', 'bonusPrompt1-btn')" aria-label="Copiar primeiro prompt bônus para área de transferência">
+       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+       </svg><span>Copiar prompt 1</span> </button>
+     </section>
+     <section class="border-2 border-purple-200 rounded-3xl p-5 bg-gradient-to-br from-purple-50/80 to-pink-50/60 shadow-lg">
+      <header class="mb-3">
+       <p class="text-[10px] uppercase font-bold text-purple-700 tracking-wide mb-1">GESTÃO DE TEMPO E ROTINA</p>
+       <h4 class="text-sm sm:text-base font-black text-slate-900">Rotina de trabalho mais leve e eficiente</h4>
+      </header>
+      <pre id="bonusPrompt2" class="whitespace-pre-wrap leading-relaxed bg-white/90 rounded-2xl p-4 border border-slate-200 max-h-64 overflow-y-auto text-[11px] sm:text-xs text-slate-800 shadow-inner">🧠 Atue como:
 Mentor em Produtividade Consciente para donos(as) e gestores(as) de PMEs, focado em rotina possível no mundo real, e não em método perfeito.
 
 🎯 Contexto:
@@ -1125,7 +905,7 @@ Quero uma rotina mais leve, organizada e possível de manter, mesmo com imprevis
 
 📊 Considere as informações disponíveis:
 1. Horários do dia em que eu costumo ter mais energia e concentração.
-2. Tipos de tarefas que mais consomem meu tempo (operacional, gestão de pessoas, clientes, financeiro, burocracias etc.).
+2. Tipos de tarefas que mais consomem meu tempo (operacional, gest  o de pessoas, clientes, financeiro, burocracias etc.).
 3. Interrupções mais frequentes que atrapalham meu foco (mensagens, urgências, reuniões, demandas da equipe).
 4. Metas pessoais de qualidade de vida e limites que não quero ultrapassar (saúde, família, descanso).
 5. Quantos dias da semana consigo dedicar a blocos de foco mais profundo e em quais períodos.
@@ -1147,848 +927,347 @@ para sugerir um primeiro modelo de semana que possa ser refinado depois.
 1. Resumo do meu cenário atual de tempo e energia, em linguagem simples.
 2. Cronograma semanal sugerido, organizado por blocos (manhã, tarde, eventualmente noite), indicando tipos de tarefa em cada bloco.
 3. Lista curta de acordos pessoais e de equipe para proteger meu foco e reduzir interrupções.
-4. Três próximos passos concretos que posso aplicar ainda nesta semana para testar essa nova rotina.</pre>
-
-            <button
-              id="bonusPrompt2-btn"
-              type="button"
-              class="mt-3 inline-flex items-center px-4 py-2 rounded-full text-xs font-semibold bg-fluxo-purple text-white hover:bg-fluxo-blueDark transition-colors"
-              onclick="copyBonusPrompt('bonusPrompt2')"
-            >
-              Copiar prompt 2
-            </button>
-          </section>
-        </div>
-      </div>
+4. Três próximos passos concretos que posso aplicar ainda nesta semana para testar essa nova rotina.</pre><button id="bonusPrompt2-btn" type="button" class="mt-3 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-xs sm:text-sm font-bold bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-400 hover:to-pink-500 active:from-purple-600 active:to-pink-700 transition-all shadow-lg hover:shadow-xl min-h-[48px]" onclick="copyBonusPrompt('bonusPrompt2', 'bonusPrompt2-btn')" aria-label="Copiar segundo prompt bônus para área de transferência">
+       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+       </svg><span>Copiar prompt 2</span> </button>
+     </section>
     </div>
-
-<!-- Preço e Garantia -->
-<section id="preco" class="py-20 bg-gradient-to-br from-white via-gray-50 to-gray-100" aria-labelledby="preco-title">
-  <div class="container mx-auto px-6 text-center max-w-3xl fade-in">
-    
-    <h2 id="preco-title" class="font-playfair text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-      Um sistema completo por menos que uma consultoria de 1 hora
-    </h2>
-
-    <p class="text-lg text-gray-700 mb-6">
-      Você paga <strong>apenas uma vez</strong> e tem acesso vitalício a tudo: Guia, Painel Interativo e atualizações contínuas. É como ter uma consultoria de IA no bolso, acessível a qualquer PME.
-    </p>
-
-    <!-- Preço visual -->
-    <div class="bg-white border-2 border-gray-200 rounded-xl p-6 shadow-xl inline-block mb-6">
-      <p class="text-gray-500 text-sm uppercase mb-2 tracking-widest">Investimento atual</p>
-      <p class="text-4xl font-bold text-fluxo-purple">R$ 97</p>
-      <p class="text-xs text-gray-500 mt-1">Lote promocional por tempo limitado</p>
-    </div>
-
-    <!-- Garantia -->
-    <p class="text-sm text-gray-600 max-w-xl mx-auto mb-8">
-      Se você não enxergar valor nos primeiros 7 dias, é só enviar um e-mail e seu dinheiro será 100% devolvido. Simples assim.
-    </p>
-
-    <a href="https://pay.kiwify.com.br/DQLoGH1?utm_source=landing&utm_medium=cta&utm_campaign=prompts-pme&utm_content=preco"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="btn-primary inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full bg-gradient-to-r from-fluxo-blue to-fluxo-purple text-white shadow-lg hover:scale-105 transition-all duration-300">
-      Quero acessar agora
-    </a>
-
+   </div>
   </div>
-</section>
-
-    <!-- Autoridade -->
-    <section class="gradient-dark py-20 text-white">
-      <div class="container mx-auto px-6">
-        <div class="max-w-4xl mx-auto text-center">
-          <div class="mb-8 fade-in">
-            <div class="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-fluxo-blue to-fluxo-purple rounded-3xl flex items-center justify-center shadow-2xl transform hover:scale-105 transition-transform duration-300">
-              <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" aria-hidden="true" focusable="false">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-              </svg>
-            </div>
-          </div>
-
-          <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-6 fade-in fade-in-delay-1">
-Criado por quem aplica IA em PMEs todos os dias
-          </h2>
-
-          <p class="text-xl md:text-2xl mb-8 text-blue-100 fade-in fade-in-delay-2">
-            <strong class="text-fluxo-amber">Vanessa Novais</strong><br>
-            Contadora, consultora de processos e fundadora da Fluxoteca.
-          </p>
-
-          <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 mb-8 fade-in fade-in-delay-3">
-<p class="text-lg leading-relaxed text-blue-100 max-w-3xl mx-auto mb-6">
-  Há mais de 15 anos ajudo PMEs a <strong>organizar fechamento, finanças e operação</strong>,
-  conectando compras, vendas, fiscal e contabilidade em sistemas como <strong>SAP</strong> e <strong>TOTVS</strong>.
-  Depois de desenhar rotinas complexas em ERPs, levei o mesmo cuidado para a IA:
-  criar prompts que respeitam o processo, os números e as pessoas que tocam o negócio todos os dias.
-</p>
-<p class="text-lg leading-relaxed text-blue-100 max-w-3xl mx-auto">
-Este sistema nasceu no campo de batalha: PMEs reais, com rotinas apertadas e decisões urgentes. Ele foi criado para economizar tempo, reduzir tentativas frustradas e aplicar IA com clareza, mesmo sem ser especialista.</p>
-          </div>
-
-          <div class="flex flex-wrap justify-center gap-3 fade-in fade-in-delay-4">
-            <span class="bg-fluxo-blue px-4 py-2 rounded-full text-sm">
-              Especialista em processos de PMEs
-            </span>
-            <span class="bg-fluxo-purple px-4 py-2 rounded-full text-sm">
-              Consultoria em finanças e operação
-            </span>
-            <span class="bg-fluxo-amber px-4 py-2 rounded-full text-sm">
-              IA aplicada a processos reais
-            </span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-<!-- FAQ COMPLETO REVISADO E OTIMIZADO -->
-<section id="faq" class="py-16 md:py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50" aria-labelledby="faq-title">
-  <div class="container mx-auto px-6">
-    <div class="max-w-5xl mx-auto">
-
-      <!-- Título -->
-      <div class="text-center mb-16">
-        <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-fluxo-blue to-fluxo-purple rounded-full mb-6 fade-in">
-          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
-        </div>
-        <h2 id="faq-title" class="font-playfair text-4xl md:text-5xl font-bold mb-6 text-gray-900 fade-in fade-in-delay-1">
-          Perguntas <span class="text-transparent bg-clip-text bg-gradient-to-r from-fluxo-blue to-fluxo-purple">frequentes</span>
-        </h2>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto fade-in fade-in-delay-2">
-          Dúvidas reais de quem quer usar IA com responsabilidade e praticidade em PMEs.
-        </p>
-      </div>
-
-      <div class="space-y-6">
-
-        <!-- FAQ Item 1 -->
-        <article class="faq-item bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden fade-in">
-  <h3>
-    <button class="faq-question w-full p-8 text-left flex justify-between items-center hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all duration-300 group" aria-expanded="false" aria-controls="faq-a1">
-      <div class="flex items-center">
-        <div class="w-12 h-12 bg-gradient-to-br from-fluxo-blue to-fluxo-purple rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-          <span class="text-white font-bold text-lg">1</span>
-        </div>
-        <span class="q-text text-xl font-bold text-gray-900 group-hover:text-fluxo-blue transition-colors">
-          Preciso entender de IA, ChatGPT ou programação para usar o material?
-        </span>
-      </div>
-      <svg class="faq-icon w-8 h-8 text-fluxo-blue transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-      </svg>
-    </button>
-  </h3>
-  <div id="faq-a1" class="faq-answer px-8 pb-8" role="region" aria-hidden="true">
-    <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6 border-l-4 border-fluxo-blue mt-2">
-      <p class="text-gray-700 leading-relaxed text-base md:text-lg">
-        Não. Você não precisa entender de programação ou comandos técnicos. O Guia foi criado para quem conhece o próprio negócio, mas ainda não usa IA de forma estruturada. Com o passo a passo e os prompts prontos, você aplica na prática mesmo começando do zero.
-      </p>
-    </div>
-  </div>
-</article>
-
-        <!-- FAQ Item 2 -->
-        <article class="faq-item bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden fade-in fade-in-delay-1">
-  <h3>
-    <button class="faq-question w-full p-8 text-left flex justify-between items-center hover:bg-gradient-to-r hover:from-purple-50 hover:to-blue-50 transition-all duration-300 group" aria-expanded="false" aria-controls="faq-a2">
-      <div class="flex items-center">
-        <div class="w-12 h-12 bg-gradient-to-br from-fluxo-purple to-fluxo-blue rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-          <span class="text-white font-bold text-lg">2</span>
-        </div>
-        <span class="q-text text-xl font-bold text-gray-900 group-hover:text-fluxo-purple transition-colors">
-          Qual é a diferença entre o Guia e o Painel?
-        </span>
-      </div>
-      <svg class="faq-icon w-8 h-8 text-fluxo-purple transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-      </svg>
-    </button>
-  </h3>
-  <div id="faq-a2" class="faq-answer px-8 pb-8" role="region" aria-hidden="true">
-    <div class="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-6 border-l-4 border-fluxo-purple mt-2">
-      <p class="text-gray-700 leading-relaxed text-base md:text-lg">
-        O <strong>Guia</strong> te ensina a pensar e estruturar prompts com lógica de negócio. Já o <strong>Painel</strong> traz os prompts prontos por área da empresa — para você copiar, colar e adaptar. O Guia é entendimento, o Painel é ação rápida.
-      </p>
-    </div>
-  </div>
-</article>
-
-        <!-- FAQ Item 3 -->
-        <article class="faq-item bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden fade-in fade-in-delay-2">
-  <h3>
-    <button class="faq-question w-full p-8 text-left flex justify-between items-center hover:bg-gradient-to-r hover:from-blue-50 hover:to-green-50 transition-all duration-300 group" aria-expanded="false" aria-controls="faq-a3">
-      <div class="flex items-center">
-        <div class="w-12 h-12 bg-gradient-to-br from-fluxo-blue to-green-400 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-          <span class="text-white font-bold text-lg">3</span>
-        </div>
-        <span class="q-text text-xl font-bold text-gray-900 group-hover:text-fluxo-blue transition-colors">
-          Serve para qualquer tipo de empresa ou só para quem tem equipe?
-        </span>
-      </div>
-      <svg class="faq-icon w-8 h-8 text-fluxo-blue transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-      </svg>
-    </button>
-  </h3>
-  <div id="faq-a3" class="faq-answer px-8 pb-8" role="region" aria-hidden="true">
-    <div class="bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl p-6 border-l-4 border-fluxo-blue mt-2">
-      <p class="text-gray-700 leading-relaxed text-base md:text-lg">
-        Serve sim. O material é útil tanto para quem lidera uma pequena equipe quanto para quem toca tudo sozinho. O foco é ajudar você a aplicar IA nas suas rotinas, com clareza e organização — seja em vendas, atendimento ou gestão.
-      </p>
-    </div>
-  </div>
-</article>
-
-        <!-- FAQ Item 4 -->
-        <article class="faq-item bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden fade-in fade-in-delay-3">
-  <h3>
-    <button class="faq-question w-full p-8 text-left flex justify-between items-center hover:bg-gradient-to-r hover:from-amber-50 hover:to-blue-50 transition-all duration-300 group" aria-expanded="false" aria-controls="faq-a4">
-      <div class="flex items-center">
-        <div class="w-12 h-12 bg-gradient-to-br from-fluxo-amber to-fluxo-blue rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-          <span class="text-white font-bold text-lg">4</span>
-        </div>
-        <span class="q-text text-xl font-bold text-gray-900 group-hover:text-fluxo-amber transition-colors">
-          Como vou saber quais prompts usar primeiro?
-        </span>
-      </div>
-      <svg class="faq-icon w-8 h-8 text-fluxo-amber transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-      </svg>
-    </button>
-  </h3>
-  <div id="faq-a4" class="faq-answer px-8 pb-8" role="region" aria-hidden="true">
-    <div class="bg-gradient-to-r from-amber-50 to-blue-50 rounded-2xl p-6 border-l-4 border-fluxo-amber mt-2">
-      <p class="text-gray-700 leading-relaxed text-base md:text-lg">
-        O Guia propõe uma ordem de aplicação baseada em impacto rápido: começar por áreas como comunicação, atendimento e financeiro. O Painel facilita ainda mais com categorias claras e sugestões de uso prático para diferentes cenários da sua empresa.
-      </p>
-    </div>
-  </div>
-</article>
-
-        <!-- FAQ Item 5 -->
-        <article class="faq-item bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden fade-in fade-in-delay-4">
-  <h3>
-    <button class="faq-question w-full p-8 text-left flex justify-between items-center hover:bg-gradient-to-r hover:from-green-50 hover:to-purple-50 transition-all duration-300 group" aria-expanded="false" aria-controls="faq-a5">
-      <div class="flex items-center">
-        <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-fluxo-purple rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-          <span class="text-white font-bold text-lg">5</span>
-        </div>
-        <span class="q-text text-xl font-bold text-gray-900 group-hover:text-fluxo-purple transition-colors">
-          E se eu não tiver tempo para aprender mais uma coisa?
-        </span>
-      </div>
-      <svg class="faq-icon w-8 h-8 text-fluxo-purple transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-      </svg>
-    </button>
-  </h3>
-  <div id="faq-a5" class="faq-answer px-8 pb-8" role="region" aria-hidden="true">
-    <div class="bg-gradient-to-r from-green-50 to-purple-50 rounded-2xl p-6 border-l-4 border-fluxo-purple mt-2">
-      <p class="text-gray-700 leading-relaxed text-base md:text-lg">
-        O conteúdo é direto ao ponto e pensado para caber na sua rotina atual. Em 15 minutos por sessão, você já aplica algo real: um e-mail mais claro, um relatório melhor, um fluxo automatizado. A ideia não é criar mais uma tarefa, e sim economizar tempo com inteligência.
-      </p>
-    </div>
-  </div>
-</article>
-
-        <!-- FAQ Item 6 -->
-        <article class="faq-item bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden fade-in fade-in-delay-5">
-  <h3>
-    <button class="faq-question w-full p-8 text-left flex justify-between items-center hover:bg-gradient-to-r hover:from-blue-50 hover:to-amber-50 transition-all duration-300 group" aria-expanded="false" aria-controls="faq-a6">
-      <div class="flex items-center">
-        <div class="w-12 h-12 bg-gradient-to-br from-fluxo-blue to-fluxo-amber rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-          <span class="text-white font-bold text-lg">6</span>
-        </div>
-        <span class="q-text text-xl font-bold text-gray-900 group-hover:text-fluxo-blue transition-colors">
-          Preciso pagar por alguma ferramenta de IA para usar?
-        </span>
-      </div>
-      <svg class="faq-icon w-8 h-8 text-fluxo-blue transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-      </svg>
-    </button>
-  </h3>
-  <div id="faq-a6" class="faq-answer px-8 pb-8" role="region" aria-hidden="true">
-    <div class="bg-gradient-to-r from-blue-50 to-amber-50 rounded-2xl p-6 border-l-4 border-fluxo-blue mt-2">
-      <p class="text-gray-700 leading-relaxed text-base md:text-lg">
-        Não. As sugestões e prompts funcionam com ferramentas gratuitas como ChatGPT Free, Gemini ou Copilot. Se você quiser investir em versões pagas depois, ótimo — mas não é obrigatório. O foco é fazer mais com o que você já tem disponível.
-      </p>
-    </div>
-  </div>
-</article>
-
-        <!-- FAQ Item 7 -->
-        <article class="faq-item bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden fade-in fade-in-delay-6">
-  <h3>
-    <button class="faq-question w-full p-8 text-left flex justify-between items-center hover:bg-gradient-to-r hover:from-blue-50 hover:to-amber-50 transition-all duration-300 group" aria-expanded="false" aria-controls="faq-a7">
-      <div class="flex items-center">
-        <div class="w-12 h-12 bg-gradient-to-br from-fluxo-blue to-fluxo-amber rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-          <span class="text-white font-bold text-lg">7</span>
-        </div>
-        <span class="q-text text-xl font-bold text-gray-900 group-hover:text-fluxo-blue transition-colors">
-          Se a IA é gratuita, por que eu pagaria por esse material?
-        </span>
-      </div>
-      <svg class="faq-icon w-8 h-8 text-fluxo-blue transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-      </svg>
-    </button>
-  </h3>
-  <div id="faq-a7" class="faq-answer px-8 pb-8" role="region" aria-hidden="true">
-    <div class="bg-gradient-to-r from-blue-50 to-amber-50 rounded-2xl p-6 border-l-4 border-fluxo-blue mt-2">
-      <p class="text-gray-700 leading-relaxed text-base md:text-lg">
-        A IA é a ferramenta. O que você está adquirindo aqui é o <strong>método de aplicação</strong>. Em vez de perder tempo com tentativas soltas, você tem prompts organizados por área e objetivos, além de um guia que ensina a transformar respostas em processos práticos.
-      </p>
-    </div>
-  </div>
-</article>
-
-        <!-- FAQ Item 8 -->
-        <article class="faq-item bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden fade-in fade-in-delay-7">
-  <h3>
-    <button class="faq-question w-full p-8 text-left flex justify-between items-center hover:bg-gradient-to-r hover:from-blue-50 hover:to-green-50 transition-all duration-300 group" aria-expanded="false" aria-controls="faq-a8">
-      <div class="flex items-center">
-        <div class="w-12 h-12 bg-gradient-to-br from-fluxo-blue to-green-400 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-          <span class="text-white font-bold text-lg">8</span>
-        </div>
-        <span class="q-text text-xl font-bold text-gray-900 group-hover:text-fluxo-blue transition-colors">
-          E se eu comprar e não gostar?
-        </span>
-      </div>
-      <svg class="faq-icon w-8 h-8 text-fluxo-blue transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-      </svg>
-    </button>
-  </h3>
-  <div id="faq-a8" class="faq-answer px-8 pb-8" role="region" aria-hidden="true">
-    <div class="bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl p-6 border-l-4 border-fluxo-blue mt-2">
-      <p class="text-gray-700 leading-relaxed text-base md:text-lg">
-        Você tem <strong>7 dias de garantia</strong> para testar, explorar e decidir com calma. Se não for útil para sua rotina ou negócio, é só pedir reembolso. Simples assim.
-      </p>
-    </div>
-  </div>
-</article>
-
-        <!-- FAQ Item 9 -->
-        <article class="faq-item bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden fade-in fade-in-delay-8">
-  <h3>
-    <button class="faq-question w-full p-8 text-left flex justify-between items-center hover:bg-gradient-to-r hover:from-purple-50 hover:to-blue-50 transition-all duration-300 group" aria-expanded="false" aria-controls="faq-a9">
-      <div class="flex items-center">
-        <div class="w-12 h-12 bg-gradient-to-br from-fluxo-purple to-fluxo-blue rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-          <span class="text-white font-bold text-lg">9</span>
-        </div>
-        <span class="q-text text-xl font-bold text-gray-900 group-hover:text-fluxo-purple transition-colors">
-          Tem suporte caso eu tenha dúvidas durante o uso?
-        </span>
-      </div>
-      <svg class="faq-icon w-8 h-8 text-fluxo-purple transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-      </svg>
-    </button>
-  </h3>
-  <div id="faq-a9" class="faq-answer px-8 pb-8" role="region" aria-hidden="true">
-    <div class="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-6 border-l-4 border-fluxo-purple mt-2">
-      <p class="text-gray-700 leading-relaxed text-base md:text-lg">
-        Sim. Você pode entrar em contato direto por e-mail e recebe orientação sobre como adaptar os prompts ao seu contexto. O suporte é humano, focado na sua dúvida específica — sem enrolação ou resposta automática genérica.
-      </p>
-    </div>
-  </div>
-</article>
-
-        <!-- FAQ Item 10 -->
-        <article class="faq-item bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden fade-in fade-in-delay-9">
-  <h3>
-    <button class="faq-question w-full p-8 text-left flex justify-between items-center hover:bg-gradient-to-r hover:from-blue-50 hover:to-amber-50 transition-all duration-300 group" aria-expanded="false" aria-controls="faq-a10">
-      <div class="flex items-center">
-        <div class="w-12 h-12 bg-gradient-to-br from-fluxo-blue to-amber-400 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-          <span class="text-white font-bold text-lg">10</span>
-        </div>
-        <span class="q-text text-xl font-bold text-gray-900 group-hover:text-fluxo-blue transition-colors">
-          O conteúdo vai ser atualizado com o tempo?
-        </span>
-      </div>
-      <svg class="faq-icon w-8 h-8 text-fluxo-blue transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-      </svg>
-    </button>
-  </h3>
-  <div id="faq-a10" class="faq-answer px-8 pb-8" role="region" aria-hidden="true">
-    <div class="bg-gradient-to-r from-blue-50 to-amber-50 rounded-2xl p-6 border-l-4 border-fluxo-blue mt-2">
-      <p class="text-gray-700 leading-relaxed text-base md:text-lg">
-        Sim. Este é um produto-vivo. À medida que a IA evolui, novos prompts, exemplos e checklists serão incluídos no Painel. Você será notificado por e-mail sempre que algo novo estiver disponível, sem custo extra.
-      </p>
-    </div>
-  </div>
-</article>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA Final -->
-<section id="cta-final" class="py-20 bg-gradient-to-r from-fluxo-blue/5 via-fluxo-purple/5 to-fluxo-amber/5 text-center" aria-labelledby="cta-final-title">
-  <div class="container mx-auto px-6 max-w-3xl fade-in">
-    <h2 id="cta-final-title" class="font-playfair text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-      IA não é sobre o futuro. É sobre fazer melhor agora.
-    </h2>
-
-    <p class="text-lg text-gray-700 mb-8">
-      Com um único acesso, você ganha tempo, clareza e um método replicável para aplicar IA onde sua empresa mais precisa.
-    </p>
-
-    <a href="https://pay.kiwify.com.br/DQLoGH1?utm_source=landing&utm_medium=cta&utm_campaign=prompts-pme&utm_content=cta-final"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="btn-primary inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full bg-gradient-to-r from-fluxo-blue to-fluxo-purple text-white shadow-lg hover:scale-105 transition-all duration-300">
-      Quero acessar agora o sistema →
-    </a>
-
-    <p class="text-sm text-gray-500 mt-4">
-      R$ 97 à vista • Acesso vitalício • Garantia de 7 dias
-    </p>
-  </div>
-</section>
-
-
-    <!-- Rodapé -->
-    <footer class="bg-gray-900 py-12 text-center text-gray-400">
-        <div class="container mx-auto px-6">
-            <div class="mb-6">
-<p class="text-lg font-semibold text-white mb-2">
-  <a href="https://fluxoteca.com.br" class="hover:underline">
-    Fluxoteca
-  </a>
-</p>
-                <p class="text-sm">
-                    Ferramentas interativas, jornadas práticas e conteúdo que vira decisão confiável na rotina das PMEs.
-                </p>
-            </div>
-            <div class="border-t border-gray-700 pt-6">
-<p class="text-sm">
-  © 2025 Fluxoteca. Todos os direitos reservados. | 
-  <a href="https://fluxoteca.com.br/politica-de-privacidade/">Política de Privacidade</a> | 
-  <a href="https://fluxoteca.com.br/termos-de-uso/">Termos de Uso</a>
-</p>
-            </div>
-        </div>
-    </footer>
-
-</main>
-
-    <script>
-document.addEventListener('DOMContentLoaded', () => {
-  /* ===========================
-     Progress Bar
-  =========================== */
-const progressBar = document.getElementById('progressBar');
-if (progressBar) {
-  window.addEventListener(
-    'scroll',
-    () => {
-      const max = (document.documentElement.scrollHeight - window.innerHeight) || 1;
-      const scrolled = (window.scrollY / max) * 100;
-
-      // Só mostra a barra depois de ~10% de rolagem
-      if (scrolled > 10) {
-        progressBar.style.opacity = '1';
-      } else {
-        progressBar.style.opacity = '0';
-      }
-
-      progressBar.style.transform = `scaleX(${scrolled / 100})`;
-    },
-    { passive: true }
-  );
-}
-
-  /* ===========================
-     CTA Flutuante
-  =========================== */
+  <script>
+    // ========================================
+    // 1. PROGRESS BAR (optimized with RAF)
+    // ========================================
     (function () {
-var floatingCta = document.getElementById('floatingCta');
-if (!floatingCta) return;
-
-// Mostra só quando a pessoa já percorreu boa parte da página
-var showAfter = 900; 
-
-function handleScroll() {
-  if (window.scrollY > showAfter) {
-    floatingCta.classList.remove('hidden');
-  } else {
-    floatingCta.classList.add('hidden');
-  }
-}
-
-    // Chama ao carregar e nos scrolls
-    handleScroll();
-    window.addEventListener('scroll', handleScroll);
-  })();
-
-/* ===========================
-   Countdown com fallback seguro
-=========================== */
-(function () {
-  // Defina um prazo real (exemplo: 2025-12-05)
-  const DEADLINE = new Date('2025-12-05T23:59:59-03:00'); 
-
-  const bar        = document.querySelector('.countdown-timer');
-  const labelEl    = document.getElementById('countdown-label');
-  const timeWrapper= document.getElementById('countdown-time');
-  const hoursEl    = document.getElementById('hours');
-  const minutesEl  = document.getElementById('minutes');
-  const secondsEl  = document.getElementById('seconds');
-
-  if (!bar || !labelEl || !timeWrapper || !hoursEl || !minutesEl || !secondsEl) return;
-
-  let timerId = null;
-
-  function updateCountdown() {
-    const now  = new Date();
-    const diff = DEADLINE.getTime() - now.getTime();
-
-    if (diff <= 0) {
-      // Depois do prazo: não deixa 00h 00m 00s na tela
-      labelEl.textContent = 'Condição especial encerrada.';
-      timeWrapper.classList.add('hidden');
-      if (timerId) clearInterval(timerId);
-      return;
-    }
-
-    const h = Math.floor(diff / 36e5);
-    const m = Math.floor((diff % 36e5) / 6e4);
-    const s = Math.floor((diff % 6e4) / 1e3);
-
-    hoursEl.textContent   = String(h).padStart(2, '0');
-    minutesEl.textContent = String(m).padStart(2, '0');
-    secondsEl.textContent = String(s).padStart(2, '0');
-
-    // Só mostra o relógio depois de calcular uma vez
-    timeWrapper.classList.remove('hidden');
-  }
-
-  updateCountdown();
-  timerId = setInterval(updateCountdown, 1000);
-})();
-
-  /* ===========================
-     FAQ – acordeão acessível (NOVO)
-     Estrutura esperada:
-     .faq-item
-       h3 > button.faq-question[aria-controls="#id"]
-       div.faq-answer#id[role="region" aria-hidden="true"]
-       .q-text (texto da pergunta)
-  =========================== */
-const faqItems = Array.from(document.querySelectorAll('.faq-item'));
-  if (faqItems.length) {
-    // Fecha todos inicialmente
-    faqItems.forEach(item => {
-      const btn = item.querySelector('.faq-question');
-      const panel = item.querySelector('.faq-answer');
-      const icon = item.querySelector('.faq-icon');
-      if (btn && panel) {
-        btn.setAttribute('aria-expanded', 'false');
-        panel.setAttribute('aria-hidden', 'true');
-        panel.style.maxHeight = null;
+      const progressBar = document.getElementById('progressBar');
+      let ticking = false;
+      
+      function updateProgress() {
+        const scrollTop = window.scrollY || window.pageYOffset;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? scrollTop / docHeight : 0;
+        progressBar.style.transform = 'scaleX(' + progress + ')';
+        progressBar.style.opacity = progress > 0.02 ? '1' : '0';
+        const percentage = Math.round(progress * 100);
+        progressBar.setAttribute('aria-valuenow', percentage);
+        ticking = false;
       }
-      if (icon) {
-        icon.classList.remove('rotate-45');
+      
+      function requestTick() {
+        if (!ticking) {
+          window.requestAnimationFrame(updateProgress);
+          ticking = true;
+        }
       }
-    });
+      
+      window.addEventListener('scroll', requestTick, { passive: true });
+      window.addEventListener('load', updateProgress);
+    })();
 
-    function closeItem(item) {
-      const btn = item.querySelector('.faq-question');
-      const panel = item.querySelector('.faq-answer');
-      const icon = item.querySelector('.faq-icon');
-      if (!btn || !panel) return;
-      item.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-      panel.setAttribute('aria-hidden', 'true');
-      panel.style.maxHeight = null;
-      if (icon) icon.classList.remove('rotate-45');
-      // Opcional: esconder após animação
-      // setTimeout(() => panel.hidden = true, 300);
+    // ========================================
+    // 2. INTERSECTION OBSERVER - LAZY LOADING
+    // ========================================
+    (function () {
+      const observerOptions = {
+        root: null,
+        rootMargin: '50px',
+        threshold: 0.01
+      };
+
+      const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('loaded');
+            sectionObserver.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      window.addEventListener('load', () => {
+        const sections = document.querySelectorAll('section:not(:first-of-type)');
+        sections.forEach(section => {
+          section.classList.add('lazy-load');
+          sectionObserver.observe(section);
+        });
+      });
+    })();
+
+    // ========================================
+    // 3. OFFLINE DETECTION
+    // ========================================
+    (function () {
+      const indicator = document.getElementById('offlineIndicator');
+      if (!indicator) return;
+
+      function updateOnlineStatus() {
+        if (!navigator.onLine) {
+          indicator.classList.add('show');
+        } else {
+          indicator.classList.remove('show');
+        }
+      }
+
+      window.addEventListener('online', updateOnlineStatus);
+      window.addEventListener('offline', updateOnlineStatus);
+      updateOnlineStatus();
+    })();
+
+    // ========================================
+    // 4. FAQ ACCORDION
+    // ========================================
+    (function () {
+      const faqs = document.querySelectorAll('.faq-item');
+      faqs.forEach(item => {
+        const btn = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+
+        btn.addEventListener('click', () => {
+          const isOpen = item.classList.contains('open');
+          faqs.forEach(i => {
+            i.classList.remove('open');
+            const ans = i.querySelector('.faq-answer');
+            const ic = i.querySelector('.faq-icon');
+            if (ans) {
+              ans.style.maxHeight = null;
+              ans.setAttribute('aria-hidden', 'true');
+            }
+            if (ic) ic.style.transform = 'rotate(0deg)';
+            const b = i.querySelector('.faq-question');
+            if (b) b.setAttribute('aria-expanded', 'false');
+          });
+
+          if (!isOpen) {
+            item.classList.add('open');
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+            answer.setAttribute('aria-hidden', 'false');
+            btn.setAttribute('aria-expanded', 'true');
+            if (icon) icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    })();
+
+    // ========================================
+    // 5. BONUS MODAL
+    // ========================================
+    function openBonusModal() {
+      const backdrop = document.getElementById('bonusModalBackdrop');
+      const modal = document.getElementById('bonusModal');
+      if (!backdrop || !modal) return;
+      
+      backdrop.classList.remove('hidden');
+      backdrop.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('overflow-hidden');
+      
+      const firstFocusable = modal.querySelector('button');
+      if (firstFocusable) {
+        setTimeout(() => firstFocusable.focus(), 100);
+      }
+      
+      trapFocus(modal);
     }
 
-    function openItem(item) {
-      const btn = item.querySelector('.faq-question');
-      const panel = item.querySelector('.faq-answer');
-      const icon = item.querySelector('.faq-icon');
-      if (!btn || !panel) return;
-      item.classList.add('open');
-      btn.setAttribute('aria-expanded', 'true');
-      panel.setAttribute('aria-hidden', 'false');
-      // panel.hidden = false;
-      // mede altura para animar
-      panel.style.maxHeight = panel.scrollHeight + 'px';
-      if (icon) icon.classList.add('rotate-45');
+    function closeBonusModal() {
+      const backdrop = document.getElementById('bonusModalBackdrop');
+      const modal = document.getElementById('bonusModal');
+      if (!backdrop) return;
+      
+      // Reset modal transform before hiding
+      if (modal) {
+        modal.style.transition = 'transform 0.3s ease';
+        modal.style.transform = 'translateY(0)';
+      }
+      
+      backdrop.classList.add('hidden');
+      backdrop.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('overflow-hidden');
     }
 
-    // Delegação de clique para abrir/fechar
-    document.addEventListener('click', (e) => {
-      const btn = e.target.closest('.faq-question');
-      if (!btn) return;
+    function trapFocus(element) {
+      const focusableElements = element.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      const firstFocusable = focusableElements[0];
+      const lastFocusable = focusableElements[focusableElements.length - 1];
 
-      const item = btn.closest('.faq-item');
-      if (!item) return;
+      element.addEventListener('keydown', function(e) {
+        if (e.key !== 'Tab') return;
 
-      const isOpen = item.classList.contains('open');
+        if (e.shiftKey) {
+          if (document.activeElement === firstFocusable) {
+            lastFocusable.focus();
+            e.preventDefault();
+          }
+        } else {
+          if (document.activeElement === lastFocusable) {
+            firstFocusable.focus();
+            e.preventDefault();
+          }
+        }
+      });
+    }
 
-      // fecha os outros
-      faqItems.forEach((el) => {
-        if (el !== item) {
-          closeItem(el);
+    function copyBonusPrompt(preId, btnId) {
+      const pre = document.getElementById(preId);
+      const btn = document.getElementById(btnId);
+      if (!pre) return;
+      const text = pre.innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        if (btn) {
+          const originalHTML = btn.innerHTML;
+          btn.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg><span>✓ Copiado!</span>';
+          btn.setAttribute('aria-label', 'Prompt copiado com sucesso');
+          setTimeout(() => {
+            btn.innerHTML = originalHTML;
+            btn.setAttribute('aria-label', 'Copiar prompt para área de transferência');
+          }, 1800);
+        }
+      }).catch(() => {});
+    }
+
+    function scrollToBonus() {
+      const bonusSection = document.getElementById('bonus-section');
+      if (!bonusSection) return;
+      
+      const offset = 100;
+      const elementPosition = bonusSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      
+      setTimeout(() => {
+        bonusSection.style.transition = 'box-shadow 0.5s ease';
+        bonusSection.style.boxShadow = '0 0 0 4px rgba(16, 185, 129, 0.4)';
+        setTimeout(() => {
+          bonusSection.style.boxShadow = '';
+        }, 1500);
+      }, 800);
+    }
+
+    (function () {
+      const backdrop = document.getElementById('bonusModalBackdrop');
+      const modal = document.getElementById('bonusModal');
+      if (!backdrop || !modal) return;
+      
+      backdrop.addEventListener('click', (e) => {
+        if (e.target === backdrop) {
+          closeBonusModal();
         }
       });
 
-      // toggle atual
-      if (!isOpen) {
-        openItem(item);
-      } else {
-        closeItem(item);
-      }
-    });
-
-    // Acessibilidade via teclado (Enter/Space)
-    document.addEventListener('keydown', (e) => {
-      if ((e.key === 'Enter' || e.key === ' ') && e.target.closest('.faq-question')) {
-        e.preventDefault();
-        e.target.click();
-      }
-    });
-
-    // Recalcula altura ao mudar tamanho/linha (evita corte de texto após resize)
-    const recalc = () => {
-      faqItems.forEach(item => {
-        if (item.classList.contains('open')) {
-          const panel = item.querySelector('.faq-answer');
-          if (panel) panel.style.maxHeight = panel.scrollHeight + 'px';
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !backdrop.classList.contains('hidden')) {
+          closeBonusModal();
         }
       });
-    };
-    window.addEventListener('resize', recalc);
-    window.addEventListener('orientationchange', recalc);
-  }
 
-  /* ===========================
-     FAQ – JSON-LD dinâmico
-     Cria/atualiza <script id="faq-schema" type="application/ld+json">
-  =========================== */
-  function buildFaqSchema() {
-    const qa = [];
-    document.querySelectorAll('.faq-item').forEach(item => {
-      const qEl = item.querySelector('.q-text');
-      const aEl = item.querySelector('.faq-answer');
-      if (!qEl || !aEl) return;
+      // Swipe down to close on mobile
+      let startY = 0;
+      let currentY = 0;
+      let isDragging = false;
 
-      const question = qEl.textContent.trim();
-      // Pega somente o texto da resposta (sem HTML decorativo)
-      const answer = aEl.textContent.trim().replace(/\s+\n/g, '\n').replace(/\n{2,}/g, '\n');
+      const modalHeader = modal.querySelector('.flex.items-center.justify-between');
+      
+      if (modalHeader && 'ontouchstart' in window) {
+        modalHeader.addEventListener('touchstart', (e) => {
+          startY = e.touches[0].clientY;
+          isDragging = true;
+          modal.style.transition = 'none';
+        }, { passive: true });
 
-      if (question && answer) {
-        qa.push({
-          "@type": "Question",
-          "name": question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": answer
+        modalHeader.addEventListener('touchmove', (e) => {
+          if (!isDragging) return;
+          currentY = e.touches[0].clientY;
+          const diff = currentY - startY;
+          if (diff > 0) {
+            modal.style.transform = `translateY(${diff}px)`;
+          }
+        }, { passive: true });
+
+        modalHeader.addEventListener('touchend', () => {
+          if (!isDragging) return;
+          isDragging = false;
+          const diff = currentY - startY;
+          modal.style.transition = 'transform 0.3s ease';
+          
+          if (diff > 100) {
+            closeBonusModal();
+          } else {
+            modal.style.transform = 'translateY(0)';
           }
         });
       }
-    });
+    })();
 
-    if (!qa.length) return;
+    // ========================================
+    // 6. FLOATING CTA (throttled with RAF)
+    // ========================================
+    (function () {
+      const floating = document.getElementById('floatingCta');
+      if (!floating) return;
 
-    const data = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": qa
-    };
-
-    let tag = document.getElementById('faq-schema');
-    if (!tag) {
-      tag = document.createElement('script');
-      tag.id = 'faq-schema';
-      tag.type = 'application/ld+json';
-      document.head.appendChild(tag);
-    }
-    tag.textContent = JSON.stringify(data);
-  }
-  buildFaqSchema();
-
-  /* ===========================
-     Smooth Scroll acessível para âncoras internas
-  =========================== */
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-      const id = anchor.getAttribute('href');
-      // ignora links “#” vazios
-      if (!id || id === '#') return;
-      const target = document.querySelector(id);
-      if (!target) return;
-
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      target.setAttribute('tabindex', '-1');
-      target.focus({ preventScroll: true });
-    });
-  });
-
-  /* ===========================
-     Animações on-scroll (fade-in)
-  =========================== */
-  const fadeIns = document.querySelectorAll('.fade-in');
-  if (fadeIns.length && 'IntersectionObserver' in window) {
-    const sectionObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.style.animationPlayState = 'running';
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-    fadeIns.forEach(el => sectionObserver.observe(el));
-  }
-});
-
- /* ===========================
-     Modal Prompt Bonus
-  =========================== */
-
-  const bonusModalBackdrop = document.getElementById('bonusModalBackdrop');
-
-  function openBonusModal() {
-    if (!bonusModalBackdrop) return;
-    bonusModalBackdrop.classList.remove('hidden');
-    document.documentElement.classList.add('overflow-hidden');
-  }
-
-  function closeBonusModal() {
-    if (!bonusModalBackdrop) return;
-    bonusModalBackdrop.classList.add('hidden');
-    document.documentElement.classList.remove('overflow-hidden');
-  }
-
-  function copyBonusPrompt(id) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    const text = el.textContent.trim();
-
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(function () {
-        const btn = document.getElementById(id + '-btn');
-        if (!btn) return;
-        const original = btn.innerText;
-        btn.innerText = 'Copiado';
-        setTimeout(function () {
-          btn.innerText = original;
-        }, 2000);
-      }).catch(function () {
-        fallbackCopy(text);
-      });
-    } else {
-      fallbackCopy(text);
-    }
-  }
-
- window.openBonusModal = openBonusModal;
-  window.closeBonusModal = closeBonusModal;
-  window.copyBonusPrompt = copyBonusPrompt;
-
-  function fallbackCopy(text) {
-    const temp = document.createElement('textarea');
-    temp.value = text;
-    temp.setAttribute('readonly', '');
-    temp.style.position = 'absolute';
-    temp.style.left = '-9999px';
-    document.body.appendChild(temp);
-    temp.select();
-    document.execCommand('copy');
-    document.body.removeChild(temp);
-  }
-
-  if (bonusModalBackdrop) {
-    bonusModalBackdrop.addEventListener('click', function (event) {
-      if (event.target === bonusModalBackdrop) {
-        closeBonusModal();
-      }
-    });
-  }
-
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape' && bonusModalBackdrop && !bonusModalBackdrop.classList.contains('hidden')) {
-      closeBonusModal();
-    }
-  });
-</script>
-<button
-  id="floatingCta"
-  type="button"
-  class="floating-cta-btn hidden"
-  onclick="window.open('https://pay.kiwify.com.br/DQLoGH1?utm_source=landing&utm_medium=cta&utm_campaign=prompts-pme&utm_content=cta-flutuante', '_blank')"
-  aria-label="Quero acessar o Guia + Painel de Prompts para PMEs"
->
-  <span class="floating-cta-label">
-    Quero aplicar IA na minha PME agora
-  </span>
-</button>
-
-<script>
-document.querySelectorAll('a[href*="kiwify"]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    if (typeof gtag === 'function') {
-      gtag('event', 'click_comprar', {
-        event_category: 'CTA',
-        event_label: btn.getAttribute('href') || 'Botão Kiwify'
-      });
-    }
-  });
-});
-
-  (function () {
-    const faqItems = document.querySelectorAll('.faq-item');
-    if (!faqItems.length) return;
-
-    const mainEntity = [];
-
-    faqItems.forEach(item => {
-      const questionEl = item.querySelector('[data-faq-question]');
-      const answerEl = item.querySelector('.faq-answer');
-
-      if (!questionEl || !answerEl) return;
-
-      const question = questionEl.textContent.trim();
-      const answer = answerEl.textContent.trim();
-
-      if (!question || !answer) return;
-
-      mainEntity.push({
-        "@type": "Question",
-        "name": question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": answer
+      let lastVisible = false;
+      let ticking = false;
+      let trigger = null;
+      
+      function handleScroll() {
+        if (!trigger) {
+          trigger = document.getElementById('preco');
+          if (!trigger) return;
         }
+        
+        const rect = trigger.getBoundingClientRect();
+        const shouldShow = rect.top < window.innerHeight && rect.bottom > 0;
+        const nearBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 200;
+
+        if (shouldShow && !nearBottom) {
+          if (!lastVisible) {
+            floating.style.opacity = '1';
+            floating.style.pointerEvents = 'auto';
+            lastVisible = true;
+          }
+        } else {
+          if (lastVisible) {
+            floating.style.opacity = '0';
+            floating.style.pointerEvents = 'none';
+            lastVisible = false;
+          }
+        }
+        ticking = false;
+      }
+      
+      function requestTick() {
+        if (!ticking) {
+          window.requestAnimationFrame(handleScroll);
+          ticking = true;
+        }
+      }
+
+      window.addEventListener('scroll', requestTick, { passive: true });
+      window.addEventListener('load', handleScroll);
+    })();
+
+    // ========================================
+    // 7. PERFORMANCE MONITORING (optional)
+    // ========================================
+    (function() {
+      if (!window.performance || !window.performance.getEntriesByType) return;
+      
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const perfData = window.performance.getEntriesByType('navigation')[0];
+          if (perfData) {
+            const loadTime = perfData.loadEventEnd - perfData.fetchStart;
+            if (loadTime > 3000) {
+              console.info('⚡ Dica: A página levou ' + Math.round(loadTime / 1000) + 's para carregar. Considere otimizações adicionais.');
+            }
+          }
+        }, 0);
       });
-    });
-
-    if (!mainEntity.length) return;
-
-    const faqSchemaEl = document.getElementById('faq-schema');
-    if (!faqSchemaEl) return;
-
-    const faqJson = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": mainEntity
-    };
-
-    faqSchemaEl.textContent = JSON.stringify(faqJson);
-  })();
-
-</script>
-
+    })();
+  </script>
 </body>
 </html>
